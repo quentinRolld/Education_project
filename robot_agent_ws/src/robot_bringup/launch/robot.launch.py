@@ -15,8 +15,8 @@ def generate_launch_description():
 
     alsa_device_arg = DeclareLaunchArgument(
         'alsa_device',
-        default_value='hw:0,0',
-        description='ALSA device for playback (e.g., hw:1,0)'
+        default_value='plughw:0,0',
+        description='ALSA device for playback (e.g., plughw:1,0)'
     )
 
     model_path_arg = DeclareLaunchArgument(

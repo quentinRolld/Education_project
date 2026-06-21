@@ -19,7 +19,7 @@ class PiperTTSNode(Node):
         
         # Declare parameters for easy audio routing and model path configuration
         self.declare_parameter('model_path', '/models/fr/model.onnx')
-        self.declare_parameter('alsa_device', 'hw:0,0')
+        self.declare_parameter('alsa_device', 'plughw:0,0')
         
         self.model_path = self.get_parameter('model_path').value
         self.alsa_device = self.get_parameter('alsa_device').value
