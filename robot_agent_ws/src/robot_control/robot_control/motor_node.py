@@ -7,6 +7,7 @@ from rclpy.node import Node
 from std_msgs.msg import String
 import json
 import time
+import math
 
 try:
     import Jetson.GPIO as GPIO
@@ -21,37 +22,29 @@ class MotorNode(Node):
         self.get_logger().info('Starting Motor Control Node')
 
         if not GPIO_AVAILABLE:
-            self.get_logger().warning('Jetson.GPIO not available. Running in MOCK MODE.')
+            self.get_logger().warning('Jetson.GPIO not available or model undetermined. Running in MOCK MODE.')
 
-        # ROS2 Parameters for hardware pin configuration (using physical BOARD pins)
-        # Adjust these defaults based on your physical wiring
-        self.declare_parameter('left_pwm_pin', 32)      # ENA
-        self.declare_parameter('left_dir1_pin', 11)     # IN1
-        self.declare_parameter('left_dir2_pin', 12)     # IN2
-
-        self.declare_parameter('right_pwm_pin', 33)     # ENB
-        self.declare_parameter('right_dir1_pin', 13)    # IN3
-        self.declare_parameter('right_dir2_pin', 15)    # IN4
-
-        # Speed and calibration parameters
-        self.declare_parameter('translation_speed_pct', 50.0)  # Duty cycle % (0 to 100)
-        self.declare_parameter('rotation_speed_pct', 40.0)     # Duty cycle % (0 to 100)
-        self.declare_parameter('sec_per_cm', 0.05)            # Calibration: seconds needed to travel 1 cm
-        self.declare_parameter('sec_per_deg', 0.015)          # Calibration: seconds needed to rotate 1 degree
+        # ROS2 Parameters mapping directly to your working robot script
+        self.declare_parameter('pwm_left_pin', 33)
+        self.declare_parameter('dir_left_pin', 29)
+        self.declare_parameter('pwm_right_pin', 15)
+        self.declare_parameter('dir_right_pin', 7)
+        
+        self.declare_parameter('wheel_base_cm', 40.0)      # distance between wheels
+        self.declare_parameter('max_speed_cm_s', 20.0)     # max speed at 100% PWM
+        self.declare_parameter('translation_speed_pct', 50.0)  # default % speed for lines
+        self.declare_parameter('rotation_speed_pct', 40.0)     # default % speed for turns
 
         # Retrieve parameter values
-        self.l_pwm = self.get_parameter('left_pwm_pin').value
-        self.l_dir1 = self.get_parameter('left_dir1_pin').value
-        self.l_dir2 = self.get_parameter('left_dir2_pin').value
-        
-        self.r_pwm = self.get_parameter('right_pwm_pin').value
-        self.r_dir1 = self.get_parameter('right_dir1_pin').value
-        self.r_dir2 = self.get_parameter('right_dir2_pin').value
+        self.l_pwm = self.get_parameter('pwm_left_pin').value
+        self.l_dir = self.get_parameter('dir_left_pin').value
+        self.r_pwm = self.get_parameter('pwm_right_pin').value
+        self.r_dir = self.get_parameter('dir_right_pin').value
 
+        self.wheel_base = self.get_parameter('wheel_base_cm').value
+        self.max_speed = self.get_parameter('max_speed_cm_s').value
         self.trans_speed = self.get_parameter('translation_speed_pct').value
         self.rot_speed = self.get_parameter('rotation_speed_pct').value
-        self.sec_per_cm = self.get_parameter('sec_per_cm').value
-        self.sec_per_deg = self.get_parameter('sec_per_deg').value
 
         # Setup GPIO
         self.setup_gpio()
@@ -66,49 +59,46 @@ class MotorNode(Node):
         
         try:
             GPIO.setmode(GPIO.BOARD)
+            GPIO.setwarnings(False)
             
             # Setup direction pins as output
-            GPIO.setup(self.l_dir1, GPIO.OUT, initial=GPIO.LOW)
-            GPIO.setup(self.l_dir2, GPIO.OUT, initial=GPIO.LOW)
-            GPIO.setup(self.r_dir1, GPIO.OUT, initial=GPIO.LOW)
-            GPIO.setup(self.r_dir2, GPIO.OUT, initial=GPIO.LOW)
+            GPIO.setup([self.l_dir, self.r_dir], GPIO.OUT, initial=GPIO.LOW)
             
             # Setup PWM pins
-            GPIO.setup(self.l_pwm, GPIO.OUT)
-            GPIO.setup(self.r_pwm, GPIO.OUT)
+            GPIO.setup(self.l_pwm, GPIO.OUT, initial=GPIO.LOW)
+            GPIO.setup(self.r_pwm, GPIO.OUT, initial=GPIO.LOW)
             
-            # Initialize PWM at 50Hz frequency
-            self.pwm_left = GPIO.PWM(self.l_pwm, 50)
-            self.pwm_right = GPIO.PWM(self.r_pwm, 50)
+            # Initialize PWM at 1000Hz frequency
+            self.pwm_left = GPIO.PWM(self.l_pwm, 1000)
+            self.pwm_right = GPIO.PWM(self.r_pwm, 1000)
             
             self.pwm_left.start(0)
             self.pwm_right.start(0)
-            self.get_logger().info('GPIO Hardware configured successfully')
+            self.get_logger().info('GPIO Hardware configured successfully (1000Hz PWM)')
         except Exception as e:
             self.get_logger().error(f'Failed to configure GPIO: {e}')
 
-    def set_motors(self, left_speed_pct, right_speed_pct, left_forward=True, right_forward=True):
-        """Sets the direction pins and PWM duty cycles for both motors."""
-        self.get_logger().debug(f'Setting motors: L_speed={left_speed_pct}% (Fwd={left_forward}), R_speed={right_speed_pct}% (Fwd={right_forward})')
+    def set_motors(self, left_speed, right_speed):
+        """
+        Sets motor direction and speed.
+        left_speed and right_speed are in % (-100 to +100)
+        """
+        self.get_logger().debug(f'Setting speeds: Left={left_speed}%, Right={right_speed}%')
         
         if GPIO_AVAILABLE:
-            # Left motor direction
-            GPIO.output(self.l_dir1, GPIO.HIGH if left_forward else GPIO.LOW)
-            GPIO.output(self.l_dir2, GPIO.LOW if left_forward else GPIO.HIGH)
+            # Left wheel direction and PWM speed
+            GPIO.output(self.l_dir, GPIO.HIGH if left_speed < 0 else GPIO.LOW)
+            self.pwm_left.ChangeDutyCycle(abs(left_speed))
             
-            # Right motor direction
-            GPIO.output(self.r_dir1, GPIO.HIGH if right_forward else GPIO.LOW)
-            GPIO.output(self.r_dir2, GPIO.LOW if right_forward else GPIO.HIGH)
-            
-            # Set speed (duty cycle)
-            self.pwm_left.ChangeDutyCycle(left_speed_pct)
-            self.pwm_right.ChangeDutyCycle(right_speed_pct)
+            # Right wheel direction and PWM speed (symmetrical mounting offset)
+            GPIO.output(self.r_dir, GPIO.LOW if right_speed < 0 else GPIO.HIGH)
+            self.pwm_right.ChangeDutyCycle(abs(right_speed))
         else:
             # Mock mode logs
             self.get_logger().info(
-                f'[MOCK MOTOR] L_pins: ({self.l_dir1}={1 if left_forward else 0}, {self.l_dir2}={0 if left_forward else 1}), '
-                f'R_pins: ({self.r_dir1}={1 if right_forward else 0}, {self.r_dir2}={0 if right_forward else 1}) | '
-                f'PWM: L={left_speed_pct}%, R={right_speed_pct}%'
+                f'[MOCK MOTOR] GPIO outputs: '
+                f'Left_Dir({self.l_dir})={"HIGH" if left_speed < 0 else "LOW"}, Speed={abs(left_speed)}% | '
+                f'Right_Dir({self.r_dir})={"LOW" if right_speed < 0 else "HIGH"}, Speed={abs(right_speed)}%'
             )
 
     def stop_motors(self):
@@ -117,10 +107,8 @@ class MotorNode(Node):
         if GPIO_AVAILABLE:
             self.pwm_left.ChangeDutyCycle(0)
             self.pwm_right.ChangeDutyCycle(0)
-            GPIO.output(self.l_dir1, GPIO.LOW)
-            GPIO.output(self.l_dir2, GPIO.LOW)
-            GPIO.output(self.r_dir1, GPIO.LOW)
-            GPIO.output(self.r_dir2, GPIO.LOW)
+            GPIO.output(self.l_dir, GPIO.LOW)
+            GPIO.output(self.r_dir, GPIO.LOW)
         else:
             self.get_logger().info('[MOCK MOTOR] Stop (PWM=0%)')
 
@@ -141,27 +129,30 @@ class MotorNode(Node):
 
         # 1. Execute Rotation first
         if angle != 0.0:
-            duration = abs(angle) * self.sec_per_deg
-            # Clockwise (+) turn: left wheel forward, right wheel backward
-            # Counterclockwise (-) turn: left wheel backward, right wheel forward
-            left_fwd = (angle > 0.0)
-            right_fwd = (angle < 0.0)
+            direction = 1 if angle > 0 else -1
+            angle_rad = abs(angle) * math.pi / 180
+            # Distance traveled by each wheel during in-place rotation
+            arc_length = (self.wheel_base * angle_rad) / 2
+            
+            # Duration based on calibration formula
+            duration = arc_length / (self.max_speed * (self.rot_speed / 100))
             
             self.get_logger().info(f'Starting rotation for {duration:.3f} seconds')
-            self.set_motors(self.rot_speed, self.rot_speed, left_fwd, right_fwd)
+            # One wheel forward, one wheel backward
+            self.set_motors(direction * self.rot_speed, -direction * self.rot_speed)
             time.sleep(duration)
             self.stop_motors()
             time.sleep(0.2)  # Short pause between moves
 
         # 2. Execute Translation next
         if distance != 0.0:
-            duration = abs(distance) * self.sec_per_cm
-            # Forward (+): both wheels forward
-            # Backward (-): both wheels backward
-            fwd = (distance > 0.0)
+            direction = 1 if distance >= 0 else -1
+            # Duration based on calibration formula
+            duration = abs(distance) / (self.max_speed * (self.trans_speed / 100))
             
             self.get_logger().info(f'Starting translation for {duration:.3f} seconds')
-            self.set_motors(self.trans_speed, self.trans_speed, fwd, fwd)
+            # Both wheels same direction
+            self.set_motors(direction * self.trans_speed, direction * self.trans_speed)
             time.sleep(duration)
             self.stop_motors()
 
