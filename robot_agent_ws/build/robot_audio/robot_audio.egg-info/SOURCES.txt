@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+resource/robot_audio
+robot_audio/__init__.py
+robot_audio/piper_tts_node.py
+robot_audio.egg-info/PKG-INFO
+robot_audio.egg-info/SOURCES.txt
+robot_audio.egg-info/dependency_links.txt
+robot_audio.egg-info/entry_points.txt
+robot_audio.egg-info/requires.txt
+robot_audio.egg-info/top_level.txt
+robot_audio.egg-info/zip-safe

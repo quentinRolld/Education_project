@@ -1,0 +1,14 @@
+running develop
+running egg_info
+writing robot_ui.egg-info/PKG-INFO
+writing dependency_links to robot_ui.egg-info/dependency_links.txt
+writing entry points to robot_ui.egg-info/entry_points.txt
+writing requirements to robot_ui.egg-info/requires.txt
+writing top-level names to robot_ui.egg-info/top_level.txt
+reading manifest file 'robot_ui.egg-info/SOURCES.txt'
+writing manifest file 'robot_ui.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/lib/python3.10/site-packages/robot-ui.egg-link (link to .)
+
+Installed /home/kant/robot_ILiAD/robot_agent_ws/build/robot_ui
+running symlink_data

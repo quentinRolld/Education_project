@@ -1,0 +1,17 @@
+[5.174s] Invoking command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera/build --no-deps symlink_data
+[5.913s] running develop
+[6.365s] running egg_info
+[6.367s] writing robot_camera.egg-info/PKG-INFO
+[6.368s] writing dependency_links to robot_camera.egg-info/dependency_links.txt
+[6.370s] writing entry points to robot_camera.egg-info/entry_points.txt
+[6.370s] writing requirements to robot_camera.egg-info/requires.txt
+[6.370s] writing top-level names to robot_camera.egg-info/top_level.txt
+[6.380s] reading manifest file 'robot_camera.egg-info/SOURCES.txt'
+[6.382s] writing manifest file 'robot_camera.egg-info/SOURCES.txt'
+[6.389s] running build_ext
+[6.389s] Creating /home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/lib/python3.10/site-packages/robot-camera.egg-link (link to .)
+[6.391s] Installing camera_node script to /home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/lib/robot_camera
+[6.392s] 
+[6.392s] Installed /home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera
+[6.392s] running symlink_data
+[7.134s] Invoked command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera' returned '0': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera/build --no-deps symlink_data
