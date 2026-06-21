@@ -44,7 +44,7 @@ class PiperTTSNode(Node):
                 'piper',
                 '--text', text,
                 '--model', self.model_path,
-                '--output', tmp_wav.name
+                '-f', tmp_wav.name
             ], check=False)
 
             # Play with aplay
