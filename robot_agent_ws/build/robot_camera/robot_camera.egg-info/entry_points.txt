@@ -1,0 +1,3 @@
+[console_scripts]
+camera_node = robot_camera.camera_node:main
+

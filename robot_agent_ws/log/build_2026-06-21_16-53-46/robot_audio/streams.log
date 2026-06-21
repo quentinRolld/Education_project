@@ -1,0 +1,17 @@
+[5.146s] Invoking command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_audio': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_audio/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_audio/build --no-deps symlink_data
+[5.834s] running develop
+[6.238s] running egg_info
+[6.239s] writing robot_audio.egg-info/PKG-INFO
+[6.240s] writing dependency_links to robot_audio.egg-info/dependency_links.txt
+[6.241s] writing entry points to robot_audio.egg-info/entry_points.txt
+[6.242s] writing requirements to robot_audio.egg-info/requires.txt
+[6.242s] writing top-level names to robot_audio.egg-info/top_level.txt
+[6.247s] reading manifest file 'robot_audio.egg-info/SOURCES.txt'
+[6.249s] writing manifest file 'robot_audio.egg-info/SOURCES.txt'
+[6.254s] running build_ext
+[6.254s] Creating /home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/lib/python3.10/site-packages/robot-audio.egg-link (link to .)
+[6.256s] Installing piper_tts_node script to /home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/lib/robot_audio
+[6.256s] 
+[6.257s] Installed /home/kant/robot_ILiAD/robot_agent_ws/build/robot_audio
+[6.257s] running symlink_data
+[6.362s] Invoked command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_audio' returned '0': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_audio/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_audio/build --no-deps symlink_data

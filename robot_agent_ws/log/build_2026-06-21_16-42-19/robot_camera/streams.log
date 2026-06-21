@@ -1,0 +1,24 @@
+[4.722s] Invoking command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera/build --no-deps symlink_data
+[5.364s] running develop
+[5.726s] running egg_info
+[5.727s] creating robot_camera.egg-info
+[5.727s] writing robot_camera.egg-info/PKG-INFO
+[5.728s] writing dependency_links to robot_camera.egg-info/dependency_links.txt
+[5.728s] writing entry points to robot_camera.egg-info/entry_points.txt
+[5.729s] writing requirements to robot_camera.egg-info/requires.txt
+[5.729s] writing top-level names to robot_camera.egg-info/top_level.txt
+[5.730s] writing manifest file 'robot_camera.egg-info/SOURCES.txt'
+[5.734s] reading manifest file 'robot_camera.egg-info/SOURCES.txt'
+[5.735s] writing manifest file 'robot_camera.egg-info/SOURCES.txt'
+[5.739s] running build_ext
+[5.740s] Creating /home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/lib/python3.10/site-packages/robot-camera.egg-link (link to .)
+[5.742s] Installing camera_node script to /home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/lib/robot_camera
+[5.742s] 
+[5.742s] Installed /home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera
+[5.743s] running symlink_data
+[5.743s] creating /home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/share/ament_index
+[5.743s] creating /home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/share/ament_index/resource_index
+[5.743s] creating /home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/share/ament_index/resource_index/packages
+[5.743s] symbolically linking /home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera/resource/robot_camera -> /home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/share/ament_index/resource_index/packages
+[5.743s] symbolically linking /home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera/package.xml -> /home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/share/robot_camera
+[5.886s] Invoked command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera' returned '0': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera/build --no-deps symlink_data

@@ -1,0 +1,23 @@
+[4.749s] Invoking command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_control': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_control/build --no-deps symlink_data
+[5.357s] running develop
+[5.756s] running egg_info
+[5.756s] creating robot_control.egg-info
+[5.757s] writing robot_control.egg-info/PKG-INFO
+[5.757s] writing dependency_links to robot_control.egg-info/dependency_links.txt
+[5.758s] writing entry points to robot_control.egg-info/entry_points.txt
+[5.758s] writing requirements to robot_control.egg-info/requires.txt
+[5.758s] writing top-level names to robot_control.egg-info/top_level.txt
+[5.759s] writing manifest file 'robot_control.egg-info/SOURCES.txt'
+[5.764s] reading manifest file 'robot_control.egg-info/SOURCES.txt'
+[5.765s] writing manifest file 'robot_control.egg-info/SOURCES.txt'
+[5.770s] running build_ext
+[5.770s] Creating /home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/lib/python3.10/site-packages/robot-control.egg-link (link to .)
+[5.772s] 
+[5.773s] Installed /home/kant/robot_ILiAD/robot_agent_ws/build/robot_control
+[5.773s] running symlink_data
+[5.773s] creating /home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/share/ament_index
+[5.773s] creating /home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/share/ament_index/resource_index
+[5.773s] creating /home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/share/ament_index/resource_index/packages
+[5.774s] symbolically linking /home/kant/robot_ILiAD/robot_agent_ws/build/robot_control/resource/robot_control -> /home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/share/ament_index/resource_index/packages
+[5.774s] symbolically linking /home/kant/robot_ILiAD/robot_agent_ws/build/robot_control/package.xml -> /home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/share/robot_control
+[6.474s] Invoked command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_control' returned '0': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_control/build --no-deps symlink_data
