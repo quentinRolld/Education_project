@@ -1,0 +1,54 @@
+[2.073s] Invoking command in '/home/kant/robot_agent_ws/src/examples/rclpy/services/minimal_client': CONDA_PROMPT_MODIFIER=(robot_env) PYTEST_ADDOPTS=--tb=short --junit-xml=/home/kant/robot_agent_ws/build/examples_rclpy_minimal_client/pytest.xml --junit-prefix=examples_rclpy_minimal_client -o cache_dir=/home/kant/robot_agent_ws/build/examples_rclpy_minimal_client/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest
+[3.166s] [1m============================= test session starts ==============================[0m
+[3.167s] platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+[3.167s] cachedir: /home/kant/robot_agent_ws/build/examples_rclpy_minimal_client/.pytest_cache
+[3.169s] rootdir: /home/kant/robot_agent_ws/src/examples/rclpy, configfile: pytest.ini
+[3.170s] plugins: ament-lint-0.12.14, ament-pep257-0.12.14, ament-xmllint-0.12.14, launch-testing-1.0.11, launch-testing-ros-0.19.12, ament-copyright-0.12.14, ament-flake8-0.12.14, colcon-core-0.20.1, cov-3.0.0
+[3.170s] [1mcollecting ... [0m[1m
+[3.170s] collected 3 items                                                              [0m
+[3.171s] 
+[3.322s] test/test_copyright.py [32m.[0m[32m                                                 [ 33%][0m
+[3.523s] test/test_flake8.py [31mF[0m[31m                                                    [ 66%][0m
+[3.568s] test/test_pep257.py [32m.[0m[31m                                                    [100%][0m
+[3.568s] 
+[3.568s] =================================== FAILURES ===================================
+[3.568s] [31m[1m_________________________________ test_flake8 __________________________________[0m
+[3.568s] [1m[31mtest/test_flake8.py[0m:23: in test_flake8
+[3.633s]     [94massert[39;49;00m rc == [94m0[39;49;00m, \
+[3.633s] [1m[31mE   AssertionError: Found 2 code style errors / warnings:[0m
+[3.633s] [1m[31mE     ./examples_rclpy_minimal_client/client_async_callback.py:33:9: F824 `nonlocal cli` is unused: name is never assigned in scope[0m
+[3.633s] [1m[31mE     ./examples_rclpy_minimal_client/client_async_callback.py:33:9: F824 `nonlocal node` is unused: name is never assigned in scope[0m
+[3.633s] [1m[31mE   assert 1 == 0[0m
+[3.634s] ----------------------------- Captured stdout call -----------------------------
+[3.634s] 
+[3.634s] ./examples_rclpy_minimal_client/client_async_callback.py:33:9: F824 `nonlocal cli` is unused: name is never assigned in scope
+[3.634s]         nonlocal cli, node, did_run, did_get_result
+[3.634s]         ^
+[3.634s] 
+[3.634s] ./examples_rclpy_minimal_client/client_async_callback.py:33:9: F824 `nonlocal node` is unused: name is never assigned in scope
+[3.634s]         nonlocal cli, node, did_run, did_get_result
+[3.634s]         ^
+[3.635s] 
+[3.635s] 2     F824 `nonlocal cli` is unused: name is never assigned in scope
+[3.635s] 
+[3.635s] 9 files checked
+[3.635s] 2 errors
+[3.635s] 
+[3.635s] 'F'-type errors: 2
+[3.635s] 
+[3.635s] Checked files:
+[3.635s] 
+[3.636s] * ./setup.py
+[3.636s] * ./examples_rclpy_minimal_client/client_async_callback.py
+[3.636s] * ./examples_rclpy_minimal_client/client_async.py
+[3.636s] * ./examples_rclpy_minimal_client/client.py
+[3.636s] * ./examples_rclpy_minimal_client/__init__.py
+[3.636s] * ./examples_rclpy_minimal_client/client_async_member_function.py
+[3.636s] * ./test/test_pep257.py
+[3.636s] * ./test/test_copyright.py
+[3.636s] * ./test/test_flake8.py
+[3.636s] - generated xml file: /home/kant/robot_agent_ws/build/examples_rclpy_minimal_client/pytest.xml -
+[3.637s] =========================== short test summary info ============================
+[3.637s] FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 2 code style ...
+[3.637s] [31m========================= [31m[1m1 failed[0m, [32m2 passed[0m[31m in 0.99s[0m[31m ==========================[0m
+[3.864s] Invoked command in '/home/kant/robot_agent_ws/src/examples/rclpy/services/minimal_client' returned '1': CONDA_PROMPT_MODIFIER=(robot_env) PYTEST_ADDOPTS=--tb=short --junit-xml=/home/kant/robot_agent_ws/build/examples_rclpy_minimal_client/pytest.xml --junit-prefix=examples_rclpy_minimal_client -o cache_dir=/home/kant/robot_agent_ws/build/examples_rclpy_minimal_client/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest

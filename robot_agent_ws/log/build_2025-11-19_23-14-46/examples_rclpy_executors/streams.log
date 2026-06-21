@@ -1,0 +1,57 @@
+[2.563s] Invoking command in '/home/kant/robot_agent_ws/src/examples/rclpy/executors': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_agent_ws/build/examples_rclpy_executors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/examples_rclpy_executors build --build-base /home/kant/robot_agent_ws/build/examples_rclpy_executors/build install --record /home/kant/robot_agent_ws/build/examples_rclpy_executors/install.log --single-version-externally-managed install_data
+[11.049s] running egg_info
+[11.049s] creating ../../../../build/examples_rclpy_executors/examples_rclpy_executors.egg-info
+[11.049s] writing ../../../../build/examples_rclpy_executors/examples_rclpy_executors.egg-info/PKG-INFO
+[11.049s] writing dependency_links to ../../../../build/examples_rclpy_executors/examples_rclpy_executors.egg-info/dependency_links.txt
+[11.049s] writing entry points to ../../../../build/examples_rclpy_executors/examples_rclpy_executors.egg-info/entry_points.txt
+[11.049s] writing requirements to ../../../../build/examples_rclpy_executors/examples_rclpy_executors.egg-info/requires.txt
+[11.049s] writing top-level names to ../../../../build/examples_rclpy_executors/examples_rclpy_executors.egg-info/top_level.txt
+[11.050s] writing manifest file '../../../../build/examples_rclpy_executors/examples_rclpy_executors.egg-info/SOURCES.txt'
+[11.050s] reading manifest file '../../../../build/examples_rclpy_executors/examples_rclpy_executors.egg-info/SOURCES.txt'
+[11.050s] writing manifest file '../../../../build/examples_rclpy_executors/examples_rclpy_executors.egg-info/SOURCES.txt'
+[11.050s] running build
+[11.050s] running build_py
+[11.050s] creating /home/kant/robot_agent_ws/build/examples_rclpy_executors/build
+[11.050s] creating /home/kant/robot_agent_ws/build/examples_rclpy_executors/build/lib
+[11.050s] creating /home/kant/robot_agent_ws/build/examples_rclpy_executors/build/lib/examples_rclpy_executors
+[11.050s] copying examples_rclpy_executors/callback_group.py -> /home/kant/robot_agent_ws/build/examples_rclpy_executors/build/lib/examples_rclpy_executors
+[11.051s] copying examples_rclpy_executors/composed.py -> /home/kant/robot_agent_ws/build/examples_rclpy_executors/build/lib/examples_rclpy_executors
+[11.052s] copying examples_rclpy_executors/talker.py -> /home/kant/robot_agent_ws/build/examples_rclpy_executors/build/lib/examples_rclpy_executors
+[11.052s] copying examples_rclpy_executors/custom_executor.py -> /home/kant/robot_agent_ws/build/examples_rclpy_executors/build/lib/examples_rclpy_executors
+[11.052s] copying examples_rclpy_executors/custom_callback_group.py -> /home/kant/robot_agent_ws/build/examples_rclpy_executors/build/lib/examples_rclpy_executors
+[11.053s] copying examples_rclpy_executors/__init__.py -> /home/kant/robot_agent_ws/build/examples_rclpy_executors/build/lib/examples_rclpy_executors
+[11.053s] copying examples_rclpy_executors/listener.py -> /home/kant/robot_agent_ws/build/examples_rclpy_executors/build/lib/examples_rclpy_executors
+[11.054s] running install
+[11.054s] running install_lib
+[11.057s] creating /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/python3.10/site-packages/examples_rclpy_executors
+[11.058s] copying /home/kant/robot_agent_ws/build/examples_rclpy_executors/build/lib/examples_rclpy_executors/callback_group.py -> /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/python3.10/site-packages/examples_rclpy_executors
+[11.059s] copying /home/kant/robot_agent_ws/build/examples_rclpy_executors/build/lib/examples_rclpy_executors/composed.py -> /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/python3.10/site-packages/examples_rclpy_executors
+[11.059s] copying /home/kant/robot_agent_ws/build/examples_rclpy_executors/build/lib/examples_rclpy_executors/talker.py -> /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/python3.10/site-packages/examples_rclpy_executors
+[11.060s] copying /home/kant/robot_agent_ws/build/examples_rclpy_executors/build/lib/examples_rclpy_executors/custom_executor.py -> /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/python3.10/site-packages/examples_rclpy_executors
+[11.060s] copying /home/kant/robot_agent_ws/build/examples_rclpy_executors/build/lib/examples_rclpy_executors/custom_callback_group.py -> /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/python3.10/site-packages/examples_rclpy_executors
+[11.061s] copying /home/kant/robot_agent_ws/build/examples_rclpy_executors/build/lib/examples_rclpy_executors/__init__.py -> /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/python3.10/site-packages/examples_rclpy_executors
+[11.061s] copying /home/kant/robot_agent_ws/build/examples_rclpy_executors/build/lib/examples_rclpy_executors/listener.py -> /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/python3.10/site-packages/examples_rclpy_executors
+[11.061s] byte-compiling /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/python3.10/site-packages/examples_rclpy_executors/callback_group.py to callback_group.cpython-310.pyc
+[11.062s] byte-compiling /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/python3.10/site-packages/examples_rclpy_executors/composed.py to composed.cpython-310.pyc
+[11.062s] byte-compiling /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/python3.10/site-packages/examples_rclpy_executors/talker.py to talker.cpython-310.pyc
+[11.062s] byte-compiling /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/python3.10/site-packages/examples_rclpy_executors/custom_executor.py to custom_executor.cpython-310.pyc
+[11.062s] byte-compiling /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/python3.10/site-packages/examples_rclpy_executors/custom_callback_group.py to custom_callback_group.cpython-310.pyc
+[11.063s] byte-compiling /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/python3.10/site-packages/examples_rclpy_executors/__init__.py to __init__.cpython-310.pyc
+[11.063s] byte-compiling /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/python3.10/site-packages/examples_rclpy_executors/listener.py to listener.cpython-310.pyc
+[11.063s] running install_data
+[11.063s] creating /home/kant/robot_agent_ws/install/examples_rclpy_executors/share/ament_index
+[11.063s] creating /home/kant/robot_agent_ws/install/examples_rclpy_executors/share/ament_index/resource_index
+[11.065s] creating /home/kant/robot_agent_ws/install/examples_rclpy_executors/share/ament_index/resource_index/packages
+[11.065s] copying resource/examples_rclpy_executors -> /home/kant/robot_agent_ws/install/examples_rclpy_executors/share/ament_index/resource_index/packages
+[11.067s] copying package.xml -> /home/kant/robot_agent_ws/install/examples_rclpy_executors/share/examples_rclpy_executors
+[11.068s] running install_egg_info
+[11.069s] Copying ../../../../build/examples_rclpy_executors/examples_rclpy_executors.egg-info to /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/python3.10/site-packages/examples_rclpy_executors-0.15.5-py3.10.egg-info
+[11.070s] running install_scripts
+[11.071s] Installing callback_group script to /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/examples_rclpy_executors
+[11.071s] Installing composed script to /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/examples_rclpy_executors
+[11.072s] Installing custom_callback_group script to /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/examples_rclpy_executors
+[11.074s] Installing custom_executor script to /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/examples_rclpy_executors
+[11.076s] Installing listener script to /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/examples_rclpy_executors
+[11.077s] Installing talker script to /home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/examples_rclpy_executors
+[11.078s] writing list of installed files to '/home/kant/robot_agent_ws/build/examples_rclpy_executors/install.log'
+[11.083s] Invoked command in '/home/kant/robot_agent_ws/src/examples/rclpy/executors' returned '0': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_agent_ws/build/examples_rclpy_executors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_agent_ws/install/examples_rclpy_executors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/examples_rclpy_executors build --build-base /home/kant/robot_agent_ws/build/examples_rclpy_executors/build install --record /home/kant/robot_agent_ws/build/examples_rclpy_executors/install.log --single-version-externally-managed install_data

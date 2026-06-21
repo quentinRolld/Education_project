@@ -1,0 +1,39 @@
+[0.036s] Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_client': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake /home/kant/robot_agent_ws/src/examples/rclcpp/services/minimal_client -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client
+[0.066s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.358s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.385s] -- Found example_interfaces: 0.9.3 (/opt/ros/humble/share/example_interfaces/cmake)
+[0.449s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.456s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.469s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.491s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.516s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.604s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[0.664s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.668s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.813s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.861s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.935s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.949s] -- Looking for pthread.h
+[1.076s] -- Looking for pthread.h - found
+[1.077s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.212s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.218s] -- Found Threads: TRUE  
+[1.328s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.377s] Traceback (most recent call last):
+[1.377s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 22, in <module>
+[1.377s]     from catkin_pkg.package import parse_package_string
+[1.377s] ModuleNotFoundError: No module named 'catkin_pkg'
+[1.386s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[1.387s]   execute_process(/home/kant/miniforge3/envs/robot_env/bin/python3
+[1.387s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[1.387s]   /home/kant/robot_agent_ws/src/examples/rclcpp/services/minimal_client/package.xml
+[1.387s]   /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_client/ament_cmake_core/package.cmake)
+[1.387s]   returned error code 1
+[1.387s] Call Stack (most recent call first):
+[1.387s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[1.387s]   /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[1.388s]   CMakeLists.txt:25 (ament_lint_auto_find_test_dependencies)
+[1.388s] 
+[1.388s] [0m
+[1.388s] -- Configuring incomplete, errors occurred!
+[1.388s] See also "/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_client/CMakeFiles/CMakeOutput.log".

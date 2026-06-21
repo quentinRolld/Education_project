@@ -1,0 +1,345 @@
+[0.000000] (-) TimerEvent: {}
+[0.001280] (examples_rclcpp_async_client) JobQueued: {'identifier': 'examples_rclcpp_async_client', 'dependencies': OrderedDict()}
+[0.001994] (examples_rclcpp_cbg_executor) JobQueued: {'identifier': 'examples_rclcpp_cbg_executor', 'dependencies': OrderedDict()}
+[0.002221] (examples_rclcpp_minimal_action_client) JobQueued: {'identifier': 'examples_rclcpp_minimal_action_client', 'dependencies': OrderedDict()}
+[0.002473] (examples_rclcpp_minimal_action_server) JobQueued: {'identifier': 'examples_rclcpp_minimal_action_server', 'dependencies': OrderedDict()}
+[0.002556] (examples_rclcpp_minimal_client) JobQueued: {'identifier': 'examples_rclcpp_minimal_client', 'dependencies': OrderedDict()}
+[0.002622] (examples_rclcpp_minimal_composition) JobQueued: {'identifier': 'examples_rclcpp_minimal_composition', 'dependencies': OrderedDict()}
+[0.002684] (examples_rclcpp_minimal_publisher) JobQueued: {'identifier': 'examples_rclcpp_minimal_publisher', 'dependencies': OrderedDict()}
+[0.002743] (examples_rclcpp_minimal_service) JobQueued: {'identifier': 'examples_rclcpp_minimal_service', 'dependencies': OrderedDict()}
+[0.002800] (examples_rclcpp_minimal_subscriber) JobQueued: {'identifier': 'examples_rclcpp_minimal_subscriber', 'dependencies': OrderedDict()}
+[0.002859] (examples_rclcpp_minimal_timer) JobQueued: {'identifier': 'examples_rclcpp_minimal_timer', 'dependencies': OrderedDict()}
+[0.002910] (examples_rclcpp_multithreaded_executor) JobQueued: {'identifier': 'examples_rclcpp_multithreaded_executor', 'dependencies': OrderedDict()}
+[0.002970] (examples_rclcpp_wait_set) JobQueued: {'identifier': 'examples_rclcpp_wait_set', 'dependencies': OrderedDict()}
+[0.003020] (examples_rclpy_executors) JobQueued: {'identifier': 'examples_rclpy_executors', 'dependencies': OrderedDict()}
+[0.003067] (examples_rclpy_guard_conditions) JobQueued: {'identifier': 'examples_rclpy_guard_conditions', 'dependencies': OrderedDict()}
+[0.003200] (examples_rclpy_minimal_action_client) JobQueued: {'identifier': 'examples_rclpy_minimal_action_client', 'dependencies': OrderedDict()}
+[0.003263] (examples_rclpy_minimal_action_server) JobQueued: {'identifier': 'examples_rclpy_minimal_action_server', 'dependencies': OrderedDict()}
+[0.003296] (examples_rclpy_minimal_client) JobQueued: {'identifier': 'examples_rclpy_minimal_client', 'dependencies': OrderedDict()}
+[0.003356] (examples_rclpy_minimal_publisher) JobQueued: {'identifier': 'examples_rclpy_minimal_publisher', 'dependencies': OrderedDict()}
+[0.003393] (examples_rclpy_minimal_service) JobQueued: {'identifier': 'examples_rclpy_minimal_service', 'dependencies': OrderedDict()}
+[0.003435] (examples_rclpy_minimal_subscriber) JobQueued: {'identifier': 'examples_rclpy_minimal_subscriber', 'dependencies': OrderedDict()}
+[0.003556] (examples_rclpy_pointcloud_publisher) JobQueued: {'identifier': 'examples_rclpy_pointcloud_publisher', 'dependencies': OrderedDict()}
+[0.003661] (launch_testing_examples) JobQueued: {'identifier': 'launch_testing_examples', 'dependencies': OrderedDict()}
+[0.003714] (examples_rclcpp_async_client) JobStarted: {'identifier': 'examples_rclcpp_async_client'}
+[0.011298] (examples_rclcpp_cbg_executor) JobStarted: {'identifier': 'examples_rclcpp_cbg_executor'}
+[0.015529] (examples_rclcpp_minimal_action_client) JobStarted: {'identifier': 'examples_rclcpp_minimal_action_client'}
+[0.019759] (examples_rclcpp_minimal_action_server) JobStarted: {'identifier': 'examples_rclcpp_minimal_action_server'}
+[0.023797] (examples_rclcpp_minimal_client) JobStarted: {'identifier': 'examples_rclcpp_minimal_client'}
+[0.028040] (examples_rclcpp_minimal_composition) JobStarted: {'identifier': 'examples_rclcpp_minimal_composition'}
+[0.035208] (examples_rclcpp_async_client) JobProgress: {'identifier': 'examples_rclcpp_async_client', 'progress': 'cmake'}
+[0.036102] (examples_rclcpp_async_client) Command: {'cmd': ['/usr/bin/cmake', '/home/kant/robot_agent_ws/src/examples/rclcpp/services/async_client', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/kant/robot_agent_ws/install/examples_rclcpp_async_client'], 'cwd': '/home/kant/robot_agent_ws/build/examples_rclcpp_async_client', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(robot_env)'), ('USER', 'kant'), ('SSH_CLIENT', '192.168.1.34 51770 22'), ('LC_TIME', 'fr_FR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('ROS_APT_SOURCE_VERSION', '1.1.0'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/kant'), ('CONDA_SHLVL', '2'), ('OLDPWD', '/home/kant/robot_agent_ws/src'), ('SSH_TTY', '/dev/pts/1'), ('JETSON_L4T', '36.4.7'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'kant'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1422625002175'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/kant/miniforge3/envs/robot_env/bin:/home/kant/miniforge3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('CONDA_PREFIX_1', '/home/kant/miniforge3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/kant/miniforge3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'robot_env'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/kant/robot_agent_ws/build/examples_rclcpp_async_client'), ('CONDA_EXE', '/home/kant/miniforge3/bin/conda'), ('SSH_CONNECTION', '192.168.1.34 51770 192.168.1.175 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/kant/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('CONDA_PREFIX', '/home/kant/miniforge3/envs/robot_env'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', ''), ('JETSON_P_NUMBER', 'p3767-0005'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.042316] (examples_rclcpp_cbg_executor) JobProgress: {'identifier': 'examples_rclcpp_cbg_executor', 'progress': 'cmake'}
+[0.043052] (examples_rclcpp_cbg_executor) Command: {'cmd': ['/usr/bin/cmake', '/home/kant/robot_agent_ws/src/examples/rclcpp/executors/cbg_executor', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/kant/robot_agent_ws/install/examples_rclcpp_cbg_executor'], 'cwd': '/home/kant/robot_agent_ws/build/examples_rclcpp_cbg_executor', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(robot_env)'), ('USER', 'kant'), ('SSH_CLIENT', '192.168.1.34 51770 22'), ('LC_TIME', 'fr_FR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('ROS_APT_SOURCE_VERSION', '1.1.0'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/kant'), ('CONDA_SHLVL', '2'), ('OLDPWD', '/home/kant/robot_agent_ws/src'), ('SSH_TTY', '/dev/pts/1'), ('JETSON_L4T', '36.4.7'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'kant'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1422625002175'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/kant/miniforge3/envs/robot_env/bin:/home/kant/miniforge3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('CONDA_PREFIX_1', '/home/kant/miniforge3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/kant/miniforge3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'robot_env'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/kant/robot_agent_ws/build/examples_rclcpp_cbg_executor'), ('CONDA_EXE', '/home/kant/miniforge3/bin/conda'), ('SSH_CONNECTION', '192.168.1.34 51770 192.168.1.175 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/kant/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('CONDA_PREFIX', '/home/kant/miniforge3/envs/robot_env'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', ''), ('JETSON_P_NUMBER', 'p3767-0005'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.045613] (examples_rclcpp_minimal_action_client) JobProgress: {'identifier': 'examples_rclcpp_minimal_action_client', 'progress': 'cmake'}
+[0.045934] (examples_rclcpp_minimal_action_client) Command: {'cmd': ['/usr/bin/cmake', '/home/kant/robot_agent_ws/src/examples/rclcpp/actions/minimal_action_client', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_action_client'], 'cwd': '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_action_client', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(robot_env)'), ('USER', 'kant'), ('SSH_CLIENT', '192.168.1.34 51770 22'), ('LC_TIME', 'fr_FR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('ROS_APT_SOURCE_VERSION', '1.1.0'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/kant'), ('CONDA_SHLVL', '2'), ('OLDPWD', '/home/kant/robot_agent_ws/src'), ('SSH_TTY', '/dev/pts/1'), ('JETSON_L4T', '36.4.7'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'kant'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1422625002175'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/kant/miniforge3/envs/robot_env/bin:/home/kant/miniforge3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('CONDA_PREFIX_1', '/home/kant/miniforge3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/kant/miniforge3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'robot_env'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_action_client'), ('CONDA_EXE', '/home/kant/miniforge3/bin/conda'), ('SSH_CONNECTION', '192.168.1.34 51770 192.168.1.175 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/kant/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('CONDA_PREFIX', '/home/kant/miniforge3/envs/robot_env'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', ''), ('JETSON_P_NUMBER', 'p3767-0005'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.048478] (examples_rclcpp_minimal_action_server) JobProgress: {'identifier': 'examples_rclcpp_minimal_action_server', 'progress': 'cmake'}
+[0.048707] (examples_rclcpp_minimal_action_server) Command: {'cmd': ['/usr/bin/cmake', '/home/kant/robot_agent_ws/src/examples/rclcpp/actions/minimal_action_server', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_action_server'], 'cwd': '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_action_server', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(robot_env)'), ('USER', 'kant'), ('SSH_CLIENT', '192.168.1.34 51770 22'), ('LC_TIME', 'fr_FR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('ROS_APT_SOURCE_VERSION', '1.1.0'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/kant'), ('CONDA_SHLVL', '2'), ('OLDPWD', '/home/kant/robot_agent_ws/src'), ('SSH_TTY', '/dev/pts/1'), ('JETSON_L4T', '36.4.7'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'kant'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1422625002175'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/kant/miniforge3/envs/robot_env/bin:/home/kant/miniforge3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('CONDA_PREFIX_1', '/home/kant/miniforge3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/kant/miniforge3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'robot_env'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_action_server'), ('CONDA_EXE', '/home/kant/miniforge3/bin/conda'), ('SSH_CONNECTION', '192.168.1.34 51770 192.168.1.175 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/kant/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('CONDA_PREFIX', '/home/kant/miniforge3/envs/robot_env'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', ''), ('JETSON_P_NUMBER', 'p3767-0005'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.051547] (examples_rclcpp_minimal_client) JobProgress: {'identifier': 'examples_rclcpp_minimal_client', 'progress': 'cmake'}
+[0.051878] (examples_rclcpp_minimal_client) Command: {'cmd': ['/usr/bin/cmake', '/home/kant/robot_agent_ws/src/examples/rclcpp/services/minimal_client', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client'], 'cwd': '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_client', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(robot_env)'), ('USER', 'kant'), ('SSH_CLIENT', '192.168.1.34 51770 22'), ('LC_TIME', 'fr_FR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('ROS_APT_SOURCE_VERSION', '1.1.0'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/kant'), ('CONDA_SHLVL', '2'), ('OLDPWD', '/home/kant/robot_agent_ws/src'), ('SSH_TTY', '/dev/pts/1'), ('JETSON_L4T', '36.4.7'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'kant'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1422625002175'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/kant/miniforge3/envs/robot_env/bin:/home/kant/miniforge3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('CONDA_PREFIX_1', '/home/kant/miniforge3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/kant/miniforge3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'robot_env'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_client'), ('CONDA_EXE', '/home/kant/miniforge3/bin/conda'), ('SSH_CONNECTION', '192.168.1.34 51770 192.168.1.175 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/kant/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('CONDA_PREFIX', '/home/kant/miniforge3/envs/robot_env'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', ''), ('JETSON_P_NUMBER', 'p3767-0005'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.060350] (examples_rclcpp_minimal_composition) JobProgress: {'identifier': 'examples_rclcpp_minimal_composition', 'progress': 'cmake'}
+[0.061189] (examples_rclcpp_minimal_composition) Command: {'cmd': ['/usr/bin/cmake', '/home/kant/robot_agent_ws/src/examples/rclcpp/composition/minimal_composition', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_composition'], 'cwd': '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_composition', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(robot_env)'), ('USER', 'kant'), ('SSH_CLIENT', '192.168.1.34 51770 22'), ('LC_TIME', 'fr_FR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('ROS_APT_SOURCE_VERSION', '1.1.0'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/kant'), ('CONDA_SHLVL', '2'), ('OLDPWD', '/home/kant/robot_agent_ws/src'), ('SSH_TTY', '/dev/pts/1'), ('JETSON_L4T', '36.4.7'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'kant'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1422625002175'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/kant/miniforge3/envs/robot_env/bin:/home/kant/miniforge3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('CONDA_PREFIX_1', '/home/kant/miniforge3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/kant/miniforge3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'robot_env'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_composition'), ('CONDA_EXE', '/home/kant/miniforge3/bin/conda'), ('SSH_CONNECTION', '192.168.1.34 51770 192.168.1.175 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/kant/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('CONDA_PREFIX', '/home/kant/miniforge3/envs/robot_env'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', ''), ('JETSON_P_NUMBER', 'p3767-0005'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.100812] (-) TimerEvent: {}
+[0.202024] (-) TimerEvent: {}
+[0.304204] (-) TimerEvent: {}
+[0.406213] (-) TimerEvent: {}
+[0.507778] (-) TimerEvent: {}
+[0.610480] (-) TimerEvent: {}
+[0.676391] (examples_rclcpp_minimal_action_server) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.676933] (examples_rclcpp_async_client) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.677165] (examples_rclcpp_minimal_action_client) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.677368] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.678755] (examples_rclcpp_minimal_client) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.710551] (-) TimerEvent: {}
+[0.812470] (-) TimerEvent: {}
+[0.914831] (-) TimerEvent: {}
+[1.016662] (-) TimerEvent: {}
+[1.118997] (-) TimerEvent: {}
+[1.127657] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.128278] (examples_rclcpp_async_client) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.131501] (examples_rclcpp_minimal_action_client) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.132072] (examples_rclcpp_minimal_client) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.136374] (examples_rclcpp_minimal_action_server) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.158736] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.160323] (examples_rclcpp_minimal_action_client) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.161141] (examples_rclcpp_minimal_client) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.161337] (examples_rclcpp_minimal_action_server) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.164278] (examples_rclcpp_async_client) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.219222] (-) TimerEvent: {}
+[1.297749] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.302257] (examples_rclcpp_minimal_action_client) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.309873] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.311278] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.312140] (examples_rclcpp_async_client) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.313790] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.315590] (examples_rclcpp_minimal_action_server) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.318610] (examples_rclcpp_minimal_client) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.319306] (-) TimerEvent: {}
+[1.327302] (examples_rclcpp_minimal_action_client) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.328233] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.328986] (examples_rclcpp_minimal_action_client) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.331273] (examples_rclcpp_minimal_action_client) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.331864] (examples_rclcpp_async_client) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.333243] (examples_rclcpp_async_client) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.334482] (examples_rclcpp_async_client) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.340217] (examples_rclcpp_minimal_client) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.340934] (examples_rclcpp_minimal_client) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.342057] (examples_rclcpp_minimal_action_server) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.343376] (examples_rclcpp_minimal_action_server) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.343963] (examples_rclcpp_minimal_client) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.344536] (examples_rclcpp_async_client) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.344842] (examples_rclcpp_minimal_action_client) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.345495] (examples_rclcpp_minimal_action_server) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.354286] (examples_rclcpp_minimal_client) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.357851] (examples_rclcpp_minimal_action_server) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.419534] (-) TimerEvent: {}
+[1.486838] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.491918] (examples_rclcpp_async_client) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.498812] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.499458] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.500428] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.504949] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.507537] (examples_rclcpp_async_client) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.508764] (examples_rclcpp_async_client) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.510449] (examples_rclcpp_async_client) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.511827] (examples_rclcpp_minimal_action_server) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.514990] (examples_rclcpp_async_client) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.515318] (examples_rclcpp_minimal_action_client) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.518694] (examples_rclcpp_minimal_client) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.519699] (-) TimerEvent: {}
+[1.524513] (examples_rclcpp_minimal_action_server) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.526319] (examples_rclcpp_minimal_action_server) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.529197] (examples_rclcpp_minimal_action_server) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.535252] (examples_rclcpp_minimal_action_server) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.535908] (examples_rclcpp_minimal_action_client) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.536968] (examples_rclcpp_minimal_action_client) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.540210] (examples_rclcpp_minimal_action_client) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.542553] (examples_rclcpp_minimal_client) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.544125] (examples_rclcpp_minimal_client) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.545883] (examples_rclcpp_minimal_client) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.549904] (examples_rclcpp_minimal_action_client) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.551375] (examples_rclcpp_minimal_client) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.620899] (-) TimerEvent: {}
+[1.721763] (-) TimerEvent: {}
+[1.823021] (-) TimerEvent: {}
+[1.924283] (-) TimerEvent: {}
+[2.025447] (-) TimerEvent: {}
+[2.126364] (-) TimerEvent: {}
+[2.227262] (-) TimerEvent: {}
+[2.329102] (-) TimerEvent: {}
+[2.430536] (-) TimerEvent: {}
+[2.531836] (-) TimerEvent: {}
+[2.632658] (-) TimerEvent: {}
+[2.733460] (-) TimerEvent: {}
+[2.834267] (-) TimerEvent: {}
+[2.909323] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Found Python3: /home/kant/miniforge3/envs/robot_env/bin/python3 (found version "3.10.18") found components: Interpreter \n'}
+[2.916400] (examples_rclcpp_async_client) StdoutLine: {'line': b'-- Found Python3: /home/kant/miniforge3/envs/robot_env/bin/python3 (found version "3.10.18") found components: Interpreter \n'}
+[2.934506] (-) TimerEvent: {}
+[2.948219] (examples_rclcpp_minimal_action_client) StdoutLine: {'line': b'-- Found Python3: /home/kant/miniforge3/envs/robot_env/bin/python3 (found version "3.10.18") found components: Interpreter \n'}
+[2.955419] (examples_rclcpp_minimal_client) StdoutLine: {'line': b'-- Found Python3: /home/kant/miniforge3/envs/robot_env/bin/python3 (found version "3.10.18") found components: Interpreter \n'}
+[2.966380] (examples_rclcpp_minimal_action_server) StdoutLine: {'line': b'-- Found Python3: /home/kant/miniforge3/envs/robot_env/bin/python3 (found version "3.10.18") found components: Interpreter \n'}
+[3.034710] (-) TimerEvent: {}
+[3.082133] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[3.082650] (examples_rclcpp_async_client) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[3.132064] (examples_rclcpp_minimal_client) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[3.134911] (-) TimerEvent: {}
+[3.138501] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[3.139758] (examples_rclcpp_minimal_action_client) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[3.142634] (examples_rclcpp_minimal_action_server) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[3.164224] (examples_rclcpp_async_client) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:14 (find_package):\n'}
+[3.165081] (examples_rclcpp_async_client) StderrLine: {'line': b'  By not providing "Findexample_interfaces.cmake" in CMAKE_MODULE_PATH this\n'}
+[3.165292] (examples_rclcpp_async_client) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[3.165455] (examples_rclcpp_async_client) StderrLine: {'line': b'  "example_interfaces", but CMake did not find one.\n'}
+[3.165607] (examples_rclcpp_async_client) StderrLine: {'line': b'\n'}
+[3.165749] (examples_rclcpp_async_client) StderrLine: {'line': b'  Could not find a package configuration file provided by\n'}
+[3.165890] (examples_rclcpp_async_client) StderrLine: {'line': b'  "example_interfaces" with any of the following names:\n'}
+[3.166021] (examples_rclcpp_async_client) StderrLine: {'line': b'\n'}
+[3.166146] (examples_rclcpp_async_client) StderrLine: {'line': b'    example_interfacesConfig.cmake\n'}
+[3.166276] (examples_rclcpp_async_client) StderrLine: {'line': b'    example_interfaces-config.cmake\n'}
+[3.166403] (examples_rclcpp_async_client) StderrLine: {'line': b'\n'}
+[3.166529] (examples_rclcpp_async_client) StderrLine: {'line': b'  Add the installation prefix of "example_interfaces" to CMAKE_PREFIX_PATH or\n'}
+[3.166657] (examples_rclcpp_async_client) StderrLine: {'line': b'  set "example_interfaces_DIR" to a directory containing one of the above\n'}
+[3.166784] (examples_rclcpp_async_client) StderrLine: {'line': b'  files.  If "example_interfaces" provides a separate development package or\n'}
+[3.166905] (examples_rclcpp_async_client) StderrLine: {'line': b'  SDK, be sure it has been installed.\n'}
+[3.167026] (examples_rclcpp_async_client) StderrLine: {'line': b'\n'}
+[3.167149] (examples_rclcpp_async_client) StderrLine: {'line': b'\x1b[0m\n'}
+[3.167273] (examples_rclcpp_async_client) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[3.167444] (examples_rclcpp_async_client) StdoutLine: {'line': b'See also "/home/kant/robot_agent_ws/build/examples_rclcpp_async_client/CMakeFiles/CMakeOutput.log".\n'}
+[3.180000] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[3.180428] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[3.180572] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.180701] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[3.180824] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[3.180940] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[3.181049] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[3.181158] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[3.181261] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[3.181361] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[3.181463] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[3.181563] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[3.181663] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[3.181782] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Found Python3: /home/kant/miniforge3/envs/robot_env/bin/python3 (found version "3.10.18") found components: Interpreter \n'}
+[3.181886] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[3.181990] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[3.184977] (examples_rclcpp_async_client) CommandEnded: {'returncode': 1}
+[3.188118] (examples_rclcpp_minimal_action_client) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:14 (find_package):\n'}
+[3.188541] (examples_rclcpp_minimal_action_client) StderrLine: {'line': b'  By not providing "Findexample_interfaces.cmake" in CMAKE_MODULE_PATH this\n'}
+[3.188828] (examples_rclcpp_minimal_action_client) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[3.188972] (examples_rclcpp_minimal_action_client) StderrLine: {'line': b'  "example_interfaces", but CMake did not find one.\n'}
+[3.189096] (examples_rclcpp_minimal_action_client) StderrLine: {'line': b'\n'}
+[3.189211] (examples_rclcpp_minimal_action_client) StderrLine: {'line': b'  Could not find a package configuration file provided by\n'}
+[3.189324] (examples_rclcpp_minimal_action_client) StderrLine: {'line': b'  "example_interfaces" with any of the following names:\n'}
+[3.189433] (examples_rclcpp_minimal_action_client) StderrLine: {'line': b'\n'}
+[3.189540] (examples_rclcpp_minimal_action_client) StderrLine: {'line': b'    example_interfacesConfig.cmake\n'}
+[3.189645] (examples_rclcpp_minimal_action_client) StderrLine: {'line': b'    example_interfaces-config.cmake\n'}
+[3.189753] (examples_rclcpp_minimal_action_client) StderrLine: {'line': b'\n'}
+[3.189859] (examples_rclcpp_minimal_action_client) StderrLine: {'line': b'  Add the installation prefix of "example_interfaces" to CMAKE_PREFIX_PATH or\n'}
+[3.189965] (examples_rclcpp_minimal_action_client) StderrLine: {'line': b'  set "example_interfaces_DIR" to a directory containing one of the above\n'}
+[3.190071] (examples_rclcpp_minimal_action_client) StderrLine: {'line': b'  files.  If "example_interfaces" provides a separate development package or\n'}
+[3.190175] (examples_rclcpp_minimal_action_client) StderrLine: {'line': b'  SDK, be sure it has been installed.\n'}
+[3.190276] (examples_rclcpp_minimal_action_client) StderrLine: {'line': b'\n'}
+[3.190379] (examples_rclcpp_minimal_action_client) StderrLine: {'line': b'\x1b[0m\n'}
+[3.190483] (examples_rclcpp_minimal_client) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:14 (find_package):\n'}
+[3.190657] (examples_rclcpp_minimal_client) StderrLine: {'line': b'  By not providing "Findexample_interfaces.cmake" in CMAKE_MODULE_PATH this\n'}
+[3.190773] (examples_rclcpp_minimal_client) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[3.190880] (examples_rclcpp_minimal_client) StderrLine: {'line': b'  "example_interfaces", but CMake did not find one.\n'}
+[3.190985] (examples_rclcpp_minimal_client) StderrLine: {'line': b'\n'}
+[3.191092] (examples_rclcpp_minimal_client) StderrLine: {'line': b'  Could not find a package configuration file provided by\n'}
+[3.191200] (examples_rclcpp_minimal_client) StderrLine: {'line': b'  "example_interfaces" with any of the following names:\n'}
+[3.191306] (examples_rclcpp_minimal_client) StderrLine: {'line': b'\n'}
+[3.191416] (examples_rclcpp_minimal_client) StderrLine: {'line': b'    example_interfacesConfig.cmake\n'}
+[3.191532] (examples_rclcpp_minimal_client) StderrLine: {'line': b'    example_interfaces-config.cmake\n'}
+[3.191788] (examples_rclcpp_minimal_client) StderrLine: {'line': b'\n'}
+[3.191914] (examples_rclcpp_minimal_client) StderrLine: {'line': b'  Add the installation prefix of "example_interfaces" to CMAKE_PREFIX_PATH or\n'}
+[3.192055] (examples_rclcpp_minimal_client) StderrLine: {'line': b'  set "example_interfaces_DIR" to a directory containing one of the above\n'}
+[3.192156] (examples_rclcpp_minimal_client) StderrLine: {'line': b'  files.  If "example_interfaces" provides a separate development package or\n'}
+[3.192255] (examples_rclcpp_minimal_client) StderrLine: {'line': b'  SDK, be sure it has been installed.\n'}
+[3.192352] (examples_rclcpp_minimal_client) StderrLine: {'line': b'\n'}
+[3.192448] (examples_rclcpp_minimal_client) StderrLine: {'line': b'\x1b[0m\n'}
+[3.192547] (examples_rclcpp_minimal_client) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[3.192677] (examples_rclcpp_minimal_client) StdoutLine: {'line': b'See also "/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_client/CMakeFiles/CMakeOutput.log".\n'}
+[3.192787] (examples_rclcpp_minimal_action_client) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[3.192909] (examples_rclcpp_minimal_action_client) StdoutLine: {'line': b'See also "/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_action_client/CMakeFiles/CMakeOutput.log".\n'}
+[3.197284] (examples_rclcpp_minimal_action_server) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:14 (find_package):\n'}
+[3.197743] (examples_rclcpp_minimal_action_server) StderrLine: {'line': b'  By not providing "Findexample_interfaces.cmake" in CMAKE_MODULE_PATH this\n'}
+[3.198222] (examples_rclcpp_minimal_action_server) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[3.198385] (examples_rclcpp_minimal_action_server) StderrLine: {'line': b'  "example_interfaces", but CMake did not find one.\n'}
+[3.198522] (examples_rclcpp_minimal_action_server) StderrLine: {'line': b'\n'}
+[3.198647] (examples_rclcpp_minimal_action_server) StderrLine: {'line': b'  Could not find a package configuration file provided by\n'}
+[3.198773] (examples_rclcpp_minimal_action_server) StderrLine: {'line': b'  "example_interfaces" with any of the following names:\n'}
+[3.198895] (examples_rclcpp_minimal_action_server) StderrLine: {'line': b'\n'}
+[3.199011] (examples_rclcpp_minimal_action_server) StderrLine: {'line': b'    example_interfacesConfig.cmake\n'}
+[3.199126] (examples_rclcpp_minimal_action_server) StderrLine: {'line': b'    example_interfaces-config.cmake\n'}
+[3.199248] (examples_rclcpp_minimal_action_server) StderrLine: {'line': b'\n'}
+[3.199870] (examples_rclcpp_minimal_action_server) StderrLine: {'line': b'  Add the installation prefix of "example_interfaces" to CMAKE_PREFIX_PATH or\n'}
+[3.202935] (examples_rclcpp_minimal_action_server) StderrLine: {'line': b'  set "example_interfaces_DIR" to a directory containing one of the above\n'}
+[3.203800] (examples_rclcpp_minimal_action_server) StderrLine: {'line': b'  files.  If "example_interfaces" provides a separate development package or\n'}
+[3.205019] (examples_rclcpp_minimal_action_server) StderrLine: {'line': b'  SDK, be sure it has been installed.\n'}
+[3.205184] (examples_rclcpp_minimal_action_server) StderrLine: {'line': b'\n'}
+[3.205314] (examples_rclcpp_minimal_action_server) StderrLine: {'line': b'\x1b[0m\n'}
+[3.205517] (examples_rclcpp_minimal_action_server) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[3.205816] (examples_rclcpp_minimal_action_server) StdoutLine: {'line': b'See also "/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_action_server/CMakeFiles/CMakeOutput.log".\n'}
+[3.205972] (examples_rclcpp_minimal_client) CommandEnded: {'returncode': 1}
+[3.207874] (examples_rclcpp_minimal_action_client) CommandEnded: {'returncode': 1}
+[3.218959] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[3.225051] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[3.226282] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[3.229830] (examples_rclcpp_async_client) JobEnded: {'identifier': 'examples_rclcpp_async_client', 'rc': 1}
+[3.232113] (examples_rclcpp_minimal_action_server) JobEnded: {'identifier': 'examples_rclcpp_minimal_action_server', 'rc': 'SIGINT'}
+[3.232598] (examples_rclcpp_minimal_client) JobEnded: {'identifier': 'examples_rclcpp_minimal_client', 'rc': 'SIGINT'}
+[3.233016] (examples_rclcpp_minimal_action_client) JobEnded: {'identifier': 'examples_rclcpp_minimal_action_client', 'rc': 'SIGINT'}
+[3.233407] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[3.234959] (-) TimerEvent: {}
+[3.237057] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[3.243480] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[3.254825] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.260985] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.278556] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.283938] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.335100] (-) TimerEvent: {}
+[3.340083] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[3.343251] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[3.344437] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[3.347670] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[3.435330] (-) TimerEvent: {}
+[3.473487] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[3.476645] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[3.521446] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[3.522073] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[3.535399] (-) TimerEvent: {}
+[3.576640] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.577398] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.594193] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[3.594577] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[3.635574] (-) TimerEvent: {}
+[3.736327] (-) TimerEvent: {}
+[3.757623] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[3.758265] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[3.758661] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[3.758958] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[3.836620] (-) TimerEvent: {}
+[3.937759] (-) TimerEvent: {}
+[3.940192] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[3.941680] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[3.944048] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[3.945858] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[4.037903] (-) TimerEvent: {}
+[4.069434] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Found rclcpp_components: 16.0.15 (/opt/ros/humble/share/rclcpp_components/cmake)\n'}
+[4.070632] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[4.114045] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[4.121084] (examples_rclcpp_cbg_executor) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[4.121553] (examples_rclcpp_cbg_executor) StderrLine: {'line': b'  File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 22, in <module>\n'}
+[4.121720] (examples_rclcpp_cbg_executor) StderrLine: {'line': b'    from catkin_pkg.package import parse_package_string\n'}
+[4.121852] (examples_rclcpp_cbg_executor) StderrLine: {'line': b"ModuleNotFoundError: No module named 'catkin_pkg'\n"}
+[4.129233] (examples_rclcpp_cbg_executor) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):\n'}
+[4.129583] (examples_rclcpp_cbg_executor) StderrLine: {'line': b'  execute_process(/home/kant/miniforge3/envs/robot_env/bin/python3\n'}
+[4.129877] (examples_rclcpp_cbg_executor) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py\n'}
+[4.130022] (examples_rclcpp_cbg_executor) StderrLine: {'line': b'  /home/kant/robot_agent_ws/src/examples/rclcpp/executors/cbg_executor/package.xml\n'}
+[4.130146] (examples_rclcpp_cbg_executor) StderrLine: {'line': b'  /home/kant/robot_agent_ws/build/examples_rclcpp_cbg_executor/ament_cmake_core/package.cmake)\n'}
+[4.130268] (examples_rclcpp_cbg_executor) StderrLine: {'line': b'  returned error code 1\n'}
+[4.130386] (examples_rclcpp_cbg_executor) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[4.130500] (examples_rclcpp_cbg_executor) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[4.130616] (examples_rclcpp_cbg_executor) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)\n'}
+[4.130732] (examples_rclcpp_cbg_executor) StderrLine: {'line': b'  CMakeLists.txt:51 (ament_lint_auto_find_test_dependencies)\n'}
+[4.130845] (examples_rclcpp_cbg_executor) StderrLine: {'line': b'\n'}
+[4.130957] (examples_rclcpp_cbg_executor) StderrLine: {'line': b'\x1b[0m\n'}
+[4.131068] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[4.131211] (examples_rclcpp_cbg_executor) StdoutLine: {'line': b'See also "/home/kant/robot_agent_ws/build/examples_rclcpp_cbg_executor/CMakeFiles/CMakeOutput.log".\n'}
+[4.138047] (-) TimerEvent: {}
+[4.157330] (examples_rclcpp_cbg_executor) JobEnded: {'identifier': 'examples_rclcpp_cbg_executor', 'rc': 'SIGINT'}
+[4.162380] (examples_rclcpp_minimal_composition) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[4.162852] (examples_rclcpp_minimal_composition) StderrLine: {'line': b'  File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 22, in <module>\n'}
+[4.163006] (examples_rclcpp_minimal_composition) StderrLine: {'line': b'    from catkin_pkg.package import parse_package_string\n'}
+[4.163129] (examples_rclcpp_minimal_composition) StderrLine: {'line': b"ModuleNotFoundError: No module named 'catkin_pkg'\n"}
+[4.169207] (examples_rclcpp_minimal_composition) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):\n'}
+[4.169568] (examples_rclcpp_minimal_composition) StderrLine: {'line': b'  execute_process(/home/kant/miniforge3/envs/robot_env/bin/python3\n'}
+[4.169685] (examples_rclcpp_minimal_composition) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py\n'}
+[4.169865] (examples_rclcpp_minimal_composition) StderrLine: {'line': b'  /home/kant/robot_agent_ws/src/examples/rclcpp/composition/minimal_composition/package.xml\n'}
+[4.169974] (examples_rclcpp_minimal_composition) StderrLine: {'line': b'  /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_composition/ament_cmake_core/package.cmake)\n'}
+[4.170083] (examples_rclcpp_minimal_composition) StderrLine: {'line': b'  returned error code 1\n'}
+[4.170183] (examples_rclcpp_minimal_composition) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[4.170281] (examples_rclcpp_minimal_composition) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[4.170378] (examples_rclcpp_minimal_composition) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)\n'}
+[4.170476] (examples_rclcpp_minimal_composition) StderrLine: {'line': b'  CMakeLists.txt:62 (ament_lint_auto_find_test_dependencies)\n'}
+[4.170573] (examples_rclcpp_minimal_composition) StderrLine: {'line': b'\n'}
+[4.170671] (examples_rclcpp_minimal_composition) StderrLine: {'line': b'\x1b[0m\n'}
+[4.170807] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[4.170931] (examples_rclcpp_minimal_composition) StdoutLine: {'line': b'See also "/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_composition/CMakeFiles/CMakeOutput.log".\n'}
+[4.192177] (examples_rclcpp_minimal_composition) JobEnded: {'identifier': 'examples_rclcpp_minimal_composition', 'rc': 'SIGINT'}
+[4.204098] (examples_rclcpp_minimal_publisher) JobSkipped: {'identifier': 'examples_rclcpp_minimal_publisher'}
+[4.204393] (examples_rclcpp_minimal_service) JobSkipped: {'identifier': 'examples_rclcpp_minimal_service'}
+[4.204566] (examples_rclcpp_minimal_subscriber) JobSkipped: {'identifier': 'examples_rclcpp_minimal_subscriber'}
+[4.204749] (examples_rclcpp_minimal_timer) JobSkipped: {'identifier': 'examples_rclcpp_minimal_timer'}
+[4.204840] (examples_rclcpp_multithreaded_executor) JobSkipped: {'identifier': 'examples_rclcpp_multithreaded_executor'}
+[4.204925] (examples_rclcpp_wait_set) JobSkipped: {'identifier': 'examples_rclcpp_wait_set'}
+[4.205100] (examples_rclpy_executors) JobSkipped: {'identifier': 'examples_rclpy_executors'}
+[4.205172] (examples_rclpy_guard_conditions) JobSkipped: {'identifier': 'examples_rclpy_guard_conditions'}
+[4.205243] (examples_rclpy_minimal_action_client) JobSkipped: {'identifier': 'examples_rclpy_minimal_action_client'}
+[4.205387] (examples_rclpy_minimal_action_server) JobSkipped: {'identifier': 'examples_rclpy_minimal_action_server'}
+[4.205528] (examples_rclpy_minimal_client) JobSkipped: {'identifier': 'examples_rclpy_minimal_client'}
+[4.205663] (examples_rclpy_minimal_publisher) JobSkipped: {'identifier': 'examples_rclpy_minimal_publisher'}
+[4.205737] (examples_rclpy_minimal_service) JobSkipped: {'identifier': 'examples_rclpy_minimal_service'}
+[4.205800] (examples_rclpy_minimal_subscriber) JobSkipped: {'identifier': 'examples_rclpy_minimal_subscriber'}
+[4.205862] (examples_rclpy_pointcloud_publisher) JobSkipped: {'identifier': 'examples_rclpy_pointcloud_publisher'}
+[4.205923] (launch_testing_examples) JobSkipped: {'identifier': 'launch_testing_examples'}
+[4.205988] (-) EventReactorShutdown: {}

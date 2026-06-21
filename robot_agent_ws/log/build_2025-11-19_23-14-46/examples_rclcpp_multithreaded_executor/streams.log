@@ -1,0 +1,71 @@
+[0.025s] Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_multithreaded_executor': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake /home/kant/robot_agent_ws/src/examples/rclcpp/executors/multithreaded_executor -DCMAKE_INSTALL_PREFIX=/home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor
+[0.412s] -- The C compiler identification is GNU 11.4.0
+[0.412s] -- The CXX compiler identification is GNU 11.4.0
+[0.412s] -- Detecting C compiler ABI info
+[0.471s] -- Detecting C compiler ABI info - done
+[0.478s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.480s] -- Detecting C compile features
+[0.484s] -- Detecting C compile features - done
+[0.489s] -- Detecting CXX compiler ABI info
+[0.670s] -- Detecting CXX compiler ABI info - done
+[0.682s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.682s] -- Detecting CXX compile features
+[0.684s] -- Detecting CXX compile features - done
+[0.688s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.691s] -- Found Python3: /home/kant/miniforge3/envs/robot_env/bin/python3 (found version "3.10.18") found components: Interpreter 
+[1.914s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[1.985s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.994s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.009s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.031s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.067s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.147s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.153s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.336s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[2.385s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.458s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.471s] -- Looking for pthread.h
+[2.604s] -- Looking for pthread.h - found
+[2.605s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.737s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.739s] -- Found Threads: TRUE  
+[2.830s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.087s] -- Added test 'copyright' to check source files copyright and LICENSE
+[3.089s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.090s] -- Configured cppcheck include dirs: 
+[3.091s] -- Configured cppcheck exclude dirs and/or files: 
+[3.092s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[3.092s] -- Configured cpplint exclude dirs and/or files: 
+[3.093s] -- Added test 'lint_cmake' to check CMake code style
+[3.094s] -- Added test 'uncrustify' to check C / C++ code style
+[3.094s] -- Configured uncrustify additional arguments: 
+[3.095s] -- Added test 'xmllint' to check XML markup files
+[3.098s] -- Configuring done
+[3.118s] -- Generating done
+[3.127s] -- Build files have been written to: /home/kant/robot_agent_ws/build/examples_rclcpp_multithreaded_executor
+[3.156s] Invoked command in '/home/kant/robot_agent_ws/build/examples_rclcpp_multithreaded_executor' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake /home/kant/robot_agent_ws/src/examples/rclcpp/executors/multithreaded_executor -DCMAKE_INSTALL_PREFIX=/home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor
+[3.160s] Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_multithreaded_executor': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --build /home/kant/robot_agent_ws/build/examples_rclcpp_multithreaded_executor -- -j6 -l6
+[3.261s] [ 50%] [32mBuilding CXX object CMakeFiles/multithreaded_executor.dir/multithreaded_executor.cpp.o[0m
+[22.827s] [100%] [32m[1mLinking CXX executable multithreaded_executor[0m
+[23.701s] [100%] Built target multithreaded_executor
+[24.046s] Invoked command in '/home/kant/robot_agent_ws/build/examples_rclcpp_multithreaded_executor' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --build /home/kant/robot_agent_ws/build/examples_rclcpp_multithreaded_executor -- -j6 -l6
+[24.049s] Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_multithreaded_executor': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --install /home/kant/robot_agent_ws/build/examples_rclcpp_multithreaded_executor
+[24.067s] -- Install configuration: ""
+[24.067s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor/lib/examples_rclcpp_multithreaded_executor/multithreaded_executor
+[24.071s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor/lib/examples_rclcpp_multithreaded_executor/multithreaded_executor" to ""
+[24.071s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor/share/ament_index/resource_index/package_run_dependencies/examples_rclcpp_multithreaded_executor
+[24.071s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor/share/ament_index/resource_index/parent_prefix_path/examples_rclcpp_multithreaded_executor
+[24.072s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/environment/ament_prefix_path.sh
+[24.072s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/environment/ament_prefix_path.dsv
+[24.072s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/environment/path.sh
+[24.072s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/environment/path.dsv
+[24.073s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/local_setup.bash
+[24.073s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/local_setup.sh
+[24.073s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/local_setup.zsh
+[24.073s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/local_setup.dsv
+[24.074s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/package.dsv
+[24.074s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor/share/ament_index/resource_index/packages/examples_rclcpp_multithreaded_executor
+[24.074s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/cmake/examples_rclcpp_multithreaded_executorConfig.cmake
+[24.074s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/cmake/examples_rclcpp_multithreaded_executorConfig-version.cmake
+[24.075s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/package.xml
+[24.087s] Invoked command in '/home/kant/robot_agent_ws/build/examples_rclcpp_multithreaded_executor' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --install /home/kant/robot_agent_ws/build/examples_rclcpp_multithreaded_executor

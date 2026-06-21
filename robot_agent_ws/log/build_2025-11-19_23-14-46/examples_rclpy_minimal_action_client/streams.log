@@ -1,0 +1,49 @@
+[1.437s] Invoking command in '/home/kant/robot_agent_ws/src/examples/rclpy/actions/minimal_action_client': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../../build/examples_rclpy_minimal_action_client build --build-base /home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/build install --record /home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/install.log --single-version-externally-managed install_data
+[1.918s] running egg_info
+[1.920s] creating ../../../../../build/examples_rclpy_minimal_action_client/examples_rclpy_minimal_action_client.egg-info
+[1.920s] writing ../../../../../build/examples_rclpy_minimal_action_client/examples_rclpy_minimal_action_client.egg-info/PKG-INFO
+[1.922s] writing dependency_links to ../../../../../build/examples_rclpy_minimal_action_client/examples_rclpy_minimal_action_client.egg-info/dependency_links.txt
+[1.922s] writing entry points to ../../../../../build/examples_rclpy_minimal_action_client/examples_rclpy_minimal_action_client.egg-info/entry_points.txt
+[1.922s] writing requirements to ../../../../../build/examples_rclpy_minimal_action_client/examples_rclpy_minimal_action_client.egg-info/requires.txt
+[1.922s] writing top-level names to ../../../../../build/examples_rclpy_minimal_action_client/examples_rclpy_minimal_action_client.egg-info/top_level.txt
+[1.923s] writing manifest file '../../../../../build/examples_rclpy_minimal_action_client/examples_rclpy_minimal_action_client.egg-info/SOURCES.txt'
+[1.927s] reading manifest file '../../../../../build/examples_rclpy_minimal_action_client/examples_rclpy_minimal_action_client.egg-info/SOURCES.txt'
+[1.929s] writing manifest file '../../../../../build/examples_rclpy_minimal_action_client/examples_rclpy_minimal_action_client.egg-info/SOURCES.txt'
+[1.929s] running build
+[1.929s] running build_py
+[1.930s] creating /home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/build
+[1.930s] creating /home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/build/lib
+[1.930s] creating /home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/build/lib/examples_rclpy_minimal_action_client
+[1.930s] copying examples_rclpy_minimal_action_client/client.py -> /home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/build/lib/examples_rclpy_minimal_action_client
+[1.932s] copying examples_rclpy_minimal_action_client/__init__.py -> /home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/build/lib/examples_rclpy_minimal_action_client
+[1.932s] copying examples_rclpy_minimal_action_client/client_not_composable.py -> /home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/build/lib/examples_rclpy_minimal_action_client
+[1.933s] copying examples_rclpy_minimal_action_client/client_cancel.py -> /home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/build/lib/examples_rclpy_minimal_action_client
+[1.933s] copying examples_rclpy_minimal_action_client/client_asyncio.py -> /home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/build/lib/examples_rclpy_minimal_action_client
+[1.934s] running install
+[1.935s] running install_lib
+[1.937s] creating /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages/examples_rclpy_minimal_action_client
+[1.937s] copying /home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/build/lib/examples_rclpy_minimal_action_client/client.py -> /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages/examples_rclpy_minimal_action_client
+[1.938s] copying /home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/build/lib/examples_rclpy_minimal_action_client/__init__.py -> /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages/examples_rclpy_minimal_action_client
+[1.938s] copying /home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/build/lib/examples_rclpy_minimal_action_client/client_not_composable.py -> /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages/examples_rclpy_minimal_action_client
+[1.938s] copying /home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/build/lib/examples_rclpy_minimal_action_client/client_cancel.py -> /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages/examples_rclpy_minimal_action_client
+[1.939s] copying /home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/build/lib/examples_rclpy_minimal_action_client/client_asyncio.py -> /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages/examples_rclpy_minimal_action_client
+[1.940s] byte-compiling /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages/examples_rclpy_minimal_action_client/client.py to client.cpython-310.pyc
+[1.942s] byte-compiling /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages/examples_rclpy_minimal_action_client/__init__.py to __init__.cpython-310.pyc
+[1.942s] byte-compiling /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages/examples_rclpy_minimal_action_client/client_not_composable.py to client_not_composable.cpython-310.pyc
+[1.943s] byte-compiling /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages/examples_rclpy_minimal_action_client/client_cancel.py to client_cancel.cpython-310.pyc
+[1.944s] byte-compiling /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages/examples_rclpy_minimal_action_client/client_asyncio.py to client_asyncio.cpython-310.pyc
+[1.945s] running install_data
+[1.946s] creating /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/share/ament_index
+[1.946s] creating /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/share/ament_index/resource_index
+[1.946s] creating /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/share/ament_index/resource_index/packages
+[1.946s] copying resource/examples_rclpy_minimal_action_client -> /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/share/ament_index/resource_index/packages
+[1.947s] copying package.xml -> /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/share/examples_rclpy_minimal_action_client
+[1.948s] running install_egg_info
+[1.954s] Copying ../../../../../build/examples_rclpy_minimal_action_client/examples_rclpy_minimal_action_client.egg-info to /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages/examples_rclpy_minimal_action_client-0.15.5-py3.10.egg-info
+[1.956s] running install_scripts
+[1.996s] Installing client script to /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/lib/examples_rclpy_minimal_action_client
+[1.996s] Installing client_asyncio script to /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/lib/examples_rclpy_minimal_action_client
+[1.996s] Installing client_cancel script to /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/lib/examples_rclpy_minimal_action_client
+[1.997s] Installing client_not_composable script to /home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/lib/examples_rclpy_minimal_action_client
+[1.998s] writing list of installed files to '/home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/install.log'
+[2.261s] Invoked command in '/home/kant/robot_agent_ws/src/examples/rclpy/actions/minimal_action_client' returned '0': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../../build/examples_rclpy_minimal_action_client build --build-base /home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/build install --record /home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/install.log --single-version-externally-managed install_data

@@ -1,0 +1,52 @@
+[0.035s] Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_composition': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake /home/kant/robot_agent_ws/src/examples/rclcpp/composition/minimal_composition -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_composition
+[3.152s] -- The C compiler identification is GNU 11.4.0
+[3.152s] -- The CXX compiler identification is GNU 11.4.0
+[3.152s] -- Detecting C compiler ABI info
+[3.153s] -- Detecting C compiler ABI info - done
+[3.153s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.153s] -- Detecting C compile features
+[3.153s] -- Detecting C compile features - done
+[3.153s] -- Detecting CXX compiler ABI info
+[3.153s] -- Detecting CXX compiler ABI info - done
+[3.153s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.153s] -- Detecting CXX compile features
+[3.153s] -- Detecting CXX compile features - done
+[3.154s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[3.154s] -- Found Python3: /home/kant/miniforge3/envs/robot_env/bin/python3 (found version "3.10.18") found components: Interpreter 
+[3.154s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[3.154s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[3.198s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[3.205s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[3.215s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[3.233s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.256s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.316s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[3.320s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[3.449s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[3.494s] -- Found FastRTPS: /opt/ros/humble/include  
+[3.549s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.566s] -- Looking for pthread.h
+[3.730s] -- Looking for pthread.h - found
+[3.731s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[3.914s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[3.918s] -- Found Threads: TRUE  
+[4.041s] -- Found rclcpp_components: 16.0.15 (/opt/ros/humble/share/rclcpp_components/cmake)
+[4.086s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.134s] Traceback (most recent call last):
+[4.135s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 22, in <module>
+[4.135s]     from catkin_pkg.package import parse_package_string
+[4.135s] ModuleNotFoundError: No module named 'catkin_pkg'
+[4.141s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[4.141s]   execute_process(/home/kant/miniforge3/envs/robot_env/bin/python3
+[4.142s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[4.142s]   /home/kant/robot_agent_ws/src/examples/rclcpp/composition/minimal_composition/package.xml
+[4.142s]   /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_composition/ament_cmake_core/package.cmake)
+[4.142s]   returned error code 1
+[4.142s] Call Stack (most recent call first):
+[4.142s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[4.142s]   /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[4.142s]   CMakeLists.txt:62 (ament_lint_auto_find_test_dependencies)
+[4.142s] 
+[4.143s] [0m
+[4.143s] -- Configuring incomplete, errors occurred!
+[4.143s] See also "/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_composition/CMakeFiles/CMakeOutput.log".

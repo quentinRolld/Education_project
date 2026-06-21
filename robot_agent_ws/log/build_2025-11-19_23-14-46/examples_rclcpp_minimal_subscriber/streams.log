@@ -1,0 +1,125 @@
+[0.042s] Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_subscriber': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake /home/kant/robot_agent_ws/src/examples/rclcpp/topics/minimal_subscriber -DCMAKE_INSTALL_PREFIX=/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber
+[0.835s] -- The C compiler identification is GNU 11.4.0
+[0.835s] -- The CXX compiler identification is GNU 11.4.0
+[0.835s] -- Detecting C compiler ABI info
+[0.835s] -- Detecting C compiler ABI info - done
+[0.836s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.836s] -- Detecting C compile features
+[0.836s] -- Detecting C compile features - done
+[0.836s] -- Detecting CXX compiler ABI info
+[1.253s] -- Detecting CXX compiler ABI info - done
+[1.268s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.282s] -- Detecting CXX compile features
+[1.284s] -- Detecting CXX compile features - done
+[1.289s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.804s] -- Found Python3: /home/kant/miniforge3/envs/robot_env/bin/python3 (found version "3.10.18") found components: Interpreter 
+[3.261s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[3.411s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[3.432s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[3.460s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[3.511s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.571s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.736s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[3.751s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[4.216s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[4.317s] -- Found FastRTPS: /opt/ros/humble/include  
+[4.485s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.500s] -- Looking for pthread.h
+[4.895s] -- Looking for pthread.h - found
+[4.896s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[5.299s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[5.301s] -- Found Threads: TRUE  
+[5.417s] -- Found rclcpp_components: 16.0.15 (/opt/ros/humble/share/rclcpp_components/cmake)
+[5.505s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[5.894s] -- Added test 'copyright' to check source files copyright and LICENSE
+[5.897s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[5.899s] -- Configured cppcheck include dirs: 
+[5.899s] -- Configured cppcheck exclude dirs and/or files: 
+[5.901s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[5.901s] -- Configured cpplint exclude dirs and/or files: 
+[5.903s] -- Added test 'lint_cmake' to check CMake code style
+[5.905s] -- Added test 'uncrustify' to check C / C++ code style
+[5.905s] -- Configured uncrustify additional arguments: 
+[5.907s] -- Added test 'xmllint' to check XML markup files
+[5.912s] -- Configuring done
+[6.102s] -- Generating done
+[6.158s] -- Build files have been written to: /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_subscriber
+[6.189s] Invoked command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_subscriber' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake /home/kant/robot_agent_ws/src/examples/rclcpp/topics/minimal_subscriber -DCMAKE_INSTALL_PREFIX=/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber
+[6.206s] Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_subscriber': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --build /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_subscriber -- -j6 -l6
+[15.280s] [  4%] [32mBuilding CXX object CMakeFiles/subscriber_lambda.dir/lambda.cpp.o[0m
+[25.826s] [  8%] [32m[1mLinking CXX executable subscriber_lambda[0m
+[26.606s] [  8%] Built target subscriber_lambda
+[26.646s] [ 12%] [32mBuilding CXX object CMakeFiles/subscriber_not_composable.dir/not_composable.cpp.o[0m
+[45.261s] [ 16%] [32m[1mLinking CXX executable subscriber_not_composable[0m
+[46.085s] [ 16%] Built target subscriber_not_composable
+[46.127s] [ 20%] [32mBuilding CXX object CMakeFiles/subscriber_content_filtering.dir/content_filtering.cpp.o[0m
+[49.151s] [ 25%] [32mBuilding CXX object CMakeFiles/wait_set_subscriber_library.dir/wait_set_subscriber.cpp.o[0m
+[50.248s] [ 29%] [32mBuilding CXX object CMakeFiles/subscriber_member_function_with_unique_network_flow_endpoints.dir/member_function_with_unique_network_flow_endpoints.cpp.o[0m
+[51.319s] [ 33%] [32mBuilding CXX object CMakeFiles/subscriber_member_function_with_type_adapter.dir/member_function_with_type_adapter.cpp.o[0m
+[52.411s] [ 37%] [32mBuilding CXX object CMakeFiles/subscriber_member_function_with_topic_statistics.dir/member_function_with_topic_statistics.cpp.o[0m
+[53.507s] [ 41%] [32mBuilding CXX object CMakeFiles/subscriber_member_function.dir/member_function.cpp.o[0m
+[76.471s] [ 45%] [32m[1mLinking CXX executable subscriber_content_filtering[0m
+[78.208s] [ 45%] Built target subscriber_content_filtering
+[83.459s] [ 50%] [32m[1mLinking CXX executable subscriber_member_function_with_unique_network_flow_endpoints[0m
+[84.444s] [ 50%] Built target subscriber_member_function_with_unique_network_flow_endpoints
+[85.833s] [ 54%] [32m[1mLinking CXX executable subscriber_member_function[0m
+[85.841s] [ 58%] [32m[1mLinking CXX executable subscriber_member_function_with_topic_statistics[0m
+[86.344s] [ 62%] [32mBuilding CXX object CMakeFiles/wait_set_subscriber_library.dir/static_wait_set_subscriber.cpp.o[0m
+[86.720s] [ 62%] Built target subscriber_member_function
+[86.737s] [ 62%] Built target subscriber_member_function_with_topic_statistics
+[86.933s] [ 66%] [32m[1mLinking CXX executable subscriber_member_function_with_type_adapter[0m
+[87.871s] [ 66%] Built target subscriber_member_function_with_type_adapter
+[103.331s] [ 70%] [32mBuilding CXX object CMakeFiles/wait_set_subscriber_library.dir/time_triggered_wait_set_subscriber.cpp.o[0m
+[121.709s] [ 75%] [32m[1mLinking CXX shared library libwait_set_subscriber_library.so[0m
+[123.353s] [ 75%] Built target wait_set_subscriber_library
+[123.389s] [ 83%] [32mBuilding CXX object CMakeFiles/static_wait_set_subscriber.dir/rclcpp_components/node_main_static_wait_set_subscriber.cpp.o[0m
+[123.389s] [ 83%] [32mBuilding CXX object CMakeFiles/time_triggered_wait_set_subscriber.dir/rclcpp_components/node_main_time_triggered_wait_set_subscriber.cpp.o[0m
+[123.402s] [ 87%] [32mBuilding CXX object CMakeFiles/wait_set_subscriber.dir/rclcpp_components/node_main_wait_set_subscriber.cpp.o[0m
+[130.472s] [ 91%] [32m[1mLinking CXX executable wait_set_subscriber[0m
+[130.727s] [ 91%] Built target wait_set_subscriber
+[130.772s] [ 95%] [32m[1mLinking CXX executable static_wait_set_subscriber[0m
+[130.874s] [100%] [32m[1mLinking CXX executable time_triggered_wait_set_subscriber[0m
+[131.036s] [100%] Built target static_wait_set_subscriber
+[131.128s] [100%] Built target time_triggered_wait_set_subscriber
+[131.433s] Invoked command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_subscriber' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --build /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_subscriber -- -j6 -l6
+[131.437s] Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_subscriber': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --install /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_subscriber
+[131.450s] -- Install configuration: ""
+[131.457s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/wait_set_subscriber
+[131.459s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/wait_set_subscriber" to ""
+[131.459s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/static_wait_set_subscriber
+[131.460s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/static_wait_set_subscriber" to ""
+[131.460s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/time_triggered_wait_set_subscriber
+[131.461s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/time_triggered_wait_set_subscriber" to ""
+[131.461s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/libwait_set_subscriber_library.so
+[131.476s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/libwait_set_subscriber_library.so" to ""
+[131.476s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/subscriber_lambda
+[131.483s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/subscriber_lambda" to ""
+[131.483s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/subscriber_member_function
+[131.490s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/subscriber_member_function" to ""
+[131.491s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/subscriber_member_function_with_topic_statistics
+[131.498s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/subscriber_member_function_with_topic_statistics" to ""
+[131.498s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/subscriber_member_function_with_type_adapter
+[131.507s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/subscriber_member_function_with_type_adapter" to ""
+[131.507s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/subscriber_member_function_with_unique_network_flow_endpoints
+[131.514s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/subscriber_member_function_with_unique_network_flow_endpoints" to ""
+[131.514s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/subscriber_not_composable
+[131.521s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/subscriber_not_composable" to ""
+[131.521s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/subscriber_content_filtering
+[131.528s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/lib/examples_rclcpp_minimal_subscriber/subscriber_content_filtering" to ""
+[131.528s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/share/ament_index/resource_index/package_run_dependencies/examples_rclcpp_minimal_subscriber
+[131.529s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/share/ament_index/resource_index/parent_prefix_path/examples_rclcpp_minimal_subscriber
+[131.529s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/environment/ament_prefix_path.sh
+[131.530s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/environment/ament_prefix_path.dsv
+[131.530s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/environment/path.sh
+[131.531s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/environment/path.dsv
+[131.531s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/local_setup.bash
+[131.531s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/local_setup.sh
+[131.532s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/local_setup.zsh
+[131.532s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/local_setup.dsv
+[131.532s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/package.dsv
+[131.533s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/share/ament_index/resource_index/packages/examples_rclcpp_minimal_subscriber
+[131.533s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/share/ament_index/resource_index/rclcpp_components/examples_rclcpp_minimal_subscriber
+[131.534s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/cmake/examples_rclcpp_minimal_subscriberConfig.cmake
+[131.534s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/cmake/examples_rclcpp_minimal_subscriberConfig-version.cmake
+[131.535s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber/share/examples_rclcpp_minimal_subscriber/package.xml
+[131.541s] Invoked command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_subscriber' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --install /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_subscriber

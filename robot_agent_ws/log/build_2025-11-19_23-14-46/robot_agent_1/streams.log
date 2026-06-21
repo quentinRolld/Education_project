@@ -1,0 +1,34 @@
+[1.926s] Invoking command in '/home/kant/robot_agent_ws/src/robot_agent_1': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_agent_ws/build/robot_agent_1/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_agent_ws/install/robot_agent_1/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_agent_1 build --build-base /home/kant/robot_agent_ws/build/robot_agent_1/build install --record /home/kant/robot_agent_ws/build/robot_agent_1/install.log --single-version-externally-managed install_data
+[2.416s] running egg_info
+[2.418s] creating ../../build/robot_agent_1/robot_agent_1.egg-info
+[2.418s] writing ../../build/robot_agent_1/robot_agent_1.egg-info/PKG-INFO
+[2.419s] writing dependency_links to ../../build/robot_agent_1/robot_agent_1.egg-info/dependency_links.txt
+[2.419s] writing entry points to ../../build/robot_agent_1/robot_agent_1.egg-info/entry_points.txt
+[2.419s] writing requirements to ../../build/robot_agent_1/robot_agent_1.egg-info/requires.txt
+[2.419s] writing top-level names to ../../build/robot_agent_1/robot_agent_1.egg-info/top_level.txt
+[2.420s] writing manifest file '../../build/robot_agent_1/robot_agent_1.egg-info/SOURCES.txt'
+[2.424s] reading manifest file '../../build/robot_agent_1/robot_agent_1.egg-info/SOURCES.txt'
+[2.425s] adding license file 'LICENSE'
+[2.426s] writing manifest file '../../build/robot_agent_1/robot_agent_1.egg-info/SOURCES.txt'
+[2.426s] running build
+[2.426s] running build_py
+[2.427s] creating /home/kant/robot_agent_ws/build/robot_agent_1/build
+[2.428s] creating /home/kant/robot_agent_ws/build/robot_agent_1/build/lib
+[2.428s] creating /home/kant/robot_agent_ws/build/robot_agent_1/build/lib/robot_agent_1
+[2.428s] copying robot_agent_1/__init__.py -> /home/kant/robot_agent_ws/build/robot_agent_1/build/lib/robot_agent_1
+[2.429s] running install
+[2.429s] running install_lib
+[2.431s] creating /home/kant/robot_agent_ws/install/robot_agent_1/lib/python3.10/site-packages/robot_agent_1
+[2.431s] copying /home/kant/robot_agent_ws/build/robot_agent_1/build/lib/robot_agent_1/__init__.py -> /home/kant/robot_agent_ws/install/robot_agent_1/lib/python3.10/site-packages/robot_agent_1
+[2.432s] byte-compiling /home/kant/robot_agent_ws/install/robot_agent_1/lib/python3.10/site-packages/robot_agent_1/__init__.py to __init__.cpython-310.pyc
+[2.433s] running install_data
+[2.433s] creating /home/kant/robot_agent_ws/install/robot_agent_1/share/ament_index
+[2.433s] creating /home/kant/robot_agent_ws/install/robot_agent_1/share/ament_index/resource_index
+[2.433s] creating /home/kant/robot_agent_ws/install/robot_agent_1/share/ament_index/resource_index/packages
+[2.434s] copying resource/robot_agent_1 -> /home/kant/robot_agent_ws/install/robot_agent_1/share/ament_index/resource_index/packages
+[2.434s] copying package.xml -> /home/kant/robot_agent_ws/install/robot_agent_1/share/robot_agent_1
+[2.434s] running install_egg_info
+[2.441s] Copying ../../build/robot_agent_1/robot_agent_1.egg-info to /home/kant/robot_agent_ws/install/robot_agent_1/lib/python3.10/site-packages/robot_agent_1-0.0.0-py3.10.egg-info
+[2.442s] running install_scripts
+[2.485s] writing list of installed files to '/home/kant/robot_agent_ws/build/robot_agent_1/install.log'
+[2.570s] Invoked command in '/home/kant/robot_agent_ws/src/robot_agent_1' returned '0': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_agent_ws/build/robot_agent_1/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_agent_ws/install/robot_agent_1/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_agent_1 build --build-base /home/kant/robot_agent_ws/build/robot_agent_1/build install --record /home/kant/robot_agent_ws/build/robot_agent_1/install.log --single-version-externally-managed install_data

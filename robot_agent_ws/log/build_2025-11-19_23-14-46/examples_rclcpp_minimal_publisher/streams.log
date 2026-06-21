@@ -1,0 +1,96 @@
+[0.059s] Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_publisher': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake /home/kant/robot_agent_ws/src/examples/rclcpp/topics/minimal_publisher -DCMAKE_INSTALL_PREFIX=/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher
+[0.757s] -- The C compiler identification is GNU 11.4.0
+[1.034s] -- The CXX compiler identification is GNU 11.4.0
+[1.080s] -- Detecting C compiler ABI info
+[1.479s] -- Detecting C compiler ABI info - done
+[1.491s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.505s] -- Detecting C compile features
+[1.507s] -- Detecting C compile features - done
+[1.516s] -- Detecting CXX compiler ABI info
+[1.968s] -- Detecting CXX compiler ABI info - done
+[1.981s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.991s] -- Detecting CXX compile features
+[1.999s] -- Detecting CXX compile features - done
+[2.016s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[4.268s] -- Found Python3: /home/kant/miniforge3/envs/robot_env/bin/python3 (found version "3.10.18") found components: Interpreter 
+[4.604s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[4.753s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[4.775s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[4.793s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[4.819s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.851s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.967s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[4.971s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[5.199s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[5.260s] -- Found FastRTPS: /opt/ros/humble/include  
+[5.390s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[5.431s] -- Looking for pthread.h
+[5.777s] -- Looking for pthread.h - found
+[5.778s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[6.175s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[6.178s] -- Found Threads: TRUE  
+[6.400s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[6.975s] -- Added test 'copyright' to check source files copyright and LICENSE
+[6.993s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[6.995s] -- Configured cppcheck include dirs: 
+[6.996s] -- Configured cppcheck exclude dirs and/or files: 
+[6.998s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[6.999s] -- Configured cpplint exclude dirs and/or files: 
+[7.001s] -- Added test 'lint_cmake' to check CMake code style
+[7.003s] -- Added test 'uncrustify' to check C / C++ code style
+[7.004s] -- Configured uncrustify additional arguments: 
+[7.006s] -- Added test 'xmllint' to check XML markup files
+[7.009s] -- Configuring done
+[7.083s] -- Generating done
+[7.123s] -- Build files have been written to: /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_publisher
+[7.155s] Invoked command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_publisher' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake /home/kant/robot_agent_ws/src/examples/rclcpp/topics/minimal_publisher -DCMAKE_INSTALL_PREFIX=/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher
+[7.156s] Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_publisher': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --build /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_publisher -- -j6 -l6
+[7.765s] [  8%] [32mBuilding CXX object CMakeFiles/publisher_lambda.dir/lambda.cpp.o[0m
+[20.328s] [ 16%] [32m[1mLinking CXX executable publisher_lambda[0m
+[20.699s] [ 16%] Built target publisher_lambda
+[20.741s] [ 25%] [32mBuilding CXX object CMakeFiles/publisher_not_composable.dir/not_composable.cpp.o[0m
+[30.392s] [ 33%] [32m[1mLinking CXX executable publisher_not_composable[0m
+[30.765s] [ 33%] Built target publisher_not_composable
+[30.803s] [ 41%] [32mBuilding CXX object CMakeFiles/publisher_wait_for_all_acked.dir/member_function_with_wait_for_all_acked.cpp.o[0m
+[40.327s] [ 50%] [32m[1mLinking CXX executable publisher_wait_for_all_acked[0m
+[40.709s] [ 50%] Built target publisher_wait_for_all_acked
+[40.745s] [ 58%] [32mBuilding CXX object CMakeFiles/publisher_member_function_with_unique_network_flow_endpoints.dir/member_function_with_unique_network_flow_endpoints.cpp.o[0m
+[50.115s] [ 66%] [32m[1mLinking CXX executable publisher_member_function_with_unique_network_flow_endpoints[0m
+[50.485s] [ 66%] Built target publisher_member_function_with_unique_network_flow_endpoints
+[50.522s] [ 75%] [32mBuilding CXX object CMakeFiles/publisher_member_function_with_type_adapter.dir/member_function_with_type_adapter.cpp.o[0m
+[66.220s] [ 83%] [32m[1mLinking CXX executable publisher_member_function_with_type_adapter[0m
+[67.103s] [ 83%] Built target publisher_member_function_with_type_adapter
+[67.248s] [ 91%] [32mBuilding CXX object CMakeFiles/publisher_member_function.dir/member_function.cpp.o[0m
+[84.982s] [100%] [32m[1mLinking CXX executable publisher_member_function[0m
+[85.972s] [100%] Built target publisher_member_function
+[86.032s] Invoked command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_publisher' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --build /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_publisher -- -j6 -l6
+[86.033s] Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_publisher': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --install /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_publisher
+[86.056s] -- Install configuration: ""
+[86.057s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/lib/examples_rclcpp_minimal_publisher/publisher_lambda
+[86.059s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/lib/examples_rclcpp_minimal_publisher/publisher_lambda" to ""
+[86.060s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/lib/examples_rclcpp_minimal_publisher/publisher_member_function
+[86.073s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/lib/examples_rclcpp_minimal_publisher/publisher_member_function" to ""
+[86.073s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/lib/examples_rclcpp_minimal_publisher/publisher_member_function_with_type_adapter
+[86.075s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/lib/examples_rclcpp_minimal_publisher/publisher_member_function_with_type_adapter" to ""
+[86.076s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/lib/examples_rclcpp_minimal_publisher/publisher_member_function_with_unique_network_flow_endpoints
+[86.078s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/lib/examples_rclcpp_minimal_publisher/publisher_member_function_with_unique_network_flow_endpoints" to ""
+[86.090s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/lib/examples_rclcpp_minimal_publisher/publisher_wait_for_all_acked
+[86.094s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/lib/examples_rclcpp_minimal_publisher/publisher_wait_for_all_acked" to ""
+[86.095s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/lib/examples_rclcpp_minimal_publisher/publisher_not_composable
+[86.098s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/lib/examples_rclcpp_minimal_publisher/publisher_not_composable" to ""
+[86.098s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/share/ament_index/resource_index/package_run_dependencies/examples_rclcpp_minimal_publisher
+[86.099s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/share/ament_index/resource_index/parent_prefix_path/examples_rclcpp_minimal_publisher
+[86.100s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/environment/ament_prefix_path.sh
+[86.101s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/environment/ament_prefix_path.dsv
+[86.102s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/environment/path.sh
+[86.102s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/environment/path.dsv
+[86.103s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/local_setup.bash
+[86.104s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/local_setup.sh
+[86.104s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/local_setup.zsh
+[86.105s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/local_setup.dsv
+[86.105s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/package.dsv
+[86.119s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/share/ament_index/resource_index/packages/examples_rclcpp_minimal_publisher
+[86.120s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/cmake/examples_rclcpp_minimal_publisherConfig.cmake
+[86.120s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/cmake/examples_rclcpp_minimal_publisherConfig-version.cmake
+[86.121s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher/share/examples_rclcpp_minimal_publisher/package.xml
+[86.128s] Invoked command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_publisher' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --install /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_publisher

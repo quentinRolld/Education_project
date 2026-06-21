@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="0.742" timestamp="2025-11-19T22:44:12.729426" hostname="kant-jetson"><testcase classname="examples_rclpy_minimal_service.services.minimal_service.test.test_copyright" name="test_copyright" time="0.366" /><testcase classname="examples_rclpy_minimal_service.services.minimal_service.test.test_flake8" name="test_flake8" time="0.122"><failure message="AssertionError: Found 1 code style errors / warnings:&#10;  ./examples_rclpy_minimal_service/service.py:23:5: F824 `global g_node` is unused: name is never assigned in scope&#10;assert 1 == 0">test/test_flake8.py:23: in test_flake8
+    assert rc == 0, \
+E   AssertionError: Found 1 code style errors / warnings:
+E     ./examples_rclpy_minimal_service/service.py:23:5: F824 `global g_node` is unused: name is never assigned in scope
+E   assert 1 == 0</failure></testcase><testcase classname="examples_rclpy_minimal_service.services.minimal_service.test.test_pep257" name="test_pep257" time="0.028" /></testsuite></testsuites>

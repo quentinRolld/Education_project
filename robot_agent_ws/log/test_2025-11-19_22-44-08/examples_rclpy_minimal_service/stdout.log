@@ -1,0 +1,45 @@
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+cachedir: /home/kant/robot_agent_ws/build/examples_rclpy_minimal_service/.pytest_cache
+rootdir: /home/kant/robot_agent_ws/src/examples/rclpy, configfile: pytest.ini
+plugins: ament-lint-0.12.14, ament-pep257-0.12.14, ament-xmllint-0.12.14, launch-testing-1.0.11, launch-testing-ros-0.19.12, ament-copyright-0.12.14, ament-flake8-0.12.14, colcon-core-0.20.1, cov-3.0.0
+[1mcollecting ... [0m[1m
+collected 3 items                                                              [0m
+
+test/test_copyright.py [32m.[0m[32m                                                 [ 33%][0m
+test/test_flake8.py [31mF[0m[31m                                                    [ 66%][0m
+test/test_pep257.py [32m.[0m[31m                                                    [100%][0m
+
+=================================== FAILURES ===================================
+[31m[1m_________________________________ test_flake8 __________________________________[0m
+[1m[31mtest/test_flake8.py[0m:23: in test_flake8
+    [94massert[39;49;00m rc == [94m0[39;49;00m, \
+[1m[31mE   AssertionError: Found 1 code style errors / warnings:[0m
+[1m[31mE     ./examples_rclpy_minimal_service/service.py:23:5: F824 `global g_node` is unused: name is never assigned in scope[0m
+[1m[31mE   assert 1 == 0[0m
+----------------------------- Captured stdout call -----------------------------
+
+./examples_rclpy_minimal_service/service.py:23:5: F824 `global g_node` is unused: name is never assigned in scope
+    global g_node
+    ^
+
+1     F824 `global g_node` is unused: name is never assigned in scope
+
+7 files checked
+1 errors
+
+'F'-type errors: 1
+
+Checked files:
+
+* ./setup.py
+* ./examples_rclpy_minimal_service/service.py
+* ./examples_rclpy_minimal_service/service_member_function.py
+* ./examples_rclpy_minimal_service/__init__.py
+* ./test/test_pep257.py
+* ./test/test_copyright.py
+* ./test/test_flake8.py
+- generated xml file: /home/kant/robot_agent_ws/build/examples_rclpy_minimal_service/pytest.xml -
+=========================== short test summary info ============================
+FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 1 code style ...
+[31m========================= [31m[1m1 failed[0m, [32m2 passed[0m[31m in 0.80s[0m[31m ==========================[0m

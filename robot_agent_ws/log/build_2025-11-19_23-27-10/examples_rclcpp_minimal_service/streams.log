@@ -1,0 +1,23 @@
+[0.074s] Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_service': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --build /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_service -- -j6 -l6
+[0.190s] [35m[1mConsolidate compiler generated dependencies of target service_main[0m
+[0.241s] [100%] Built target service_main
+[0.268s] Invoked command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_service' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --build /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_service -- -j6 -l6
+[0.273s] Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_service': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --install /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_service
+[0.299s] -- Install configuration: ""
+[0.300s] -- Up-to-date: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_service/lib/examples_rclcpp_minimal_service/service_main
+[0.300s] -- Up-to-date: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_service/share/ament_index/resource_index/package_run_dependencies/examples_rclcpp_minimal_service
+[0.300s] -- Up-to-date: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_service/share/ament_index/resource_index/parent_prefix_path/examples_rclcpp_minimal_service
+[0.300s] -- Up-to-date: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/environment/ament_prefix_path.sh
+[0.300s] -- Up-to-date: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/environment/ament_prefix_path.dsv
+[0.300s] -- Up-to-date: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/environment/path.sh
+[0.300s] -- Up-to-date: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/environment/path.dsv
+[0.300s] -- Up-to-date: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/local_setup.bash
+[0.300s] -- Up-to-date: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/local_setup.sh
+[0.301s] -- Up-to-date: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/local_setup.zsh
+[0.301s] -- Up-to-date: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/local_setup.dsv
+[0.301s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/package.dsv
+[0.301s] -- Up-to-date: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_service/share/ament_index/resource_index/packages/examples_rclcpp_minimal_service
+[0.301s] -- Up-to-date: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/cmake/examples_rclcpp_minimal_serviceConfig.cmake
+[0.301s] -- Up-to-date: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/cmake/examples_rclcpp_minimal_serviceConfig-version.cmake
+[0.301s] -- Up-to-date: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/package.xml
+[0.388s] Invoked command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_service' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --install /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_service

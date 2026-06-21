@@ -1,0 +1,14 @@
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+cachedir: /home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/.pytest_cache
+rootdir: /home/kant/robot_agent_ws/src/examples/rclpy, configfile: pytest.ini
+plugins: ament-lint-0.12.14, ament-pep257-0.12.14, ament-xmllint-0.12.14, launch-testing-1.0.11, launch-testing-ros-0.19.12, ament-copyright-0.12.14, ament-flake8-0.12.14, colcon-core-0.20.1, cov-3.0.0
+[1mcollecting ... [0m[1m
+collected 3 items                                                              [0m
+
+test/test_copyright.py [32m.[0m[32m                                                 [ 33%][0m
+test/test_flake8.py [32m.[0m[32m                                                    [ 66%][0m
+test/test_pep257.py [32m.[0m[32m                                                    [100%][0m
+
+- generated xml file: /home/kant/robot_agent_ws/build/examples_rclpy_minimal_action_client/pytest.xml -
+[32m============================== [32m[1m3 passed[0m[32m in 0.89s[0m[32m ===============================[0m

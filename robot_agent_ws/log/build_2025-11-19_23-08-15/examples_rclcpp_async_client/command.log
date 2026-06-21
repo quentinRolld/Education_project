@@ -1,0 +1,1 @@
+Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_async_client': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake /home/kant/robot_agent_ws/src/examples/rclcpp/services/async_client -DCMAKE_INSTALL_PREFIX=/home/kant/robot_agent_ws/install/examples_rclcpp_async_client

@@ -1,0 +1,76 @@
+[0.070s] Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_timer': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake /home/kant/robot_agent_ws/src/examples/rclcpp/timers/minimal_timer -DCMAKE_INSTALL_PREFIX=/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer
+[2.981s] -- The C compiler identification is GNU 11.4.0
+[2.981s] -- The CXX compiler identification is GNU 11.4.0
+[2.981s] -- Detecting C compiler ABI info
+[2.981s] -- Detecting C compiler ABI info - done
+[2.981s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.981s] -- Detecting C compile features
+[2.981s] -- Detecting C compile features - done
+[2.981s] -- Detecting CXX compiler ABI info
+[2.982s] -- Detecting CXX compiler ABI info - done
+[2.982s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.982s] -- Detecting CXX compile features
+[2.982s] -- Detecting CXX compile features - done
+[2.982s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.982s] -- Found Python3: /home/kant/miniforge3/envs/robot_env/bin/python3 (found version "3.10.18") found components: Interpreter 
+[2.982s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[3.030s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[3.038s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[3.053s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[3.076s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.106s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.204s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[3.209s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[3.612s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[3.688s] -- Found FastRTPS: /opt/ros/humble/include  
+[3.845s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.873s] -- Looking for pthread.h
+[4.278s] -- Looking for pthread.h - found
+[4.279s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.679s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[4.681s] -- Found Threads: TRUE  
+[4.811s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[5.180s] -- Added test 'copyright' to check source files copyright and LICENSE
+[5.182s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[5.185s] -- Configured cppcheck include dirs: 
+[5.185s] -- Configured cppcheck exclude dirs and/or files: 
+[5.187s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[5.187s] -- Configured cpplint exclude dirs and/or files: 
+[5.189s] -- Added test 'lint_cmake' to check CMake code style
+[5.190s] -- Added test 'uncrustify' to check C / C++ code style
+[5.191s] -- Configured uncrustify additional arguments: 
+[5.192s] -- Added test 'xmllint' to check XML markup files
+[5.194s] -- Configuring done
+[5.216s] -- Generating done
+[5.227s] -- Build files have been written to: /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_timer
+[5.256s] Invoked command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_timer' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake /home/kant/robot_agent_ws/src/examples/rclcpp/timers/minimal_timer -DCMAKE_INSTALL_PREFIX=/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer
+[5.269s] Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_timer': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --build /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_timer -- -j6 -l6
+[5.442s] [ 25%] [32mBuilding CXX object CMakeFiles/timer_lambda.dir/lambda.cpp.o[0m
+[13.744s] [ 50%] [32m[1mLinking CXX executable timer_lambda[0m
+[13.997s] [ 50%] Built target timer_lambda
+[14.038s] [ 75%] [32mBuilding CXX object CMakeFiles/timer_member_function.dir/member_function.cpp.o[0m
+[21.129s] [100%] [32m[1mLinking CXX executable timer_member_function[0m
+[21.373s] [100%] Built target timer_member_function
+[21.401s] Invoked command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_timer' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --build /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_timer -- -j6 -l6
+[21.401s] Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_timer': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --install /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_timer
+[22.190s] -- Install configuration: ""
+[22.190s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer/lib/examples_rclcpp_minimal_timer/timer_lambda
+[22.191s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer/lib/examples_rclcpp_minimal_timer/timer_lambda" to ""
+[22.191s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer/lib/examples_rclcpp_minimal_timer/timer_member_function
+[22.191s] -- Set runtime path of "/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer/lib/examples_rclcpp_minimal_timer/timer_member_function" to ""
+[22.191s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer/share/ament_index/resource_index/package_run_dependencies/examples_rclcpp_minimal_timer
+[22.191s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer/share/ament_index/resource_index/parent_prefix_path/examples_rclcpp_minimal_timer
+[22.191s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer/share/examples_rclcpp_minimal_timer/environment/ament_prefix_path.sh
+[22.191s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer/share/examples_rclcpp_minimal_timer/environment/ament_prefix_path.dsv
+[22.191s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer/share/examples_rclcpp_minimal_timer/environment/path.sh
+[22.192s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer/share/examples_rclcpp_minimal_timer/environment/path.dsv
+[22.192s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer/share/examples_rclcpp_minimal_timer/local_setup.bash
+[22.192s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer/share/examples_rclcpp_minimal_timer/local_setup.sh
+[22.192s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer/share/examples_rclcpp_minimal_timer/local_setup.zsh
+[22.192s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer/share/examples_rclcpp_minimal_timer/local_setup.dsv
+[22.192s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer/share/examples_rclcpp_minimal_timer/package.dsv
+[22.192s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer/share/ament_index/resource_index/packages/examples_rclcpp_minimal_timer
+[22.192s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer/share/examples_rclcpp_minimal_timer/cmake/examples_rclcpp_minimal_timerConfig.cmake
+[22.192s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer/share/examples_rclcpp_minimal_timer/cmake/examples_rclcpp_minimal_timerConfig-version.cmake
+[22.192s] -- Installing: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer/share/examples_rclcpp_minimal_timer/package.xml
+[22.196s] Invoked command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_timer' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --install /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_timer

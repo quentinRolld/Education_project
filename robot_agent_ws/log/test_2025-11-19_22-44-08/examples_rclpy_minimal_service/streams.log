@@ -1,0 +1,47 @@
+[3.147s] Invoking command in '/home/kant/robot_agent_ws/src/examples/rclpy/services/minimal_service': CONDA_PROMPT_MODIFIER=(robot_env) PYTEST_ADDOPTS=--tb=short --junit-xml=/home/kant/robot_agent_ws/build/examples_rclpy_minimal_service/pytest.xml --junit-prefix=examples_rclpy_minimal_service -o cache_dir=/home/kant/robot_agent_ws/build/examples_rclpy_minimal_service/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest
+[3.737s] [1m============================= test session starts ==============================[0m
+[3.737s] platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+[3.746s] cachedir: /home/kant/robot_agent_ws/build/examples_rclpy_minimal_service/.pytest_cache
+[3.746s] rootdir: /home/kant/robot_agent_ws/src/examples/rclpy, configfile: pytest.ini
+[3.746s] plugins: ament-lint-0.12.14, ament-pep257-0.12.14, ament-xmllint-0.12.14, launch-testing-1.0.11, launch-testing-ros-0.19.12, ament-copyright-0.12.14, ament-flake8-0.12.14, colcon-core-0.20.1, cov-3.0.0
+[3.896s] [1mcollecting ... [0m[1m
+[3.896s] collected 3 items                                                              [0m
+[3.896s] 
+[4.271s] test/test_copyright.py [32m.[0m[32m                                                 [ 33%][0m
+[4.442s] test/test_flake8.py [31mF[0m[31m                                                    [ 66%][0m
+[4.474s] test/test_pep257.py [32m.[0m[31m                                                    [100%][0m
+[4.474s] 
+[4.474s] =================================== FAILURES ===================================
+[4.474s] [31m[1m_________________________________ test_flake8 __________________________________[0m
+[4.474s] [1m[31mtest/test_flake8.py[0m:23: in test_flake8
+[4.538s]     [94massert[39;49;00m rc == [94m0[39;49;00m, \
+[4.538s] [1m[31mE   AssertionError: Found 1 code style errors / warnings:[0m
+[4.538s] [1m[31mE     ./examples_rclpy_minimal_service/service.py:23:5: F824 `global g_node` is unused: name is never assigned in scope[0m
+[4.538s] [1m[31mE   assert 1 == 0[0m
+[4.538s] ----------------------------- Captured stdout call -----------------------------
+[4.538s] 
+[4.538s] ./examples_rclpy_minimal_service/service.py:23:5: F824 `global g_node` is unused: name is never assigned in scope
+[4.539s]     global g_node
+[4.539s]     ^
+[4.539s] 
+[4.539s] 1     F824 `global g_node` is unused: name is never assigned in scope
+[4.539s] 
+[4.539s] 7 files checked
+[4.539s] 1 errors
+[4.539s] 
+[4.539s] 'F'-type errors: 1
+[4.540s] 
+[4.540s] Checked files:
+[4.540s] 
+[4.540s] * ./setup.py
+[4.540s] * ./examples_rclpy_minimal_service/service.py
+[4.540s] * ./examples_rclpy_minimal_service/service_member_function.py
+[4.540s] * ./examples_rclpy_minimal_service/__init__.py
+[4.540s] * ./test/test_pep257.py
+[4.540s] * ./test/test_copyright.py
+[4.540s] * ./test/test_flake8.py
+[4.541s] - generated xml file: /home/kant/robot_agent_ws/build/examples_rclpy_minimal_service/pytest.xml -
+[4.541s] =========================== short test summary info ============================
+[4.541s] FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 1 code style ...
+[4.541s] [31m========================= [31m[1m1 failed[0m, [32m2 passed[0m[31m in 0.80s[0m[31m ==========================[0m
+[4.718s] Invoked command in '/home/kant/robot_agent_ws/src/examples/rclpy/services/minimal_service' returned '1': CONDA_PROMPT_MODIFIER=(robot_env) PYTEST_ADDOPTS=--tb=short --junit-xml=/home/kant/robot_agent_ws/build/examples_rclpy_minimal_service/pytest.xml --junit-prefix=examples_rclpy_minimal_service -o cache_dir=/home/kant/robot_agent_ws/build/examples_rclpy_minimal_service/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest

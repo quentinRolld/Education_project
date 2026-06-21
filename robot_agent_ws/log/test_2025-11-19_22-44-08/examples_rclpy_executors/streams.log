@@ -1,0 +1,16 @@
+[0.548s] Invoking command in '/home/kant/robot_agent_ws/src/examples/rclpy/executors': CONDA_PROMPT_MODIFIER=(robot_env) PYTEST_ADDOPTS=--tb=short --junit-xml=/home/kant/robot_agent_ws/build/examples_rclpy_executors/pytest.xml --junit-prefix=examples_rclpy_executors -o cache_dir=/home/kant/robot_agent_ws/build/examples_rclpy_executors/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest
+[2.633s] [1m============================= test session starts ==============================[0m
+[2.635s] platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+[2.636s] cachedir: /home/kant/robot_agent_ws/build/examples_rclpy_executors/.pytest_cache
+[2.637s] rootdir: /home/kant/robot_agent_ws/src/examples/rclpy, configfile: pytest.ini
+[2.637s] plugins: ament-lint-0.12.14, ament-pep257-0.12.14, ament-xmllint-0.12.14, launch-testing-1.0.11, launch-testing-ros-0.19.12, ament-copyright-0.12.14, ament-flake8-0.12.14, colcon-core-0.20.1, cov-3.0.0
+[2.637s] [1mcollecting ... [0m[1m
+[2.638s] collected 3 items                                                              [0m
+[2.639s] 
+[2.639s] test/test_copyright.py [32m.[0m[32m                                                 [ 33%][0m
+[2.639s] test/test_flake8.py [32m.[0m[32m                                                    [ 66%][0m
+[2.639s] test/test_pep257.py [32m.[0m[32m                                                    [100%][0m
+[2.639s] 
+[2.639s] - generated xml file: /home/kant/robot_agent_ws/build/examples_rclpy_executors/pytest.xml -
+[2.639s] [32m============================== [32m[1m3 passed[0m[32m in 1.02s[0m[32m ===============================[0m
+[3.184s] Invoked command in '/home/kant/robot_agent_ws/src/examples/rclpy/executors' returned '0': CONDA_PROMPT_MODIFIER=(robot_env) PYTEST_ADDOPTS=--tb=short --junit-xml=/home/kant/robot_agent_ws/build/examples_rclpy_executors/pytest.xml --junit-prefix=examples_rclpy_executors -o cache_dir=/home/kant/robot_agent_ws/build/examples_rclpy_executors/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest

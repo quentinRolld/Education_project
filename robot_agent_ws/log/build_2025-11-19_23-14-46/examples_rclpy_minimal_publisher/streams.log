@@ -1,0 +1,49 @@
+[1.554s] Invoking command in '/home/kant/robot_agent_ws/src/examples/rclpy/topics/minimal_publisher': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../../build/examples_rclpy_minimal_publisher build --build-base /home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/build install --record /home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/install.log --single-version-externally-managed install_data
+[2.098s] running egg_info
+[2.101s] creating ../../../../../build/examples_rclpy_minimal_publisher/examples_rclpy_minimal_publisher.egg-info
+[2.102s] writing ../../../../../build/examples_rclpy_minimal_publisher/examples_rclpy_minimal_publisher.egg-info/PKG-INFO
+[2.104s] writing dependency_links to ../../../../../build/examples_rclpy_minimal_publisher/examples_rclpy_minimal_publisher.egg-info/dependency_links.txt
+[2.104s] writing entry points to ../../../../../build/examples_rclpy_minimal_publisher/examples_rclpy_minimal_publisher.egg-info/entry_points.txt
+[2.105s] writing requirements to ../../../../../build/examples_rclpy_minimal_publisher/examples_rclpy_minimal_publisher.egg-info/requires.txt
+[2.106s] writing top-level names to ../../../../../build/examples_rclpy_minimal_publisher/examples_rclpy_minimal_publisher.egg-info/top_level.txt
+[2.107s] writing manifest file '../../../../../build/examples_rclpy_minimal_publisher/examples_rclpy_minimal_publisher.egg-info/SOURCES.txt'
+[2.113s] reading manifest file '../../../../../build/examples_rclpy_minimal_publisher/examples_rclpy_minimal_publisher.egg-info/SOURCES.txt'
+[2.115s] writing manifest file '../../../../../build/examples_rclpy_minimal_publisher/examples_rclpy_minimal_publisher.egg-info/SOURCES.txt'
+[2.116s] running build
+[2.116s] running build_py
+[2.117s] creating /home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/build
+[2.118s] creating /home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/build/lib
+[2.119s] creating /home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/build/lib/examples_rclpy_minimal_publisher
+[2.120s] copying examples_rclpy_minimal_publisher/publisher_old_school.py -> /home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/build/lib/examples_rclpy_minimal_publisher
+[2.121s] copying examples_rclpy_minimal_publisher/publisher_member_function_with_wait_for_all_acked.py -> /home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/build/lib/examples_rclpy_minimal_publisher
+[2.123s] copying examples_rclpy_minimal_publisher/publisher_local_function.py -> /home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/build/lib/examples_rclpy_minimal_publisher
+[2.124s] copying examples_rclpy_minimal_publisher/__init__.py -> /home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/build/lib/examples_rclpy_minimal_publisher
+[2.125s] copying examples_rclpy_minimal_publisher/publisher_member_function.py -> /home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/build/lib/examples_rclpy_minimal_publisher
+[2.127s] running install
+[2.129s] running install_lib
+[2.132s] creating /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages/examples_rclpy_minimal_publisher
+[2.132s] copying /home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/build/lib/examples_rclpy_minimal_publisher/publisher_old_school.py -> /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages/examples_rclpy_minimal_publisher
+[2.133s] copying /home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/build/lib/examples_rclpy_minimal_publisher/publisher_member_function_with_wait_for_all_acked.py -> /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages/examples_rclpy_minimal_publisher
+[2.134s] copying /home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/build/lib/examples_rclpy_minimal_publisher/publisher_local_function.py -> /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages/examples_rclpy_minimal_publisher
+[2.134s] copying /home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/build/lib/examples_rclpy_minimal_publisher/__init__.py -> /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages/examples_rclpy_minimal_publisher
+[2.135s] copying /home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/build/lib/examples_rclpy_minimal_publisher/publisher_member_function.py -> /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages/examples_rclpy_minimal_publisher
+[2.137s] byte-compiling /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages/examples_rclpy_minimal_publisher/publisher_old_school.py to publisher_old_school.cpython-310.pyc
+[2.138s] byte-compiling /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages/examples_rclpy_minimal_publisher/publisher_member_function_with_wait_for_all_acked.py to publisher_member_function_with_wait_for_all_acked.cpython-310.pyc
+[2.140s] byte-compiling /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages/examples_rclpy_minimal_publisher/publisher_local_function.py to publisher_local_function.cpython-310.pyc
+[2.142s] byte-compiling /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages/examples_rclpy_minimal_publisher/__init__.py to __init__.cpython-310.pyc
+[2.143s] byte-compiling /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages/examples_rclpy_minimal_publisher/publisher_member_function.py to publisher_member_function.cpython-310.pyc
+[2.144s] running install_data
+[2.145s] creating /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/share/ament_index
+[2.145s] creating /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/share/ament_index/resource_index
+[2.146s] creating /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/share/ament_index/resource_index/packages
+[2.146s] copying resource/examples_rclpy_minimal_publisher -> /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/share/ament_index/resource_index/packages
+[2.147s] copying package.xml -> /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/share/examples_rclpy_minimal_publisher
+[2.148s] running install_egg_info
+[2.156s] Copying ../../../../../build/examples_rclpy_minimal_publisher/examples_rclpy_minimal_publisher.egg-info to /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages/examples_rclpy_minimal_publisher-0.15.5-py3.10.egg-info
+[2.158s] running install_scripts
+[2.204s] Installing publisher_local_function script to /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/lib/examples_rclpy_minimal_publisher
+[2.205s] Installing publisher_member_function script to /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/lib/examples_rclpy_minimal_publisher
+[2.205s] Installing publisher_member_function_with_wait_for_all_acked script to /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/lib/examples_rclpy_minimal_publisher
+[2.205s] Installing publisher_old_school script to /home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/lib/examples_rclpy_minimal_publisher
+[2.207s] writing list of installed files to '/home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/install.log'
+[2.308s] Invoked command in '/home/kant/robot_agent_ws/src/examples/rclpy/topics/minimal_publisher' returned '0': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../../build/examples_rclpy_minimal_publisher build --build-base /home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/build install --record /home/kant/robot_agent_ws/build/examples_rclpy_minimal_publisher/install.log --single-version-externally-managed install_data

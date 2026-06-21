@@ -1,0 +1,24 @@
+[0.054s] Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_client': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --build /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_client -- -j6 -l6
+[0.198s] [35m[1mConsolidate compiler generated dependencies of target client_main[0m
+[0.233s] [100%] Built target client_main
+[0.332s] Invoked command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_client' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --build /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_client -- -j6 -l6
+[0.337s] Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_client': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --install /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_client
+[0.352s] -- Install configuration: ""
+[0.353s] -- Execute custom install script
+[0.355s] -- Up-to-date symlink: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client/lib/examples_rclcpp_minimal_client/client_main
+[0.356s] -- Up-to-date symlink: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client/share/ament_index/resource_index/package_run_dependencies/examples_rclcpp_minimal_client
+[0.356s] -- Up-to-date symlink: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client/share/ament_index/resource_index/parent_prefix_path/examples_rclcpp_minimal_client
+[0.358s] -- Up-to-date symlink: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client/share/examples_rclcpp_minimal_client/environment/ament_prefix_path.sh
+[0.359s] -- Up-to-date symlink: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client/share/examples_rclcpp_minimal_client/environment/ament_prefix_path.dsv
+[0.364s] -- Up-to-date symlink: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client/share/examples_rclcpp_minimal_client/environment/path.sh
+[0.365s] -- Up-to-date symlink: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client/share/examples_rclcpp_minimal_client/environment/path.dsv
+[0.365s] -- Up-to-date symlink: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client/share/examples_rclcpp_minimal_client/local_setup.bash
+[0.366s] -- Up-to-date symlink: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client/share/examples_rclcpp_minimal_client/local_setup.sh
+[0.366s] -- Up-to-date symlink: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client/share/examples_rclcpp_minimal_client/local_setup.zsh
+[0.368s] -- Up-to-date symlink: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client/share/examples_rclcpp_minimal_client/local_setup.dsv
+[0.368s] -- Symlinking: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client/share/examples_rclcpp_minimal_client/package.dsv
+[0.389s] -- Up-to-date symlink: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client/share/ament_index/resource_index/packages/examples_rclcpp_minimal_client
+[0.390s] -- Up-to-date symlink: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client/share/examples_rclcpp_minimal_client/cmake/examples_rclcpp_minimal_clientConfig.cmake
+[0.391s] -- Up-to-date symlink: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client/share/examples_rclcpp_minimal_client/cmake/examples_rclcpp_minimal_clientConfig-version.cmake
+[0.392s] -- Up-to-date symlink: /home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client/share/examples_rclcpp_minimal_client/package.xml
+[0.464s] Invoked command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_client' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake --install /home/kant/robot_agent_ws/build/examples_rclcpp_minimal_client

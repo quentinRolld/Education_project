@@ -1,0 +1,48 @@
+[0.565s] Invoking command in '/home/kant/robot_agent_ws/src/examples/rclpy/topics/minimal_subscriber': CONDA_PROMPT_MODIFIER=(robot_env) PYTEST_ADDOPTS=--tb=short --junit-xml=/home/kant/robot_agent_ws/build/examples_rclpy_minimal_subscriber/pytest.xml --junit-prefix=examples_rclpy_minimal_subscriber -o cache_dir=/home/kant/robot_agent_ws/build/examples_rclpy_minimal_subscriber/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest
+[1.121s] [1m============================= test session starts ==============================[0m
+[1.121s] platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+[1.130s] cachedir: /home/kant/robot_agent_ws/build/examples_rclpy_minimal_subscriber/.pytest_cache
+[1.130s] rootdir: /home/kant/robot_agent_ws/src/examples/rclpy, configfile: pytest.ini
+[1.130s] plugins: ament-lint-0.12.14, ament-pep257-0.12.14, ament-xmllint-0.12.14, launch-testing-1.0.11, launch-testing-ros-0.19.12, ament-copyright-0.12.14, ament-flake8-0.12.14, colcon-core-0.20.1, cov-3.0.0
+[1.281s] [1mcollecting ... [0m[1m
+[1.281s] collected 3 items                                                              [0m
+[1.282s] 
+[1.687s] test/test_copyright.py [32m.[0m[32m                                                 [ 33%][0m
+[1.846s] test/test_flake8.py [31mF[0m[31m                                                    [ 66%][0m
+[1.881s] test/test_pep257.py [32m.[0m[31m                                                    [100%][0m
+[1.881s] 
+[1.882s] =================================== FAILURES ===================================
+[1.882s] [31m[1m_________________________________ test_flake8 __________________________________[0m
+[1.882s] [1m[31mtest/test_flake8.py[0m:23: in test_flake8
+[1.943s]     [94massert[39;49;00m rc == [94m0[39;49;00m, \
+[1.943s] [1m[31mE   AssertionError: Found 1 code style errors / warnings:[0m
+[1.943s] [1m[31mE     ./examples_rclpy_minimal_subscriber/subscriber_old_school.py:23:5: F824 `global g_node` is unused: name is never assigned in scope[0m
+[1.944s] [1m[31mE   assert 1 == 0[0m
+[1.944s] ----------------------------- Captured stdout call -----------------------------
+[1.944s] 
+[1.944s] ./examples_rclpy_minimal_subscriber/subscriber_old_school.py:23:5: F824 `global g_node` is unused: name is never assigned in scope
+[1.945s]     global g_node
+[1.945s]     ^
+[1.945s] 
+[1.945s] 1     F824 `global g_node` is unused: name is never assigned in scope
+[1.945s] 
+[1.946s] 8 files checked
+[1.946s] 1 errors
+[1.946s] 
+[1.946s] 'F'-type errors: 1
+[1.947s] 
+[1.947s] Checked files:
+[1.947s] 
+[1.947s] * ./setup.py
+[1.947s] * ./examples_rclpy_minimal_subscriber/subscriber_member_function.py
+[1.948s] * ./examples_rclpy_minimal_subscriber/subscriber_lambda.py
+[1.948s] * ./examples_rclpy_minimal_subscriber/subscriber_old_school.py
+[1.948s] * ./examples_rclpy_minimal_subscriber/__init__.py
+[1.948s] * ./test/test_pep257.py
+[1.949s] * ./test/test_copyright.py
+[1.949s] * ./test/test_flake8.py
+[1.949s] - generated xml file: /home/kant/robot_agent_ws/build/examples_rclpy_minimal_subscriber/pytest.xml -
+[1.949s] =========================== short test summary info ============================
+[1.949s] FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 1 code style ...
+[1.950s] [31m========================= [31m[1m1 failed[0m, [32m2 passed[0m[31m in 0.82s[0m[31m ==========================[0m
+[2.119s] Invoked command in '/home/kant/robot_agent_ws/src/examples/rclpy/topics/minimal_subscriber' returned '1': CONDA_PROMPT_MODIFIER=(robot_env) PYTEST_ADDOPTS=--tb=short --junit-xml=/home/kant/robot_agent_ws/build/examples_rclpy_minimal_subscriber/pytest.xml --junit-prefix=examples_rclpy_minimal_subscriber -o cache_dir=/home/kant/robot_agent_ws/build/examples_rclpy_minimal_subscriber/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest

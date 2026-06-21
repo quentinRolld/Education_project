@@ -1,0 +1,35 @@
+[0.031s] Invoking command in '/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_action_server': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(robot_env) /usr/bin/cmake /home/kant/robot_agent_ws/src/examples/rclcpp/actions/minimal_action_server -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_action_server
+[0.657s] -- The C compiler identification is GNU 11.4.0
+[1.117s] -- The CXX compiler identification is GNU 11.4.0
+[1.142s] -- Detecting C compiler ABI info
+[1.296s] -- Detecting C compiler ABI info - done
+[1.322s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.324s] -- Detecting C compile features
+[1.326s] -- Detecting C compile features - done
+[1.338s] -- Detecting CXX compiler ABI info
+[1.492s] -- Detecting CXX compiler ABI info - done
+[1.505s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.507s] -- Detecting CXX compile features
+[1.509s] -- Detecting CXX compile features - done
+[1.516s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.947s] -- Found Python3: /home/kant/miniforge3/envs/robot_env/bin/python3 (found version "3.10.18") found components: Interpreter 
+[3.123s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[3.178s] [31mCMake Error at CMakeLists.txt:14 (find_package):
+[3.178s]   By not providing "Findexample_interfaces.cmake" in CMAKE_MODULE_PATH this
+[3.178s]   project has asked CMake to find a package configuration file provided by
+[3.179s]   "example_interfaces", but CMake did not find one.
+[3.179s] 
+[3.179s]   Could not find a package configuration file provided by
+[3.179s]   "example_interfaces" with any of the following names:
+[3.179s] 
+[3.179s]     example_interfacesConfig.cmake
+[3.179s]     example_interfaces-config.cmake
+[3.180s] 
+[3.180s]   Add the installation prefix of "example_interfaces" to CMAKE_PREFIX_PATH or
+[3.184s]   set "example_interfaces_DIR" to a directory containing one of the above
+[3.185s]   files.  If "example_interfaces" provides a separate development package or
+[3.185s]   SDK, be sure it has been installed.
+[3.185s] 
+[3.185s] [0m
+[3.186s] -- Configuring incomplete, errors occurred!
+[3.186s] See also "/home/kant/robot_agent_ws/build/examples_rclcpp_minimal_action_server/CMakeFiles/CMakeOutput.log".

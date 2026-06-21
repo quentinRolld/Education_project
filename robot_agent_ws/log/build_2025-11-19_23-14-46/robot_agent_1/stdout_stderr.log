@@ -1,0 +1,32 @@
+running egg_info
+creating ../../build/robot_agent_1/robot_agent_1.egg-info
+writing ../../build/robot_agent_1/robot_agent_1.egg-info/PKG-INFO
+writing dependency_links to ../../build/robot_agent_1/robot_agent_1.egg-info/dependency_links.txt
+writing entry points to ../../build/robot_agent_1/robot_agent_1.egg-info/entry_points.txt
+writing requirements to ../../build/robot_agent_1/robot_agent_1.egg-info/requires.txt
+writing top-level names to ../../build/robot_agent_1/robot_agent_1.egg-info/top_level.txt
+writing manifest file '../../build/robot_agent_1/robot_agent_1.egg-info/SOURCES.txt'
+reading manifest file '../../build/robot_agent_1/robot_agent_1.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/robot_agent_1/robot_agent_1.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/kant/robot_agent_ws/build/robot_agent_1/build
+creating /home/kant/robot_agent_ws/build/robot_agent_1/build/lib
+creating /home/kant/robot_agent_ws/build/robot_agent_1/build/lib/robot_agent_1
+copying robot_agent_1/__init__.py -> /home/kant/robot_agent_ws/build/robot_agent_1/build/lib/robot_agent_1
+running install
+running install_lib
+creating /home/kant/robot_agent_ws/install/robot_agent_1/lib/python3.10/site-packages/robot_agent_1
+copying /home/kant/robot_agent_ws/build/robot_agent_1/build/lib/robot_agent_1/__init__.py -> /home/kant/robot_agent_ws/install/robot_agent_1/lib/python3.10/site-packages/robot_agent_1
+byte-compiling /home/kant/robot_agent_ws/install/robot_agent_1/lib/python3.10/site-packages/robot_agent_1/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/kant/robot_agent_ws/install/robot_agent_1/share/ament_index
+creating /home/kant/robot_agent_ws/install/robot_agent_1/share/ament_index/resource_index
+creating /home/kant/robot_agent_ws/install/robot_agent_1/share/ament_index/resource_index/packages
+copying resource/robot_agent_1 -> /home/kant/robot_agent_ws/install/robot_agent_1/share/ament_index/resource_index/packages
+copying package.xml -> /home/kant/robot_agent_ws/install/robot_agent_1/share/robot_agent_1
+running install_egg_info
+Copying ../../build/robot_agent_1/robot_agent_1.egg-info to /home/kant/robot_agent_ws/install/robot_agent_1/lib/python3.10/site-packages/robot_agent_1-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/kant/robot_agent_ws/build/robot_agent_1/install.log'
