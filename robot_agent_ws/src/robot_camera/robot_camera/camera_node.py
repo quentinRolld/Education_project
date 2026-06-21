@@ -1,7 +1,11 @@
 
 # -------------------------------
-# file: robot_camera/scripts/camera_node.py
+# file: robot_camera/camera_node.py
 # -------------------------------
+import rclpy
+from rclpy.node import Node
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge
 import cv2
 
 

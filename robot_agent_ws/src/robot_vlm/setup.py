@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'vlm_node = robot_vlm.vlm_node:main',
         ],
     },
 )

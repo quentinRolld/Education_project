@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'piper_tts_node = robot_audio.piper_tts_node:main',
         ],
     },
 )
