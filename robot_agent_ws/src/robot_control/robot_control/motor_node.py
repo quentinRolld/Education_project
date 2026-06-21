@@ -11,7 +11,7 @@ import time
 try:
     import Jetson.GPIO as GPIO
     GPIO_AVAILABLE = True
-except ImportError:
+except Exception:
     GPIO_AVAILABLE = False
 
 
