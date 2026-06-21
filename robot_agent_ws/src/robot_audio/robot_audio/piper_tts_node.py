@@ -63,6 +63,7 @@ try:
 rclpy.spin(node)
 except KeyboardInterrupt:
 pass
-finally:
-node.destroy_node()
-rclpy.shutdown()
+    finally:
+        node.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()

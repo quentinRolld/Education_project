@@ -44,11 +44,13 @@ class CameraNode(Node):
         self.publisher_.publish(msg)
 
 
-    def destroy(self):
+    def destroy_node(self):
         try:
+            self.get_logger().info('Releasing camera capture...')
             self.cap.release()
         except Exception:
             pass
+        super().destroy_node()
 
 
 def main(args=None):
@@ -60,4 +62,5 @@ def main(args=None):
         pass
     finally:
         node.destroy_node()
-        rclpy.shutdown()
+        if rclpy.ok():
+            rclpy.shutdown()
