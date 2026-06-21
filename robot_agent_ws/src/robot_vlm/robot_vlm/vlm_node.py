@@ -25,6 +25,8 @@ class VLMNode(Node):
         self.create_subscription(Image, '/camera/image_raw', self.image_cb, 10)
         self.create_subscription(String, '/user/instruction', self.instruction_cb, 10)
         self.output_pub = self.create_publisher(String, '/vlm/output', 10)
+        self.speech_pub = self.create_publisher(String, '/say_text', 10)
+        self.motion_pub = self.create_publisher(String, '/vlm/motion_command', 10)
 
         # Warmup model at startup (non-blocking thread could be used, but a blocking warmup is fine here)
         self.get_logger().info('Warming up Gemma model (this may take time)...')
@@ -51,22 +53,27 @@ class VLMNode(Node):
         if self.last_image_b64 is None:
             self.get_logger().warning('No image available yet, ignoring instruction')
             return
-        # build prompt
+        
         system_prompt = f"""
         You are the onboard vision-language model of a two-wheeled mobile robot.
         You receive visual input from the robot's front-facing USB camera and text instructions from a human user.
         User instruction: {user_instruction}
 
-        Your task is to interpret the scene and the user's instruction to determine a simple motion plan.
-        Output strictly two values:
-        1. The straight distance (in centimeters) the robot should move forward (+) or backward (−).
-        2. The rotation angle (in degrees) the robot should turn clockwise (+) or counterclockwise (−).
+        Your task is to interpret the scene and the user's instruction to answer the user's question or explain your action, and plan any necessary movement.
+        Output a JSON object with exactly these three keys:
+        1. "text_response": A string containing your answer to the user in French. If the user asks a question, answer it. If the user gives a movement command, explain what you are going to do.
+        2. "distance_cm": The straight distance (in centimeters) the robot should move forward (+) or backward (-). Default to 0.0 if no movement is needed.
+        3. "angle_deg": The rotation angle (in degrees) the robot should turn clockwise (+) or counterclockwise (-). Default to 0.0 if no rotation is needed.
 
         Guidelines:
-        - Respond only with a JSON object in the form:
-        {{"distance_cm": float, "angle_deg": float}}
-        - Do not include explanations or any text outside this JSON.
-        - If the task cannot be interpreted, respond with {{"distance_cm": 0.0, "angle_deg": 0.0}}.
+        - Respond ONLY with a valid JSON object.
+        - Do not include any explanations or text outside the JSON.
+        - JSON format example:
+        {{
+          "text_response": "Je vais avancer de 50 cm pour éviter la boîte.",
+          "distance_cm": 50.0,
+          "angle_deg": 0.0
+        }}
         """
         payload = {
             'model': MODEL_NAME,
@@ -81,8 +88,44 @@ class VLMNode(Node):
             data = resp.json()
             # Ollama returns 'response' key
             response_text = data.get('response', '')
-            # Publish raw response and parsed JSON
+            # Publish raw response
             self.output_pub.publish(String(data=response_text))
+            
+            # Robust parsing of JSON response
+            import re
+            parsed_json = None
+            try:
+                parsed_json = json.loads(response_text.strip())
+            except Exception:
+                # Try finding JSON block in case model outputs markdown formatting
+                match = re.search(r'\{.*\}', response_text, re.DOTALL)
+                if match:
+                    try:
+                        parsed_json = json.loads(match.group(0))
+                    except Exception:
+                        pass
+            
+            if parsed_json is not None:
+                text_response = parsed_json.get('text_response', '')
+                distance = parsed_json.get('distance_cm', 0.0)
+                angle = parsed_json.get('angle_deg', 0.0)
+                
+                self.get_logger().info(f'Parsed VLM Response -> Speech: "{text_response}", Distance: {distance} cm, Angle: {angle} deg')
+                
+                # Publish speech text to TTS node
+                if text_response:
+                    self.speech_pub.publish(String(data=text_response))
+                
+                # Publish motion commands
+                motion_data = json.dumps({"distance_cm": distance, "angle_deg": angle})
+                self.motion_pub.publish(String(data=motion_data))
+            else:
+                self.get_logger().warning('Could not parse VLM response as JSON, falling back to reading raw output')
+                # Fallback: treat whole response as text response
+                self.speech_pub.publish(String(data=response_text))
+                motion_data = json.dumps({"distance_cm": 0.0, "angle_deg": 0.0})
+                self.motion_pub.publish(String(data=motion_data))
+                
         except Exception as e:
             self.get_logger().error(f'VLM request failed: {e}')
 
