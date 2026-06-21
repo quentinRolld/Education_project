@@ -13,6 +13,18 @@ def generate_launch_description():
         description='Index of the USB camera device (V4L2)'
     )
 
+    alsa_device_arg = DeclareLaunchArgument(
+        'alsa_device',
+        default_value='hw:0,0',
+        description='ALSA device for playback (e.g., hw:1,0)'
+    )
+
+    model_path_arg = DeclareLaunchArgument(
+        'model_path',
+        default_value='/models/fr/model.onnx',
+        description='Path to the Piper French ONNX voice model'
+    )
+
     # 1. Camera Node
     camera_node = Node(
         package='robot_camera',
@@ -35,6 +47,10 @@ def generate_launch_description():
         package='robot_audio',
         executable='piper_tts_node',
         name='piper_tts_node',
+        parameters=[{
+            'alsa_device': LaunchConfiguration('alsa_device'),
+            'model_path': LaunchConfiguration('model_path')
+        }],
         output='screen'
     )
 
@@ -56,6 +72,8 @@ def generate_launch_description():
 
     return LaunchDescription([
         device_index_arg,
+        alsa_device_arg,
+        model_path_arg,
         camera_node,
         vlm_node,
         piper_tts_node,

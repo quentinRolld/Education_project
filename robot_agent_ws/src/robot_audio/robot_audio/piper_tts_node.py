@@ -16,6 +16,14 @@ class PiperTTSNode(Node):
     def __init__(self):
         super().__init__('piper_tts')
         self.get_logger().info('Starting Piper TTS node')
+        
+        # Declare parameters for easy audio routing and model path configuration
+        self.declare_parameter('model_path', '/models/fr/model.onnx')
+        self.declare_parameter('alsa_device', 'hw:0,0')
+        
+        self.model_path = self.get_parameter('model_path').value
+        self.alsa_device = self.get_parameter('alsa_device').value
+
         # Subscriber to /say_text topic
         self.sub = self.create_subscription(String, '/say_text', self.say_callback, 10)
 
@@ -35,12 +43,12 @@ class PiperTTSNode(Node):
             proc = subprocess.run([
                 'piper',
                 '--text', text,
-                '--model', '/models/fr/model.onnx',
+                '--model', self.model_path,
                 '--output', tmp_wav.name
             ], check=False)
 
-            # Play with aplay (force hw:0,0 or detect externally)
-            subprocess.run(['aplay', '-D', 'hw:0,0', tmp_wav.name], check=False)
+            # Play with aplay
+            subprocess.run(['aplay', '-D', self.alsa_device, tmp_wav.name], check=False)
         except Exception as e:
             self.get_logger().error(f'Failed to say text: {e}')
         finally:
@@ -53,12 +61,12 @@ class PiperTTSNode(Node):
 
 
 def main(args=None):
-rclpy.init(args=args)
-node = PiperTTSNode()
-try:
-rclpy.spin(node)
-except KeyboardInterrupt:
-pass
+    rclpy.init(args=args)
+    node = PiperTTSNode()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
     finally:
         node.destroy_node()
         if rclpy.ok():
