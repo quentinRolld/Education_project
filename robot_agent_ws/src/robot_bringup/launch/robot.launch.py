@@ -25,6 +25,12 @@ def generate_launch_description():
         description='Path to the Piper French ONNX voice model'
     )
 
+    mic_device_index_arg = DeclareLaunchArgument(
+        'mic_device_index',
+        default_value='-1',
+        description='PyAudio index of the USB microphone device'
+    )
+
     # 1. Camera Node
     camera_node = Node(
         package='robot_camera',
@@ -59,6 +65,7 @@ def generate_launch_description():
         package='robot_audio',
         executable='stt_node',
         name='stt_node',
+        parameters=[{'device_index': LaunchConfiguration('mic_device_index')}],
         output='screen'
     )
 
@@ -74,6 +81,7 @@ def generate_launch_description():
         device_index_arg,
         alsa_device_arg,
         model_path_arg,
+        mic_device_index_arg,
         camera_node,
         vlm_node,
         piper_tts_node,

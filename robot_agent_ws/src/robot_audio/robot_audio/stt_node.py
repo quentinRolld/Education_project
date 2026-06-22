@@ -32,7 +32,11 @@ class SpeechToTextNode(Node):
 
         self.language = self.get_parameter('language').value
         self.energy_threshold = self.get_parameter('energy_threshold').value
-        self.device_index = self.get_parameter('device_index').value
+        
+        try:
+            self.device_index = int(self.get_parameter('device_index').value)
+        except (ValueError, TypeError):
+            self.device_index = -1
 
         self.pub = self.create_publisher(String, '/user/instruction', 10)
         self.running = True
