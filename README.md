@@ -5,9 +5,15 @@
 [![Ollama](https://img.shields.io/badge/Ollama-Gemma%203%3A4B-orange?style=for-the-badge)](https://ollama.com)
 [![License](https://img.shields.io/github/license/TRI-ML/prismatic-vlms?style=for-the-badge)](LICENSE)
 
-An autonomous mobile robot powered by a local Vision-Language Model (VLM) running on a distributed ROS2 network. 
+---
 
-To prevent USB power drops caused by heavy GPU inference load, the system is split into a **Master (Jetson Orin Nano)** for heavy AI computation and a **Slave (Raspberry Pi 5)** for physical IO and motor control.
+![alt text](https://medias.spotern.com/spots/w1280/13/13334-1532336916.webp)
+
+**Autonomous robot boosted with openVLA / Gemma 3**
+
+The goal of this project is to create a robot capable of interacting with a human and realize an action based on the instruction of the user.
+
+---
 
 ---
 
