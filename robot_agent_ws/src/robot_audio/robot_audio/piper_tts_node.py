@@ -44,10 +44,9 @@ class PiperTTSNode(Node):
             # Example piper invocation; change according to your piper installation
             proc = subprocess.run([
                 self.piper_path,
-                '--text', text,
                 '--model', self.model_path,
                 '-f', tmp_wav.name
-            ], check=False)
+            ], input=text.encode('utf-8'), check=False)
 
             # Play with aplay
             subprocess.run(['aplay', '-D', self.alsa_device, tmp_wav.name], check=False)
