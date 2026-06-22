@@ -15,6 +15,13 @@ def generate_launch_description():
         description='Index of the USB camera device (V4L2)'
     )
 
+    # Declare microphone device index argument
+    mic_device_index_arg = DeclareLaunchArgument(
+        'mic_device_index',
+        default_value='-1',
+        description='PyAudio index of the USB microphone device'
+    )
+
     # 1. Camera Node
     camera_node = Node(
         package='robot_camera',
@@ -24,7 +31,16 @@ def generate_launch_description():
         output='screen'
     )
 
-    # 2. VLM Brain Node
+    # 2. Speech-To-Text (Microphone Capture) Node
+    stt_node = Node(
+        package='robot_audio',
+        executable='stt_node',
+        name='stt_node',
+        parameters=[{'device_index': LaunchConfiguration('mic_device_index')}],
+        output='screen'
+    )
+
+    # 3. VLM Brain Node
     vlm_node = Node(
         package='robot_vlm',
         executable='vlm_node',
@@ -34,6 +50,8 @@ def generate_launch_description():
 
     return LaunchDescription([
         device_index_arg,
+        mic_device_index_arg,
         camera_node,
+        stt_node,
         vlm_node
     ])

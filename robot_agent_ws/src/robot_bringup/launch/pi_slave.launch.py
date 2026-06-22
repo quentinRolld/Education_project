@@ -7,12 +7,6 @@ from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
     # Declare configurable launch arguments for hardware/IO
-    device_index_arg = DeclareLaunchArgument(
-        'device_index',
-        default_value='0',
-        description='Index of the USB camera device (V4L2)'
-    )
-
     alsa_device_arg = DeclareLaunchArgument(
         'alsa_device',
         default_value='plughw:0,0',
@@ -25,19 +19,13 @@ def generate_launch_description():
         description='Path to the Piper French ONNX voice model'
     )
 
-    mic_device_index_arg = DeclareLaunchArgument(
-        'mic_device_index',
-        default_value='-1',
-        description='PyAudio index of the USB microphone device'
-    )
-
     piper_path_arg = DeclareLaunchArgument(
         'piper_path',
         default_value='piper',
         description='Path to the Piper executable binary'
     )
 
-    # 2. Piper TTS (Speech Synthesis) Node
+    # 1. Piper TTS (Speech Synthesis) Node
     piper_tts_node = Node(
         package='robot_audio',
         executable='piper_tts_node',
@@ -50,16 +38,7 @@ def generate_launch_description():
         output='screen'
     )
 
-    # 3. Speech-To-Text (Microphone Capture) Node
-    stt_node = Node(
-        package='robot_audio',
-        executable='stt_node',
-        name='stt_node',
-        parameters=[{'device_index': LaunchConfiguration('mic_device_index')}],
-        output='screen'
-    )
-
-    # 4. Motor Control Node
+    # 2. Motor Control Node
     motor_node = Node(
         package='robot_control',
         executable='motor_node',
@@ -68,12 +47,9 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        device_index_arg,
         alsa_device_arg,
         model_path_arg,
-        mic_device_index_arg,
         piper_path_arg,
         piper_tts_node,
-        stt_node,
         motor_node
     ])
