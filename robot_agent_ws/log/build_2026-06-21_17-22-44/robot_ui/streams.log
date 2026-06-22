@@ -1,0 +1,16 @@
+[4.555s] Invoking command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_ui': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_ui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_ui/build --no-deps symlink_data
+[5.366s] running develop
+[5.738s] running egg_info
+[5.738s] writing robot_ui.egg-info/PKG-INFO
+[5.739s] writing dependency_links to robot_ui.egg-info/dependency_links.txt
+[5.740s] writing entry points to robot_ui.egg-info/entry_points.txt
+[5.740s] writing requirements to robot_ui.egg-info/requires.txt
+[5.741s] writing top-level names to robot_ui.egg-info/top_level.txt
+[5.745s] reading manifest file 'robot_ui.egg-info/SOURCES.txt'
+[5.746s] writing manifest file 'robot_ui.egg-info/SOURCES.txt'
+[5.750s] running build_ext
+[5.750s] Creating /home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/lib/python3.10/site-packages/robot-ui.egg-link (link to .)
+[5.752s] 
+[5.752s] Installed /home/kant/robot_ILiAD/robot_agent_ws/build/robot_ui
+[5.752s] running symlink_data
+[5.858s] Invoked command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_ui' returned '0': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_ui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_ui/build --no-deps symlink_data

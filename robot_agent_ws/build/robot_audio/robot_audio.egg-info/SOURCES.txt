@@ -4,6 +4,7 @@ setup.py
 resource/robot_audio
 robot_audio/__init__.py
 robot_audio/piper_tts_node.py
+robot_audio/stt_node.py
 robot_audio.egg-info/PKG-INFO
 robot_audio.egg-info/SOURCES.txt
 robot_audio.egg-info/dependency_links.txt

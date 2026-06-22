@@ -1,0 +1,500 @@
+[0.235s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.236s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=6, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff8b6d5720>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff8b6d51e0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff8b6d51e0>>)
+[0.592s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.593s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.593s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.593s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.593s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.593s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.593s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/kant/robot_ILiAD/robot_agent_ws'
+[0.594s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.594s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.594s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.594s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.594s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.594s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.594s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.595s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.595s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.616s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.616s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.616s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.617s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.617s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.617s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.617s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.617s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.618s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.618s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.618s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.618s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.618s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_audio) by extensions ['ignore', 'ignore_ament_install']
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_audio) by extension 'ignore'
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_audio) by extension 'ignore_ament_install'
+[0.621s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_audio) by extensions ['colcon_pkg']
+[0.621s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_audio) by extension 'colcon_pkg'
+[0.621s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_audio) by extensions ['colcon_meta']
+[0.621s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_audio) by extension 'colcon_meta'
+[0.621s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_audio) by extensions ['ros']
+[0.621s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_audio) by extension 'ros'
+[0.626s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_audio' with type 'ros.ament_python' and name 'robot_audio'
+[0.626s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.627s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'ignore'
+[0.627s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'ignore_ament_install'
+[0.627s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extensions ['colcon_pkg']
+[0.627s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'colcon_pkg'
+[0.627s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extensions ['colcon_meta']
+[0.627s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'colcon_meta'
+[0.627s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extensions ['ros']
+[0.627s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'ros'
+[0.628s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_bringup' with type 'ros.ament_python' and name 'robot_bringup'
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_camera) by extensions ['ignore', 'ignore_ament_install']
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_camera) by extension 'ignore'
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_camera) by extension 'ignore_ament_install'
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_camera) by extensions ['colcon_pkg']
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_camera) by extension 'colcon_pkg'
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_camera) by extensions ['colcon_meta']
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_camera) by extension 'colcon_meta'
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_camera) by extensions ['ros']
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_camera) by extension 'ros'
+[0.630s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_camera' with type 'ros.ament_python' and name 'robot_camera'
+[0.630s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control) by extensions ['ignore', 'ignore_ament_install']
+[0.631s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control) by extension 'ignore'
+[0.631s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control) by extension 'ignore_ament_install'
+[0.631s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control) by extensions ['colcon_pkg']
+[0.631s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control) by extension 'colcon_pkg'
+[0.631s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control) by extensions ['colcon_meta']
+[0.631s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control) by extension 'colcon_meta'
+[0.631s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control) by extensions ['ros']
+[0.631s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control) by extension 'ros'
+[0.632s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_control' with type 'ros.ament_python' and name 'robot_control'
+[0.632s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_planner) by extensions ['ignore', 'ignore_ament_install']
+[0.632s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_planner) by extension 'ignore'
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_planner) by extension 'ignore_ament_install'
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_planner) by extensions ['colcon_pkg']
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_planner) by extension 'colcon_pkg'
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_planner) by extensions ['colcon_meta']
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_planner) by extension 'colcon_meta'
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_planner) by extensions ['ros']
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_planner) by extension 'ros'
+[0.634s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_planner' with type 'ros.ament_python' and name 'robot_planner'
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_ui) by extensions ['ignore', 'ignore_ament_install']
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_ui) by extension 'ignore'
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_ui) by extension 'ignore_ament_install'
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_ui) by extensions ['colcon_pkg']
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_ui) by extension 'colcon_pkg'
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_ui) by extensions ['colcon_meta']
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_ui) by extension 'colcon_meta'
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_ui) by extensions ['ros']
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_ui) by extension 'ros'
+[0.636s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_ui' with type 'ros.ament_python' and name 'robot_ui'
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_vlm) by extensions ['ignore', 'ignore_ament_install']
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_vlm) by extension 'ignore'
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_vlm) by extension 'ignore_ament_install'
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_vlm) by extensions ['colcon_pkg']
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_vlm) by extension 'colcon_pkg'
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_vlm) by extensions ['colcon_meta']
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_vlm) by extension 'colcon_meta'
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_vlm) by extensions ['ros']
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_vlm) by extension 'ros'
+[0.641s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_vlm' with type 'ros.ament_python' and name 'robot_vlm'
+[0.641s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.641s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.642s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.642s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.642s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.719s] WARNING:colcon.colcon_core.prefix_path.colcon:The path '/home/kant/robot_agent_ws/install' in the environment variable COLCON_PREFIX_PATH doesn't exist
+[0.722s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/robot_vlm' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.729s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/robot_ui' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.729s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/robot_planner' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.729s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/robot_control' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.729s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/robot_camera' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.729s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/robot_bringup' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.729s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/robot_audio' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.729s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/robot_agent_1' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.729s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/my_package' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.729s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/launch_testing_examples' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.729s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclpy_pointcloud_publisher' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.729s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclpy_minimal_subscriber' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.730s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclpy_minimal_service' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.730s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclpy_minimal_publisher' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.730s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclpy_minimal_client' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.730s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_server' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.730s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclpy_minimal_action_client' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.730s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclpy_guard_conditions' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.730s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclpy_executors' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.730s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_wait_set' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.730s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.730s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.730s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.730s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_service' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.730s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.731s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_composition' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.731s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.731s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_action_server' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.731s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_action_client' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.731s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_cbg_executor' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.731s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_async_client' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.731s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_wait_set' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.731s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_multithreaded_executor' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.731s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_timer' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.732s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_subscriber' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.732s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_service' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.732s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_publisher' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.732s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_composition' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.732s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_client' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.732s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_action_server' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.732s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_minimal_action_client' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.732s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_cbg_executor' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.732s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/kant/robot_agent_ws/install/examples_rclcpp_async_client' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.735s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 31 installed packages in /home/kant/robot_ILiAD/robot_agent_ws/install
+[0.738s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 323 installed packages in /opt/ros/humble
+[0.742s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.827s] Level 5:colcon.colcon_core.verb:set package 'robot_audio' build argument 'cmake_args' from command line to 'None'
+[0.827s] Level 5:colcon.colcon_core.verb:set package 'robot_audio' build argument 'cmake_target' from command line to 'None'
+[0.827s] Level 5:colcon.colcon_core.verb:set package 'robot_audio' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.827s] Level 5:colcon.colcon_core.verb:set package 'robot_audio' build argument 'cmake_clean_cache' from command line to 'False'
+[0.827s] Level 5:colcon.colcon_core.verb:set package 'robot_audio' build argument 'cmake_clean_first' from command line to 'False'
+[0.827s] Level 5:colcon.colcon_core.verb:set package 'robot_audio' build argument 'cmake_force_configure' from command line to 'False'
+[0.828s] Level 5:colcon.colcon_core.verb:set package 'robot_audio' build argument 'ament_cmake_args' from command line to 'None'
+[0.828s] Level 5:colcon.colcon_core.verb:set package 'robot_audio' build argument 'catkin_cmake_args' from command line to 'None'
+[0.828s] Level 5:colcon.colcon_core.verb:set package 'robot_audio' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.828s] DEBUG:colcon.colcon_core.verb:Building package 'robot_audio' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_audio', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio', 'merge_install': False, 'path': '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_audio', 'symlink_install': True, 'test_result_base': None}
+[0.828s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_args' from command line to 'None'
+[0.828s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_target' from command line to 'None'
+[0.829s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.829s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.829s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.829s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.829s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.829s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.829s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.829s] DEBUG:colcon.colcon_core.verb:Building package 'robot_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup', 'merge_install': False, 'path': '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_bringup', 'symlink_install': True, 'test_result_base': None}
+[0.829s] Level 5:colcon.colcon_core.verb:set package 'robot_camera' build argument 'cmake_args' from command line to 'None'
+[0.830s] Level 5:colcon.colcon_core.verb:set package 'robot_camera' build argument 'cmake_target' from command line to 'None'
+[0.830s] Level 5:colcon.colcon_core.verb:set package 'robot_camera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.830s] Level 5:colcon.colcon_core.verb:set package 'robot_camera' build argument 'cmake_clean_cache' from command line to 'False'
+[0.830s] Level 5:colcon.colcon_core.verb:set package 'robot_camera' build argument 'cmake_clean_first' from command line to 'False'
+[0.830s] Level 5:colcon.colcon_core.verb:set package 'robot_camera' build argument 'cmake_force_configure' from command line to 'False'
+[0.830s] Level 5:colcon.colcon_core.verb:set package 'robot_camera' build argument 'ament_cmake_args' from command line to 'None'
+[0.830s] Level 5:colcon.colcon_core.verb:set package 'robot_camera' build argument 'catkin_cmake_args' from command line to 'None'
+[0.830s] Level 5:colcon.colcon_core.verb:set package 'robot_camera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.830s] DEBUG:colcon.colcon_core.verb:Building package 'robot_camera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera', 'merge_install': False, 'path': '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_camera', 'symlink_install': True, 'test_result_base': None}
+[0.830s] Level 5:colcon.colcon_core.verb:set package 'robot_control' build argument 'cmake_args' from command line to 'None'
+[0.831s] Level 5:colcon.colcon_core.verb:set package 'robot_control' build argument 'cmake_target' from command line to 'None'
+[0.831s] Level 5:colcon.colcon_core.verb:set package 'robot_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.831s] Level 5:colcon.colcon_core.verb:set package 'robot_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.831s] Level 5:colcon.colcon_core.verb:set package 'robot_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.831s] Level 5:colcon.colcon_core.verb:set package 'robot_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.831s] Level 5:colcon.colcon_core.verb:set package 'robot_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.831s] Level 5:colcon.colcon_core.verb:set package 'robot_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.831s] Level 5:colcon.colcon_core.verb:set package 'robot_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.831s] DEBUG:colcon.colcon_core.verb:Building package 'robot_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control', 'merge_install': False, 'path': '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_control', 'symlink_install': True, 'test_result_base': None}
+[0.831s] Level 5:colcon.colcon_core.verb:set package 'robot_planner' build argument 'cmake_args' from command line to 'None'
+[0.832s] Level 5:colcon.colcon_core.verb:set package 'robot_planner' build argument 'cmake_target' from command line to 'None'
+[0.832s] Level 5:colcon.colcon_core.verb:set package 'robot_planner' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.832s] Level 5:colcon.colcon_core.verb:set package 'robot_planner' build argument 'cmake_clean_cache' from command line to 'False'
+[0.832s] Level 5:colcon.colcon_core.verb:set package 'robot_planner' build argument 'cmake_clean_first' from command line to 'False'
+[0.832s] Level 5:colcon.colcon_core.verb:set package 'robot_planner' build argument 'cmake_force_configure' from command line to 'False'
+[0.832s] Level 5:colcon.colcon_core.verb:set package 'robot_planner' build argument 'ament_cmake_args' from command line to 'None'
+[0.832s] Level 5:colcon.colcon_core.verb:set package 'robot_planner' build argument 'catkin_cmake_args' from command line to 'None'
+[0.832s] Level 5:colcon.colcon_core.verb:set package 'robot_planner' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.832s] DEBUG:colcon.colcon_core.verb:Building package 'robot_planner' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_planner', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner', 'merge_install': False, 'path': '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_planner', 'symlink_install': True, 'test_result_base': None}
+[0.832s] Level 5:colcon.colcon_core.verb:set package 'robot_ui' build argument 'cmake_args' from command line to 'None'
+[0.833s] Level 5:colcon.colcon_core.verb:set package 'robot_ui' build argument 'cmake_target' from command line to 'None'
+[0.833s] Level 5:colcon.colcon_core.verb:set package 'robot_ui' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.833s] Level 5:colcon.colcon_core.verb:set package 'robot_ui' build argument 'cmake_clean_cache' from command line to 'False'
+[0.833s] Level 5:colcon.colcon_core.verb:set package 'robot_ui' build argument 'cmake_clean_first' from command line to 'False'
+[0.833s] Level 5:colcon.colcon_core.verb:set package 'robot_ui' build argument 'cmake_force_configure' from command line to 'False'
+[0.833s] Level 5:colcon.colcon_core.verb:set package 'robot_ui' build argument 'ament_cmake_args' from command line to 'None'
+[0.833s] Level 5:colcon.colcon_core.verb:set package 'robot_ui' build argument 'catkin_cmake_args' from command line to 'None'
+[0.833s] Level 5:colcon.colcon_core.verb:set package 'robot_ui' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.833s] DEBUG:colcon.colcon_core.verb:Building package 'robot_ui' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_ui', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui', 'merge_install': False, 'path': '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_ui', 'symlink_install': True, 'test_result_base': None}
+[0.833s] Level 5:colcon.colcon_core.verb:set package 'robot_vlm' build argument 'cmake_args' from command line to 'None'
+[0.834s] Level 5:colcon.colcon_core.verb:set package 'robot_vlm' build argument 'cmake_target' from command line to 'None'
+[0.834s] Level 5:colcon.colcon_core.verb:set package 'robot_vlm' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.834s] Level 5:colcon.colcon_core.verb:set package 'robot_vlm' build argument 'cmake_clean_cache' from command line to 'False'
+[0.834s] Level 5:colcon.colcon_core.verb:set package 'robot_vlm' build argument 'cmake_clean_first' from command line to 'False'
+[0.834s] Level 5:colcon.colcon_core.verb:set package 'robot_vlm' build argument 'cmake_force_configure' from command line to 'False'
+[0.834s] Level 5:colcon.colcon_core.verb:set package 'robot_vlm' build argument 'ament_cmake_args' from command line to 'None'
+[0.834s] Level 5:colcon.colcon_core.verb:set package 'robot_vlm' build argument 'catkin_cmake_args' from command line to 'None'
+[0.834s] Level 5:colcon.colcon_core.verb:set package 'robot_vlm' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.834s] DEBUG:colcon.colcon_core.verb:Building package 'robot_vlm' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_vlm', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm', 'merge_install': False, 'path': '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_vlm', 'symlink_install': True, 'test_result_base': None}
+[0.834s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.837s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.837s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_audio' with build type 'ament_python'
+[0.837s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_audio', 'ament_prefix_path')
+[0.843s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.843s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/share/robot_audio/hook/ament_prefix_path.ps1'
+[0.844s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/share/robot_audio/hook/ament_prefix_path.dsv'
+[0.845s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/share/robot_audio/hook/ament_prefix_path.sh'
+[0.847s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.847s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.858s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_bringup' with build type 'ament_python'
+[0.858s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_bringup', 'ament_prefix_path')
+[0.859s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup/share/robot_bringup/hook/ament_prefix_path.ps1'
+[0.861s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup/share/robot_bringup/hook/ament_prefix_path.dsv'
+[0.862s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup/share/robot_bringup/hook/ament_prefix_path.sh'
+[0.863s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.864s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.874s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_camera' with build type 'ament_python'
+[0.875s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_camera', 'ament_prefix_path')
+[0.875s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/share/robot_camera/hook/ament_prefix_path.ps1'
+[0.877s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/share/robot_camera/hook/ament_prefix_path.dsv'
+[0.878s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/share/robot_camera/hook/ament_prefix_path.sh'
+[0.879s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.879s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.889s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_control' with build type 'ament_python'
+[0.890s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_control', 'ament_prefix_path')
+[0.890s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/share/robot_control/hook/ament_prefix_path.ps1'
+[0.892s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/share/robot_control/hook/ament_prefix_path.dsv'
+[0.893s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/share/robot_control/hook/ament_prefix_path.sh'
+[0.894s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.894s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.905s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_planner' with build type 'ament_python'
+[0.906s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_planner', 'ament_prefix_path')
+[0.906s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner/share/robot_planner/hook/ament_prefix_path.ps1'
+[0.908s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner/share/robot_planner/hook/ament_prefix_path.dsv'
+[0.909s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner/share/robot_planner/hook/ament_prefix_path.sh'
+[0.910s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.910s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.919s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_ui' with build type 'ament_python'
+[0.920s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_ui', 'ament_prefix_path')
+[0.920s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/share/robot_ui/hook/ament_prefix_path.ps1'
+[0.922s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/share/robot_ui/hook/ament_prefix_path.dsv'
+[0.922s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/share/robot_ui/hook/ament_prefix_path.sh'
+[0.924s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.924s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.539s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_audio'
+[1.540s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.540s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.147s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_bringup'
+[2.148s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.148s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.782s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_camera'
+[2.783s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.783s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.410s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_control'
+[3.411s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.411s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.037s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_planner'
+[4.038s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.038s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.655s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_ui'
+[4.656s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.657s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.609s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_ui': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_ui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_ui/build --no-deps symlink_data
+[5.676s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_bringup': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_bringup/build --no-deps symlink_data
+[5.700s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera/build --no-deps symlink_data
+[5.744s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_audio': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_audio/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_audio/build --no-deps symlink_data
+[5.788s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_planner': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_planner/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_planner/build --no-deps symlink_data
+[5.944s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_control': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_control/build --no-deps symlink_data
+[6.811s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_camera', 'pythonpath_develop')
+[6.811s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera/share/robot_camera/hook/pythonpath_develop.ps1'
+[6.814s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera' returned '0': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera/build --no-deps symlink_data
+[6.814s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera/share/robot_camera/hook/pythonpath_develop.dsv'
+[6.815s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_camera/share/robot_camera/hook/pythonpath_develop.sh'
+[6.825s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera' for CMake module files
+[6.826s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera' for CMake config files
+[6.837s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/lib'
+[6.837s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/bin'
+[6.838s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/lib/pkgconfig/robot_camera.pc'
+[6.838s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/lib/python3.10/site-packages'
+[6.838s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_camera', 'pythonpath')
+[6.839s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/share/robot_camera/hook/pythonpath.ps1'
+[6.840s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/share/robot_camera/hook/pythonpath.dsv'
+[6.841s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/share/robot_camera/hook/pythonpath.sh'
+[6.842s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/bin'
+[6.843s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_camera)
+[6.843s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/share/robot_camera/package.ps1'
+[6.845s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/share/robot_camera/package.dsv'
+[6.847s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/share/robot_camera/package.sh'
+[6.863s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/share/robot_camera/package.bash'
+[6.865s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/share/robot_camera/package.zsh'
+[6.868s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kant/robot_ILiAD/robot_agent_ws/install/robot_camera/share/colcon-core/packages/robot_camera)
+[6.869s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_vlm' with build type 'ament_python'
+[6.882s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_vlm', 'ament_prefix_path')
+[6.883s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm/share/robot_vlm/hook/ament_prefix_path.ps1'
+[6.885s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm/share/robot_vlm/hook/ament_prefix_path.dsv'
+[6.886s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm/share/robot_vlm/hook/ament_prefix_path.sh'
+[6.888s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.888s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.911s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_bringup', 'pythonpath_develop')
+[6.913s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_bringup/share/robot_bringup/hook/pythonpath_develop.ps1'
+[6.912s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_bringup' returned '0': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_bringup/build --no-deps symlink_data
+[6.915s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_bringup/share/robot_bringup/hook/pythonpath_develop.dsv'
+[6.917s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_bringup/share/robot_bringup/hook/pythonpath_develop.sh'
+[6.919s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup' for CMake module files
+[6.920s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup' for CMake config files
+[6.921s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup/lib'
+[6.922s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup/bin'
+[6.923s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup/lib/pkgconfig/robot_bringup.pc'
+[6.923s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup/lib/python3.10/site-packages'
+[6.923s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_bringup', 'pythonpath')
+[6.924s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup/share/robot_bringup/hook/pythonpath.ps1'
+[6.929s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup/share/robot_bringup/hook/pythonpath.dsv'
+[6.943s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup/share/robot_bringup/hook/pythonpath.sh'
+[6.947s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup/bin'
+[6.948s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_bringup)
+[6.949s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup/share/robot_bringup/package.ps1'
+[6.951s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup/share/robot_bringup/package.dsv'
+[6.952s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup/share/robot_bringup/package.sh'
+[6.953s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup/share/robot_bringup/package.bash'
+[6.956s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup/share/robot_bringup/package.zsh'
+[6.958s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kant/robot_ILiAD/robot_agent_ws/install/robot_bringup/share/colcon-core/packages/robot_bringup)
+[7.608s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/kant/robot_ILiAD/robot_agent_ws/src/robot_vlm'
+[7.609s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.609s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.626s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_ui', 'pythonpath_develop')
+[7.627s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_ui/share/robot_ui/hook/pythonpath_develop.ps1'
+[7.628s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_ui' returned '0': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_ui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_ui/build --no-deps symlink_data
+[7.630s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_ui/share/robot_ui/hook/pythonpath_develop.dsv'
+[7.631s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_ui/share/robot_ui/hook/pythonpath_develop.sh'
+[7.633s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui' for CMake module files
+[7.635s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui' for CMake config files
+[7.637s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/lib'
+[7.637s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/bin'
+[7.637s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/lib/pkgconfig/robot_ui.pc'
+[7.638s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/lib/python3.10/site-packages'
+[7.638s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_ui', 'pythonpath')
+[7.639s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/share/robot_ui/hook/pythonpath.ps1'
+[7.640s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/share/robot_ui/hook/pythonpath.dsv'
+[7.642s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/share/robot_ui/hook/pythonpath.sh'
+[7.645s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/bin'
+[7.645s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_ui)
+[7.646s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/share/robot_ui/package.ps1'
+[7.648s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/share/robot_ui/package.dsv'
+[7.650s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/share/robot_ui/package.sh'
+[7.652s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/share/robot_ui/package.bash'
+[7.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/share/robot_ui/package.zsh'
+[7.655s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kant/robot_ILiAD/robot_agent_ws/install/robot_ui/share/colcon-core/packages/robot_ui)
+[7.655s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_audio', 'pythonpath_develop')
+[7.656s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_audio/share/robot_audio/hook/pythonpath_develop.ps1'
+[7.659s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_audio' returned '0': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_audio/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_audio/build --no-deps symlink_data
+[7.659s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_audio/share/robot_audio/hook/pythonpath_develop.dsv'
+[7.661s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_audio/share/robot_audio/hook/pythonpath_develop.sh'
+[7.663s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio' for CMake module files
+[7.665s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio' for CMake config files
+[7.666s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/lib'
+[7.667s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/bin'
+[7.667s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/lib/pkgconfig/robot_audio.pc'
+[7.668s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/lib/python3.10/site-packages'
+[7.668s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_audio', 'pythonpath')
+[7.669s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/share/robot_audio/hook/pythonpath.ps1'
+[7.670s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/share/robot_audio/hook/pythonpath.dsv'
+[7.672s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/share/robot_audio/hook/pythonpath.sh'
+[7.674s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/bin'
+[7.674s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_audio)
+[7.676s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/share/robot_audio/package.ps1'
+[7.678s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/share/robot_audio/package.dsv'
+[7.679s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/share/robot_audio/package.sh'
+[7.681s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/share/robot_audio/package.bash'
+[7.682s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/share/robot_audio/package.zsh'
+[7.683s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kant/robot_ILiAD/robot_agent_ws/install/robot_audio/share/colcon-core/packages/robot_audio)
+[7.684s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_control', 'pythonpath_develop')
+[7.684s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_control/share/robot_control/hook/pythonpath_develop.ps1'
+[7.686s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_control/share/robot_control/hook/pythonpath_develop.dsv'
+[7.687s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_control' returned '0': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_control/build --no-deps symlink_data
+[7.687s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_control/share/robot_control/hook/pythonpath_develop.sh'
+[7.689s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control' for CMake module files
+[7.689s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control' for CMake config files
+[7.691s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/lib'
+[7.691s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/bin'
+[7.691s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/lib/pkgconfig/robot_control.pc'
+[7.691s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/lib/python3.10/site-packages'
+[7.691s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_control', 'pythonpath')
+[7.692s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/share/robot_control/hook/pythonpath.ps1'
+[7.693s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/share/robot_control/hook/pythonpath.dsv'
+[7.693s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/share/robot_control/hook/pythonpath.sh'
+[7.695s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/bin'
+[7.695s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_control)
+[7.695s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/share/robot_control/package.ps1'
+[7.697s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/share/robot_control/package.dsv'
+[7.698s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/share/robot_control/package.sh'
+[7.699s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/share/robot_control/package.bash'
+[7.700s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/share/robot_control/package.zsh'
+[7.701s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kant/robot_ILiAD/robot_agent_ws/install/robot_control/share/colcon-core/packages/robot_control)
+[7.701s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_planner', 'pythonpath_develop')
+[7.702s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_planner/share/robot_planner/hook/pythonpath_develop.ps1'
+[7.703s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_planner/share/robot_planner/hook/pythonpath_develop.dsv'
+[7.704s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_planner' returned '0': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_planner/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_planner/build --no-deps symlink_data
+[7.705s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_planner/share/robot_planner/hook/pythonpath_develop.sh'
+[7.706s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner' for CMake module files
+[7.707s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner' for CMake config files
+[7.708s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner/lib'
+[7.708s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner/bin'
+[7.708s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner/lib/pkgconfig/robot_planner.pc'
+[7.709s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner/lib/python3.10/site-packages'
+[7.709s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_planner', 'pythonpath')
+[7.709s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner/share/robot_planner/hook/pythonpath.ps1'
+[7.710s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner/share/robot_planner/hook/pythonpath.dsv'
+[7.711s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner/share/robot_planner/hook/pythonpath.sh'
+[7.712s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner/bin'
+[7.713s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_planner)
+[7.713s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner/share/robot_planner/package.ps1'
+[7.714s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner/share/robot_planner/package.dsv'
+[7.715s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner/share/robot_planner/package.sh'
+[7.716s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner/share/robot_planner/package.bash'
+[7.717s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner/share/robot_planner/package.zsh'
+[7.718s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kant/robot_ILiAD/robot_agent_ws/install/robot_planner/share/colcon-core/packages/robot_planner)
+[8.529s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_vlm': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_vlm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_vlm/build --no-deps symlink_data
+[9.547s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_vlm', 'pythonpath_develop')
+[9.548s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_vlm/share/robot_vlm/hook/pythonpath_develop.ps1'
+[9.549s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_vlm' returned '0': CONDA_PROMPT_MODIFIER=(robot_env) PYTHONPATH=/home/kant/robot_ILiAD/robot_agent_ws/build/robot_vlm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kant/robot_ILiAD/robot_agent_ws/build/robot_vlm/build --no-deps symlink_data
+[9.551s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_vlm/share/robot_vlm/hook/pythonpath_develop.dsv'
+[9.553s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/build/robot_vlm/share/robot_vlm/hook/pythonpath_develop.sh'
+[9.555s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm' for CMake module files
+[9.557s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm' for CMake config files
+[9.559s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm/lib'
+[9.559s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm/bin'
+[9.559s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm/lib/pkgconfig/robot_vlm.pc'
+[9.560s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm/lib/python3.10/site-packages'
+[9.560s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_vlm', 'pythonpath')
+[9.561s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm/share/robot_vlm/hook/pythonpath.ps1'
+[9.563s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm/share/robot_vlm/hook/pythonpath.dsv'
+[9.564s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm/share/robot_vlm/hook/pythonpath.sh'
+[9.567s] Level 1:colcon.colcon_core.environment:checking '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm/bin'
+[9.567s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_vlm)
+[9.569s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm/share/robot_vlm/package.ps1'
+[9.571s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm/share/robot_vlm/package.dsv'
+[9.573s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm/share/robot_vlm/package.sh'
+[9.575s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm/share/robot_vlm/package.bash'
+[9.576s] INFO:colcon.colcon_core.shell:Creating package script '/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm/share/robot_vlm/package.zsh'
+[9.578s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kant/robot_ILiAD/robot_agent_ws/install/robot_vlm/share/colcon-core/packages/robot_vlm)
+[9.579s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.580s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.580s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[9.581s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.603s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.603s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.603s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[9.634s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ChildExited: Process org.freedesktop.Notifications exited with status 1
+[9.634s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[9.636s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kant/robot_ILiAD/robot_agent_ws/install/local_setup.ps1'
+[9.639s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/kant/robot_ILiAD/robot_agent_ws/install/_local_setup_util_ps1.py'
+[9.645s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kant/robot_ILiAD/robot_agent_ws/install/setup.ps1'
+[9.654s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kant/robot_ILiAD/robot_agent_ws/install/local_setup.sh'
+[9.656s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/kant/robot_ILiAD/robot_agent_ws/install/_local_setup_util_sh.py'
+[9.659s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kant/robot_ILiAD/robot_agent_ws/install/setup.sh'
+[9.669s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kant/robot_ILiAD/robot_agent_ws/install/local_setup.bash'
+[9.671s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kant/robot_ILiAD/robot_agent_ws/install/setup.bash'
+[9.679s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kant/robot_ILiAD/robot_agent_ws/install/local_setup.zsh'
+[9.681s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kant/robot_ILiAD/robot_agent_ws/install/setup.zsh'
