@@ -15,20 +15,18 @@ The goal of this project is to create a robot capable of interacting with a huma
 
 ---
 
----
-
 ## System Architecture
 
 ```mermaid
 graph TD
-    subgraph Jetson Orin Nano [Jetson Orin Nano - Master / Brain]
+    subgraph jetson_node ["Jetson Orin Nano - Master / Brain"]
         Cam[camera_node] -->|/camera/image_raw| VLM[vlm_node]
         Mic[stt_node] -->|/user/instruction| VLM
         VLM -->|/say_text| Net[Local Ethernet Network]
         VLM -->|/vlm/motion_command| Net
     end
 
-    subgraph Raspberry Pi 5 [Raspberry Pi 5 - Slave / Physical IO]
+    subgraph pi_node ["Raspberry Pi 5 - Slave / Physical IO"]
         Net -->|/say_text| TTS[piper_tts_node]
         Net -->|/vlm/motion_command| Motor[motor_node]
     end
