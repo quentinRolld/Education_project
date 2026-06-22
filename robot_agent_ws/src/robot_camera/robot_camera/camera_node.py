@@ -25,10 +25,15 @@ class CameraNode(Node):
         if not self.cap.isOpened():
             self.get_logger().error(f'Could not open camera device {self.device_index}')
         else:
+            # Configure resolution and compression to avoid USB bandwidth issues on Jetson
+            self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
+            self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+            self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+            
             # warmup
             import time
             time.sleep(1.0)
-            self.get_logger().info(f'Camera device {self.device_index} opened')
+            self.get_logger().info(f'Camera device {self.device_index} opened and configured (640x480 MJPG)')
 
 
     def timer_callback(self):
