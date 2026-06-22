@@ -90,7 +90,7 @@ class MotorNode(Node):
         """
         self.get_logger().debug(f'Setting speeds: Left={left_speed}%, Right={right_speed}%')
         
-        if GPIO_AVAILABLE:
+        if GPIO_AVAILABLE and hasattr(self, 'pwm_left') and hasattr(self, 'pwm_right'):
             # Left wheel direction and PWM speed
             GPIO.output(self.l_dir, GPIO.HIGH if left_speed < 0 else GPIO.LOW)
             self.pwm_left.ChangeDutyCycle(abs(left_speed))
@@ -109,7 +109,7 @@ class MotorNode(Node):
     def stop_motors(self):
         """Stops both motors immediately."""
         self.get_logger().info('Stopping motors')
-        if GPIO_AVAILABLE:
+        if GPIO_AVAILABLE and hasattr(self, 'pwm_left') and hasattr(self, 'pwm_right'):
             self.pwm_left.ChangeDutyCycle(0)
             self.pwm_right.ChangeDutyCycle(0)
             GPIO.output(self.l_dir, GPIO.LOW)
@@ -167,8 +167,10 @@ class MotorNode(Node):
         self.stop_motors()
         if GPIO_AVAILABLE:
             try:
-                self.pwm_left.stop()
-                self.pwm_right.stop()
+                if hasattr(self, 'pwm_left'):
+                    self.pwm_left.stop()
+                if hasattr(self, 'pwm_right'):
+                    self.pwm_right.stop()
                 GPIO.cleanup()
                 self.get_logger().info('GPIO Cleaned up')
             except Exception as e:
