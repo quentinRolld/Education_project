@@ -10,10 +10,15 @@ import time
 import math
 
 try:
-    import Jetson.GPIO as GPIO
+    import RPi.GPIO as GPIO
     GPIO_AVAILABLE = True
-except Exception:
-    GPIO_AVAILABLE = False
+except ImportError:
+    try:
+        import Jetson.GPIO as GPIO
+        GPIO_AVAILABLE = True
+    except Exception:
+        GPIO_AVAILABLE = False
+
 
 
 class MotorNode(Node):
