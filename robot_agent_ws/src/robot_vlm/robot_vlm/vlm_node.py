@@ -28,13 +28,7 @@ class VLMNode(Node):
         self.speech_pub = self.create_publisher(String, '/say_text', 10)
         self.motion_pub = self.create_publisher(String, '/vlm/motion_command', 10)
 
-        # Warmup model at startup (non-blocking thread could be used, but a blocking warmup is fine here)
-        self.get_logger().info('Warming up Gemma model (this may take time)...')
-        try:
-            requests.post(f'{OLLAMA_URL}/api/generate', json={'model': MODEL_NAME, 'prompt': 'warmup', 'stream': False}, timeout=120)
-        except Exception as e:
-            self.get_logger().warning(f'Warmup request failed: {e}')
-        self.get_logger().info('VLM ready')
+        self.get_logger().info('VLM Node ready (Warmup disabled to prevent boot power spikes)')
 
 
     def image_cb(self, msg: Image):
