@@ -20,9 +20,11 @@ class PiperTTSNode(Node):
         # Declare parameters for easy audio routing and model path configuration
         self.declare_parameter('model_path', '/models/fr/model.onnx')
         self.declare_parameter('alsa_device', 'plughw:0,0')
+        self.declare_parameter('piper_path', 'piper')
         
         self.model_path = self.get_parameter('model_path').value
         self.alsa_device = self.get_parameter('alsa_device').value
+        self.piper_path = self.get_parameter('piper_path').value
 
         # Subscriber to /say_text topic
         self.sub = self.create_subscription(String, '/say_text', self.say_callback, 10)
@@ -41,7 +43,7 @@ class PiperTTSNode(Node):
             # Adjust model path if needed
             # Example piper invocation; change according to your piper installation
             proc = subprocess.run([
-                'piper',
+                self.piper_path,
                 '--text', text,
                 '--model', self.model_path,
                 '-f', tmp_wav.name

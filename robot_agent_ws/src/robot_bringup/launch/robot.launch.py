@@ -31,6 +31,12 @@ def generate_launch_description():
         description='PyAudio index of the USB microphone device'
     )
 
+    piper_path_arg = DeclareLaunchArgument(
+        'piper_path',
+        default_value='piper',
+        description='Path to the Piper executable binary'
+    )
+
     # 1. Camera Node
     camera_node = Node(
         package='robot_camera',
@@ -55,7 +61,8 @@ def generate_launch_description():
         name='piper_tts_node',
         parameters=[{
             'alsa_device': LaunchConfiguration('alsa_device'),
-            'model_path': LaunchConfiguration('model_path')
+            'model_path': LaunchConfiguration('model_path'),
+            'piper_path': LaunchConfiguration('piper_path')
         }],
         output='screen'
     )
@@ -82,6 +89,7 @@ def generate_launch_description():
         alsa_device_arg,
         model_path_arg,
         mic_device_index_arg,
+        piper_path_arg,
         camera_node,
         vlm_node,
         piper_tts_node,
