@@ -37,15 +37,6 @@ def generate_launch_description():
         description='Path to the Piper executable binary'
     )
 
-    # 1. Camera Node
-    camera_node = Node(
-        package='robot_camera',
-        executable='camera_node',
-        name='camera_node',
-        parameters=[{'device_index': LaunchConfiguration('device_index')}],
-        output='screen'
-    )
-
     # 2. Piper TTS (Speech Synthesis) Node
     piper_tts_node = Node(
         package='robot_audio',
@@ -82,7 +73,6 @@ def generate_launch_description():
         model_path_arg,
         mic_device_index_arg,
         piper_path_arg,
-        camera_node,
         piper_tts_node,
         stt_node,
         motor_node
