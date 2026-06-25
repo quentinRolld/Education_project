@@ -55,7 +55,7 @@ class VLMNode(Node):
             'keep_alive': -1
         }
         try:
-            resp = requests.post(f'{OLLAMA_URL}/api/generate', json=payload, timeout=60)
+            resp = requests.post(f'{OLLAMA_URL}/api/generate', json=payload, timeout=300)
             if resp.status_code == 200:
                 self.get_logger().info('Ollama model pre-loaded and warmed up successfully!')
                 self.speech_pub.publish(String(data="Le modèle est préchargé et prêt."))
