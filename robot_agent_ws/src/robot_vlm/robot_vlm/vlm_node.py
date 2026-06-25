@@ -28,8 +28,35 @@ class VLMNode(Node):
         self.speech_pub = self.create_publisher(String, '/say_text', 10)
         self.motion_pub = self.create_publisher(String, '/vlm/motion_command', 10)
 
-        self.get_logger().info('VLM Node ready (Warmup disabled to prevent boot power spikes)')
+        # Start background thread to warm up the model
+        import threading
+        self.warmup_thread = threading.Thread(target=self.warmup_ollama, daemon=True)
+        self.warmup_thread.start()
+        
+        self.get_logger().info('VLM Node ready (Warmup thread started in background)')
 
+    def warmup_ollama(self):
+        self.get_logger().info(f'Pre-loading and warming up model {MODEL_NAME} in Ollama...')
+        # 1x1 black PNG in base64
+        dummy_image = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='
+        payload = {
+            'model': MODEL_NAME,
+            'prompt': 'initialization',
+            'images': [dummy_image],
+            'stream': False,
+            'options': {
+                'num_predict': 1
+            },
+            'keep_alive': -1
+        }
+        try:
+            resp = requests.post(f'{OLLAMA_URL}/api/generate', json=payload, timeout=60)
+            if resp.status_code == 200:
+                self.get_logger().info('Ollama model pre-loaded and warmed up successfully!')
+            else:
+                self.get_logger().warning(f'Warmup failed with status code {resp.status_code}')
+        except Exception as e:
+            self.get_logger().warning(f'Failed to warm up Ollama at startup: {e}')
 
     def image_cb(self, msg: Image):
         # convert to jpg base64
@@ -73,7 +100,8 @@ class VLMNode(Node):
             'model': MODEL_NAME,
             'prompt': system_prompt,
             'images': [self.last_image_b64],
-            'stream': False
+            'stream': False,
+            'keep_alive': -1
         }
         self.get_logger().info('Sending request to Gemma...')
         try:
