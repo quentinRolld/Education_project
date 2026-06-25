@@ -36,6 +36,11 @@ class VLMNode(Node):
         self.get_logger().info('VLM Node ready (Warmup thread started in background)')
 
     def warmup_ollama(self):
+        import time
+        # Sleep to allow ROS2 network discovery to find the TTS node subscriber
+        time.sleep(2.0)
+        self.speech_pub.publish(String(data="Initialisation et préchauffage du modèle."))
+
         self.get_logger().info(f'Pre-loading and warming up model {MODEL_NAME} in Ollama...')
         # 1x1 black PNG in base64
         dummy_image = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='
@@ -53,6 +58,7 @@ class VLMNode(Node):
             resp = requests.post(f'{OLLAMA_URL}/api/generate', json=payload, timeout=60)
             if resp.status_code == 200:
                 self.get_logger().info('Ollama model pre-loaded and warmed up successfully!')
+                self.speech_pub.publish(String(data="Le modèle est préchargé et prêt."))
             else:
                 self.get_logger().warning(f'Warmup failed with status code {resp.status_code}')
         except Exception as e:
