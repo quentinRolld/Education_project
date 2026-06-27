@@ -12,13 +12,31 @@ import cv2
 class CameraNode(Node):
     def __init__(self):
         super().__init__('camera_node')
-        # Declare parameter for camera index (default: 0)
-        self.declare_parameter('device_index', 0)
+        # Declare parameter for camera index (default: -1 for auto-discovery)
+        self.declare_parameter('device_index', -1)
         self.device_index = self.get_parameter('device_index').value
+
+        if self.device_index == -1:
+            self.device_index = self.auto_discover_camera()
 
         self.publisher_ = self.create_publisher(Image, '/camera/image_raw', 10)
         self.timer = self.create_timer(0.2, self.timer_callback)
         self.bridge = CvBridge()
+        
+    def auto_discover_camera(self) -> int:
+        self.get_logger().info('Auto-discovering USB Camera (V4L2)...')
+        for i in range(10):
+            cap = cv2.VideoCapture(i, cv2.CAP_V4L2)
+            if cap.isOpened():
+                # On Pi, some hardware encoders present as video nodes. Check if we can read a frame or width.
+                width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
+                if width > 0:
+                    self.get_logger().info(f'Found working Camera at /dev/video{i}')
+                    cap.release()
+                    return i
+                cap.release()
+        self.get_logger().warning('Auto-discovery failed to find a camera. Falling back to index 0.')
+        return 0
         
         self.get_logger().info(f'Opening camera device index {self.device_index} (V4L2)...')
         self.cap = cv2.VideoCapture(self.device_index, cv2.CAP_V4L2)

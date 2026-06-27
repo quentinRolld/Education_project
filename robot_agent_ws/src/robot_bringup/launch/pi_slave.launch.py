@@ -9,14 +9,14 @@ def generate_launch_description():
     # Declare configurable launch arguments for hardware/IO
     device_index_arg = DeclareLaunchArgument(
         'device_index',
-        default_value='0',
-        description='Index of the USB camera device (V4L2)'
+        default_value='-1',
+        description='Index of the USB camera device (V4L2) or -1 for auto-discovery'
     )
 
     alsa_device_arg = DeclareLaunchArgument(
         'alsa_device',
-        default_value='plughw:0,0',
-        description='ALSA device for playback (e.g., plughw:1,0)'
+        default_value='auto',
+        description='ALSA device for playback (e.g., plughw:1,0) or auto for discovery'
     )
 
     model_path_arg = DeclareLaunchArgument(

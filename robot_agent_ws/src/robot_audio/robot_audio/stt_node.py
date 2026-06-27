@@ -38,8 +38,25 @@ class SpeechToTextNode(Node):
         except (ValueError, TypeError):
             self.device_index = -1
 
+        if self.device_index == -1 and SR_AVAILABLE:
+            self.device_index = self.auto_discover_microphone()
+
         self.pub = self.create_publisher(String, '/user/instruction', 10)
         self.running = True
+
+    def auto_discover_microphone(self) -> int:
+        self.get_logger().info('Auto-discovering USB microphone...')
+        try:
+            mic_names = sr.Microphone.list_microphone_names()
+            for i, name in enumerate(mic_names):
+                if 'USB' in name or 'Camera' in name or 'Mic' in name or 'UACDemo' in name:
+                    self.get_logger().info(f'Found Microphone: "{name}" at index {i}')
+                    return i
+        except Exception as e:
+            self.get_logger().error(f'Failed to list microphones: {e}')
+            
+        self.get_logger().warning('Auto-discovery failed. Using system default microphone (index -1).')
+        return -1
 
         # Start the microphone listener thread
         if SR_AVAILABLE:
