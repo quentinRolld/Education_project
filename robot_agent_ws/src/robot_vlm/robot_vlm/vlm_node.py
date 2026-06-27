@@ -39,7 +39,7 @@ class VLMNode(Node):
         import time
         # Sleep to allow ROS2 network discovery to find the TTS node subscriber
         time.sleep(2.0)
-        self.speech_pub.publish(String(data="Initialisation et préchauffage du modèle."))
+        self.speech_pub.publish(String(data="Initializing and warming up the model."))
 
         self.get_logger().info(f'Pre-loading and warming up model {MODEL_NAME} in Ollama...')
         # 1x1 black PNG in base64
@@ -58,7 +58,7 @@ class VLMNode(Node):
             resp = requests.post(f'{OLLAMA_URL}/api/generate', json=payload, timeout=300)
             if resp.status_code == 200:
                 self.get_logger().info('Ollama model pre-loaded and warmed up successfully!')
-                self.speech_pub.publish(String(data="Le modèle est préchargé et prêt."))
+                self.speech_pub.publish(String(data="The model is preloaded and ready."))
             else:
                 self.get_logger().warning(f'Warmup failed with status code {resp.status_code}')
         except Exception as e:
@@ -69,7 +69,14 @@ class VLMNode(Node):
         try:
             cv_img = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
             import cv2
-            _, buf = cv2.imencode('.jpg', cv_img)
+            
+            # Resize image to speed up VLM inference by reducing visual tokens
+            height, width = cv_img.shape[:2]
+            if width > 640 or height > 480:
+                cv_img = cv2.resize(cv_img, (640, 480))
+                
+            # Compress slightly more to reduce base64 size
+            _, buf = cv2.imencode('.jpg', cv_img, [int(cv2.IMWRITE_JPEG_QUALITY), 80])
             self.last_image_b64 = base64.b64encode(buf.tobytes()).decode('utf-8')
         except Exception as e:
             self.get_logger().error(f'Image conversion failed: {e}')
@@ -88,7 +95,7 @@ class VLMNode(Node):
 
         Your task is to interpret the scene and the user's instruction to answer the user's question or explain your action, and plan any necessary movement.
         Output a JSON object with exactly these three keys:
-        1. "text_response": A string containing your answer to the user in French. If the user asks a question, answer it. If the user gives a movement command, explain what you are going to do.
+        1. "text_response": A string containing your answer to the user in English. If the user asks a question, answer it. If the user gives a movement command, explain what you are going to do.
         2. "distance_cm": The straight distance (in centimeters) the robot should move forward (+) or backward (-). Default to 0.0 if no movement is needed.
         3. "angle_deg": The rotation angle (in degrees) the robot should turn clockwise (+) or counterclockwise (-). Default to 0.0 if no rotation is needed.
 
@@ -97,7 +104,7 @@ class VLMNode(Node):
         - Do not include any explanations or text outside the JSON.
         - JSON format example:
         {{
-          "text_response": "Je vais avancer de 50 cm pour éviter la boîte.",
+          "text_response": "I will move forward by 50 cm to avoid the box.",
           "distance_cm": 50.0,
           "angle_deg": 0.0
         }}
@@ -107,6 +114,10 @@ class VLMNode(Node):
             'prompt': system_prompt,
             'images': [self.last_image_b64],
             'stream': False,
+            'options': {
+                'num_predict': 100,  # Limit output length to speed up generation
+                'temperature': 0.1   # Low temperature for deterministic/faster output
+            },
             'keep_alive': -1
         }
         self.get_logger().info('Sending request to Gemma...')

@@ -21,8 +21,8 @@ def generate_launch_description():
 
     model_path_arg = DeclareLaunchArgument(
         'model_path',
-        default_value='/home/kant/piper_models/fr_FR-siwis-medium.onnx',
-        description='Path to the Piper French ONNX voice model'
+        default_value='/home/kant/piper_models/en_US-lessac-medium.onnx',
+        description='Path to the Piper English ONNX voice model'
     )
 
     mic_device_index_arg = DeclareLaunchArgument(

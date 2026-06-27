@@ -26,7 +26,7 @@ class SpeechToTextNode(Node):
             )
             # We don't crash, but we will print errors during callbacks
         
-        self.declare_parameter('language', 'fr-FR')
+        self.declare_parameter('language', 'en-US')
         self.declare_parameter('energy_threshold', 300)  # Silence detection sensitivity
         self.declare_parameter('device_index', -1)      # -1 for default mic, or specific audio index
 
