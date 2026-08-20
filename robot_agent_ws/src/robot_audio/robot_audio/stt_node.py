@@ -6,6 +6,7 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 import threading
+import time
 
 try:
     import speech_recognition as sr
@@ -78,6 +79,7 @@ class SpeechToTextNode(Node):
         recognizer = sr.Recognizer()
         recognizer.energy_threshold = self.energy_threshold
         recognizer.dynamic_energy_threshold = True
+        recognizer.operation_timeout = 10  # cap the Google API request so a network hiccup can't hang the loop forever
 
         # Use specified mic index if configured
         mic_index = None if self.device_index == -1 else self.device_index
@@ -95,13 +97,20 @@ class SpeechToTextNode(Node):
                 self.get_logger().info(f'Calibration done. New threshold: {recognizer.energy_threshold:.1f}')
 
                 self.get_logger().info("STT is listening. You can speak now...")
+                last_heartbeat = time.monotonic()
 
                 while self.running:
                     try:
                         # Listen for a phrase (timeout = no speech, phrase_time_limit = max duration of speech)
                         audio = recognizer.listen(source, timeout=1.0, phrase_time_limit=10.0)
                     except sr.WaitTimeoutError:
+                        # Periodic proof-of-life so idle silence isn't mistaken for a hang
+                        if time.monotonic() - last_heartbeat > 30.0:
+                            self.get_logger().info('Still listening, no speech detected recently...')
+                            last_heartbeat = time.monotonic()
                         continue  # Keep listening
+
+                    last_heartbeat = time.monotonic()
 
                     if not self.running:
                         break
