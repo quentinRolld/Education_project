@@ -37,8 +37,8 @@ class MotorNode(Node):
         
         self.declare_parameter('wheel_base_cm', 40.0)      # distance between wheels
         self.declare_parameter('max_speed_cm_s', 60.0)     # recalibrated from field test: 10cm command covered 30cm at 50% pwm
-        self.declare_parameter('translation_speed_pct', 20.0)  # default % speed for lines
-        self.declare_parameter('rotation_speed_pct', 25.0)     # default % speed for turns
+        self.declare_parameter('translation_speed_pct', 10.0)  # default % speed for lines
+        self.declare_parameter('rotation_speed_pct', 12.5)     # default % speed for turns
 
         # Retrieve parameter values
         self.l_pwm = self.get_parameter('pwm_left_pin').value
