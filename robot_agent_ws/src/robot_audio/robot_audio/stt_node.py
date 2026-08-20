@@ -44,6 +44,12 @@ class SpeechToTextNode(Node):
         self.pub = self.create_publisher(String, '/user/instruction', 10)
         self.running = True
 
+        # Start the microphone listener thread
+        if SR_AVAILABLE:
+            self.listener_thread = threading.Thread(target=self.listen_loop, daemon=True)
+            self.listener_thread.start()
+            self.get_logger().info('Mic listener thread started')
+
     def auto_discover_microphone(self) -> int:
         self.get_logger().info('Auto-discovering USB microphone...')
         try:
@@ -54,15 +60,9 @@ class SpeechToTextNode(Node):
                     return i
         except Exception as e:
             self.get_logger().error(f'Failed to list microphones: {e}')
-            
+
         self.get_logger().warning('Auto-discovery failed. Using system default microphone (index -1).')
         return -1
-
-        # Start the microphone listener thread
-        if SR_AVAILABLE:
-            self.listener_thread = threading.Thread(target=self.listen_loop, daemon=True)
-            self.listener_thread.start()
-            self.get_logger().info('Mic listener thread started')
 
     def listen_loop(self):
         recognizer = sr.Recognizer()
