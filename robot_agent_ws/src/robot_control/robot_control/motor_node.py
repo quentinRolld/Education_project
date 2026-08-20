@@ -36,9 +36,9 @@ class MotorNode(Node):
         self.declare_parameter('dir_right_pin', 7)
         
         self.declare_parameter('wheel_base_cm', 40.0)      # distance between wheels
-        self.declare_parameter('max_speed_cm_s', 20.0)     # max speed at 100% PWM
-        self.declare_parameter('translation_speed_pct', 50.0)  # default % speed for lines
-        self.declare_parameter('rotation_speed_pct', 40.0)     # default % speed for turns
+        self.declare_parameter('max_speed_cm_s', 60.0)     # recalibrated from field test: 10cm command covered 30cm at 50% pwm
+        self.declare_parameter('translation_speed_pct', 20.0)  # default % speed for lines
+        self.declare_parameter('rotation_speed_pct', 25.0)     # default % speed for turns
 
         # Retrieve parameter values
         self.l_pwm = self.get_parameter('pwm_left_pin').value
@@ -92,11 +92,11 @@ class MotorNode(Node):
         
         if GPIO_AVAILABLE and hasattr(self, 'pwm_left') and hasattr(self, 'pwm_right'):
             # Left wheel direction and PWM speed
-            GPIO.output(self.l_dir, GPIO.HIGH if left_speed < 0 else GPIO.LOW)
+            GPIO.output(self.l_dir, GPIO.LOW if left_speed < 0 else GPIO.HIGH)
             self.pwm_left.ChangeDutyCycle(abs(left_speed))
-            
+
             # Right wheel direction and PWM speed (symmetrical mounting offset)
-            GPIO.output(self.r_dir, GPIO.LOW if right_speed < 0 else GPIO.HIGH)
+            GPIO.output(self.r_dir, GPIO.HIGH if right_speed < 0 else GPIO.LOW)
             self.pwm_right.ChangeDutyCycle(abs(right_speed))
         else:
             # Mock mode logs

@@ -55,6 +55,25 @@ Connected via Ethernet (sharing `ROS_DOMAIN_ID=42`), this board handles all low-
 
 ---
 
+## Wheel Motor Wiring (Raspberry Pi 5 → Cytron MDD20A)
+
+`motor_node` drives the wheels through a **Cytron MDD20A** dual-channel H-bridge in Sign-Magnitude mode (1 PWM + 1 DIR pin per motor). Pin numbers below use Raspberry Pi **BOARD** (physical) numbering and match the `motor_node` ROS2 parameter defaults.
+
+| Signal (ROS2 param) | Pi physical pin | GPIO (BCM) | MDD20A pin |
+|---|---|---|---|
+| `pwm_left_pin`  | 33 | GPIO13 | `PWM1` |
+| `dir_left_pin`  | 29 | GPIO5  | `DIR1` |
+| `pwm_right_pin` | 15 | GPIO22 | `PWM2` |
+| `dir_right_pin` | 7  | GPIO4  | `DIR2` |
+| —               | 6 or 9 (any GND) | GND | `GND` (signal header) |
+
+*   Motor outputs: left motor on `M1A`/`M1B`, right motor on `M2A`/`M2B`.
+*   Battery pack (5–30V, matching motor rating) goes to the MDD20A power terminals (`VMS`/`GND`), separate from the Pi's own power supply.
+*   Do **not** wire the MDD20A's `5V` signal-header pin back into the Pi — it's a regulator output for external logic, not an input.
+*   Pi and driver **GND must be tied together** so the PWM/DIR signals have a common reference, even though power rails are separate.
+
+---
+
 ## Package Structure
 
 ```
