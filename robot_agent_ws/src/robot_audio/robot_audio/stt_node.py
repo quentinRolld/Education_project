@@ -53,11 +53,21 @@ class SpeechToTextNode(Node):
     def auto_discover_microphone(self) -> int:
         self.get_logger().info('Auto-discovering USB microphone...')
         try:
-            mic_names = sr.Microphone.list_microphone_names()
-            for i, name in enumerate(mic_names):
-                if 'USB' in name or 'Camera' in name or 'Mic' in name or 'UACDemo' in name:
-                    self.get_logger().info(f'Found Microphone: "{name}" at index {i}')
-                    return i
+            import pyaudio
+            p = pyaudio.PyAudio()
+            try:
+                for i in range(p.get_device_count()):
+                    info = p.get_device_info_by_index(i)
+                    name = info['name']
+                    # Must actually expose input channels, not just match by name
+                    # (USB speakers/sound cards often share naming keywords with USB mics)
+                    if info['maxInputChannels'] > 0 and (
+                        'USB' in name or 'Camera' in name or 'Mic' in name or 'UACDemo' in name
+                    ):
+                        self.get_logger().info(f'Found Microphone: "{name}" at index {i}')
+                        return i
+            finally:
+                p.terminate()
         except Exception as e:
             self.get_logger().error(f'Failed to list microphones: {e}')
 
