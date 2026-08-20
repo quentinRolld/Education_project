@@ -85,42 +85,44 @@ class SpeechToTextNode(Node):
         try:
             mic = sr.Microphone(device_index=mic_index)
             
-            # Calibrate threshold to ambient noise
-            self.get_logger().info('Calibrating microphone to ambient noise...')
+            # Open the mic stream once and keep it open for the whole listening
+            # session (re-opening it every loop iteration was re-triggering
+            # ALSA's device probing on every timeout, flooding the logs).
             with mic as source:
+                # Calibrate threshold to ambient noise
+                self.get_logger().info('Calibrating microphone to ambient noise...')
                 recognizer.adjust_for_ambient_noise(source, duration=2.0)
-            self.get_logger().info(f'Calibration done. New threshold: {recognizer.energy_threshold:.1f}')
-            
-            self.get_logger().info("STT is listening. You can speak now...")
-            
-            while self.running:
-                with mic as source:
+                self.get_logger().info(f'Calibration done. New threshold: {recognizer.energy_threshold:.1f}')
+
+                self.get_logger().info("STT is listening. You can speak now...")
+
+                while self.running:
                     try:
                         # Listen for a phrase (timeout = no speech, phrase_time_limit = max duration of speech)
                         audio = recognizer.listen(source, timeout=1.0, phrase_time_limit=10.0)
                     except sr.WaitTimeoutError:
                         continue  # Keep listening
-                    
-                if not self.running:
-                    break
 
-                self.get_logger().info('Speech detected. Transcribing...')
-                try:
-                    # Recognize speech using Google Speech Recognition
-                    text = recognizer.recognize_google(audio, language=self.language)
-                    self.get_logger().info(f'Transcribed speech: "{text}"')
-                    
-                    # Publish the text instruction
-                    msg = String()
-                    msg.data = text
-                    self.pub.publish(msg)
-                except sr.UnknownValueError:
-                    self.get_logger().warning("Could not understand audio")
-                except sr.RequestError as e:
-                    self.get_logger().error(f"Could not request transcription service: {e}")
-                except Exception as e:
-                    self.get_logger().error(f"Error during recognition: {e}")
-                    
+                    if not self.running:
+                        break
+
+                    self.get_logger().info('Speech detected. Transcribing...')
+                    try:
+                        # Recognize speech using Google Speech Recognition
+                        text = recognizer.recognize_google(audio, language=self.language)
+                        self.get_logger().info(f'Transcribed speech: "{text}"')
+
+                        # Publish the text instruction
+                        msg = String()
+                        msg.data = text
+                        self.pub.publish(msg)
+                    except sr.UnknownValueError:
+                        self.get_logger().warning("Could not understand audio")
+                    except sr.RequestError as e:
+                        self.get_logger().error(f"Could not request transcription service: {e}")
+                    except Exception as e:
+                        self.get_logger().error(f"Error during recognition: {e}")
+
         except Exception as e:
             self.get_logger().error(f"Failed to initialize microphone: {e}. Is your USB microphone connected?")
 
