@@ -78,7 +78,11 @@ class SpeechToTextNode(Node):
     def listen_loop(self):
         recognizer = sr.Recognizer()
         recognizer.energy_threshold = self.energy_threshold
-        recognizer.dynamic_energy_threshold = True
+        # Fixed threshold after calibration instead of continuously adapting during
+        # listening: dynamic mode was making recognition inconsistent across
+        # sessions (drifting threshold triggering on background noise, or cutting
+        # phrases at the wrong point).
+        recognizer.dynamic_energy_threshold = False
         recognizer.operation_timeout = 10  # cap the Google API request so a network hiccup can't hang the loop forever
 
         # Use specified mic index if configured
@@ -93,7 +97,7 @@ class SpeechToTextNode(Node):
             with mic as source:
                 # Calibrate threshold to ambient noise
                 self.get_logger().info('Calibrating microphone to ambient noise...')
-                recognizer.adjust_for_ambient_noise(source, duration=2.0)
+                recognizer.adjust_for_ambient_noise(source, duration=3.0)
                 self.get_logger().info(f'Calibration done. New threshold: {recognizer.energy_threshold:.1f}')
 
                 self.get_logger().info("STT is listening. You can speak now...")
