@@ -24,7 +24,7 @@ class PiperTTSNode(Node):
         self.declare_parameter('model_path', '/models/fr/model.onnx')
         self.declare_parameter('alsa_device', 'auto')
         self.declare_parameter('piper_path', 'piper')
-        self.declare_parameter('volume_gain', 2.5)  # software amplification on top of the ALSA mixer
+        self.declare_parameter('volume_gain', 1.8)  # software amplification on top of the ALSA mixer
 
         self.model_path = self.get_parameter('model_path').value
         self.alsa_device = self.get_parameter('alsa_device').value
