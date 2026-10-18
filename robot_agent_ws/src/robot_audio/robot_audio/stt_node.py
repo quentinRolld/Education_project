@@ -8,6 +8,8 @@ from std_msgs.msg import String
 import threading
 import time
 
+import numpy as np
+
 try:
     import speech_recognition as sr
     SR_AVAILABLE = True
@@ -84,6 +86,7 @@ class SpeechToTextNode(Node):
         # phrases at the wrong point).
         recognizer.dynamic_energy_threshold = False
         recognizer.operation_timeout = 10  # cap the Google API request so a network hiccup can't hang the loop forever
+        recognizer.pause_threshold = 1.0  # seconds of silence ending a phrase (default 0.8 cut sentences mid-way)
 
         # Use specified mic index if configured
         mic_index = None if self.device_index == -1 else self.device_index
@@ -119,7 +122,11 @@ class SpeechToTextNode(Node):
                     if not self.running:
                         break
 
-                    self.get_logger().info('Speech detected. Transcribing...')
+                    duration = len(audio.frame_data) / (audio.sample_rate * audio.sample_width)
+                    rms = float(np.sqrt(np.mean(np.frombuffer(audio.frame_data, dtype=np.int16).astype(np.float32) ** 2)))
+                    self.get_logger().info(
+                        f'Speech detected ({duration:.1f}s, rms {rms:.0f}, threshold {recognizer.energy_threshold:.0f}). Transcribing...'
+                    )
                     try:
                         # Recognize speech using Google Speech Recognition
                         text = recognizer.recognize_google(audio, language=self.language)
@@ -130,7 +137,9 @@ class SpeechToTextNode(Node):
                         msg.data = text
                         self.pub.publish(msg)
                     except sr.UnknownValueError:
-                        self.get_logger().warning("Could not understand audio")
+                        self.get_logger().warning("Could not understand audio (clip saved to /tmp/stt_last_failed.wav)")
+                        with open('/tmp/stt_last_failed.wav', 'wb') as f:
+                            f.write(audio.get_wav_data())
                     except sr.RequestError as e:
                         self.get_logger().error(f"Could not request transcription service: {e}")
                     except Exception as e:

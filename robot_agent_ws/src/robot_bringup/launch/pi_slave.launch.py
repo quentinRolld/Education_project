@@ -39,7 +39,7 @@ def generate_launch_description():
 
     volume_gain_arg = DeclareLaunchArgument(
         'volume_gain',
-        default_value='1.8',
+        default_value='1.0',
         description='Software gain applied to TTS audio (1.0 = unchanged)'
     )
 

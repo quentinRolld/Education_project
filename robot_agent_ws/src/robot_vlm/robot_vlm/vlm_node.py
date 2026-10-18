@@ -9,11 +9,22 @@ from sensor_msgs.msg import Image
 import base64
 import requests
 import json
+import time
 from cv_bridge import CvBridge
 
 
 OLLAMA_URL = 'http://localhost:11434'
 MODEL_NAME = 'gemma3:4b-it-qat'
+# Shared by warmup and real requests: any difference (e.g. num_ctx) makes Ollama
+# reload the model. The smaller context/batch leaves enough memory on the 8GB
+# Orin for every layer and the vision encoder to stay on the GPU; with the
+# defaults (4096/512) part of the model fell back to CPU and image requests
+# took ~100s instead of ~10s.
+OLLAMA_OPTIONS = {
+    'num_ctx': 2048,
+    'num_batch': 256,
+    'temperature': 0.1,
+}
 
 
 class VLMNode(Node):
@@ -49,9 +60,7 @@ class VLMNode(Node):
             'prompt': 'initialization',
             'images': [dummy_image],
             'stream': False,
-            'options': {
-                'num_predict': 1
-            },
+            'options': {**OLLAMA_OPTIONS, 'num_predict': 1},
             'keep_alive': -1
         }
         try:
@@ -101,6 +110,7 @@ class VLMNode(Node):
 
         Guidelines:
         - Respond ONLY with a valid JSON object.
+        - Keep "text_response" to one short sentence.
         - Do not include any explanations or text outside the JSON.
         - JSON format example:
         {{
@@ -114,13 +124,12 @@ class VLMNode(Node):
             'prompt': system_prompt,
             'images': [self.last_image_b64],
             'stream': False,
-            'options': {
-                'num_predict': 100,  # Limit output length to speed up generation
-                'temperature': 0.1   # Low temperature for deterministic/faster output
-            },
+            'format': 'json',  # constrained JSON output: no markdown fences to generate or strip
+            'options': {**OLLAMA_OPTIONS, 'num_predict': 100},
             'keep_alive': -1
         }
         self.get_logger().info('Sending request to Gemma...')
+        start = time.monotonic()
         try:
             resp = requests.post(f'{OLLAMA_URL}/api/generate', json=payload, timeout=600)
             resp.raise_for_status()
@@ -149,7 +158,7 @@ class VLMNode(Node):
                 distance = parsed_json.get('distance_cm', 0.0)
                 angle = parsed_json.get('angle_deg', 0.0)
                 
-                self.get_logger().info(f'Parsed VLM Response -> Speech: "{text_response}", Distance: {distance} cm, Angle: {angle} deg')
+                self.get_logger().info(f'Parsed VLM Response ({time.monotonic() - start:.1f}s) -> Speech: "{text_response}", Distance: {distance} cm, Angle: {angle} deg')
                 
                 # Publish speech text to TTS node
                 if text_response:
