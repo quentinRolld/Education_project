@@ -11,6 +11,9 @@ import subprocess
 import tempfile
 import os
 import re
+import wave
+
+import numpy as np
 
 
 class PiperTTSNode(Node):
@@ -21,10 +24,12 @@ class PiperTTSNode(Node):
         self.declare_parameter('model_path', '/models/fr/model.onnx')
         self.declare_parameter('alsa_device', 'auto')
         self.declare_parameter('piper_path', 'piper')
-        
+        self.declare_parameter('volume_gain', 2.5)  # software amplification on top of the ALSA mixer
+
         self.model_path = self.get_parameter('model_path').value
         self.alsa_device = self.get_parameter('alsa_device').value
         self.piper_path = self.get_parameter('piper_path').value
+        self.volume_gain = float(self.get_parameter('volume_gain').value)
 
         if self.alsa_device == 'auto':
             self.alsa_device = self.auto_discover_speaker()
@@ -54,6 +59,20 @@ class PiperTTSNode(Node):
         self.get_logger().warning('Auto-discovery failed to find a USB speaker. Falling back to plughw:0,0')
         return 'plughw:0,0'
 
+    def amplify_wav(self, path: str, gain: float):
+        # Piper outputs 16-bit PCM; scale samples and clip to avoid integer wrap-around.
+        with wave.open(path, 'rb') as wf:
+            params = wf.getparams()
+            frames = wf.readframes(params.nframes)
+        if params.sampwidth != 2:
+            self.get_logger().warning(f'Unsupported sample width {params.sampwidth}, skipping volume gain')
+            return
+        samples = np.frombuffer(frames, dtype=np.int16).astype(np.float32) * gain
+        samples = np.clip(samples, -32768, 32767).astype(np.int16)
+        with wave.open(path, 'wb') as wf:
+            wf.setparams(params)
+            wf.writeframes(samples.tobytes())
+
     def say_callback(self, msg):
         self.say(msg.data)
 
@@ -72,6 +91,9 @@ class PiperTTSNode(Node):
             if proc.returncode != 0:
                 self.get_logger().error(f'Piper failed: {proc.stderr.decode("utf-8")}')
                 return
+
+            if self.volume_gain != 1.0:
+                self.amplify_wav(tmp_wav.name, self.volume_gain)
 
             # Play with aplay
             play_proc = subprocess.run(['aplay', '-D', self.alsa_device, tmp_wav.name], capture_output=True)

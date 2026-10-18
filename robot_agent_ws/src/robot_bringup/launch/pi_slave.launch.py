@@ -37,6 +37,12 @@ def generate_launch_description():
         description='Path to the Piper executable binary'
     )
 
+    volume_gain_arg = DeclareLaunchArgument(
+        'volume_gain',
+        default_value='2.5',
+        description='Software gain applied to TTS audio (1.0 = unchanged)'
+    )
+
     # 1. Camera Node
     camera_node = Node(
         package='robot_camera',
@@ -54,7 +60,8 @@ def generate_launch_description():
         parameters=[{
             'alsa_device': LaunchConfiguration('alsa_device'),
             'model_path': LaunchConfiguration('model_path'),
-            'piper_path': LaunchConfiguration('piper_path')
+            'piper_path': LaunchConfiguration('piper_path'),
+            'volume_gain': LaunchConfiguration('volume_gain')
         }],
         output='screen'
     )
@@ -82,6 +89,7 @@ def generate_launch_description():
         model_path_arg,
         mic_device_index_arg,
         piper_path_arg,
+        volume_gain_arg,
         camera_node,
         piper_tts_node,
         stt_node,
