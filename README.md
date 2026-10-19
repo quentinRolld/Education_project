@@ -1,4 +1,4 @@
-# robot_ILiAD - Distributed Autonomous Talking Robot
+# Education project - Distributed Autonomous Talking Robot
 
 [![ROS2](https://img.shields.io/badge/ROS2-Jazzy%20%2F%20Humble-blue?style=for-the-badge&logo=ros)](https://docs.ros.org)
 [![Python](https://img.shields.io/badge/python-3.10%20%2F%203.13-blue?style=for-the-badge&logo=python)](https://www.python.org)
@@ -107,26 +107,55 @@ On both boards, add the following to `~/.bashrc` to enable automatic ROS2 cross-
 export ROS_DOMAIN_ID=42
 ```
 
-### Running the System
+### Startup Procedure (Power-On to Launch)
 
-#### 1. On Jetson Orin Nano (Master)
-Start the brain first to initialize the VLM.
-```bash
-cd ~/Education_project/robot_agent_ws
-colcon build --packages-select robot_vlm
-source install/setup.bash
-ros2 launch robot_bringup jetson_master.launch.py
-```
+1.  **Power on**: connect the Jetson's power supply and the Pi 5's official 27W USB-C supply. Make sure the motor battery pack is charged and plugged into the Cytron MDD20A (see [Wheel Motor Wiring](#wheel-motor-wiring-raspberry-pi-5--cytron-mdd20a)). Both boards boot headless; allow ~30–60s for boot to complete.
 
-#### 2. On Raspberry Pi 5 (Slave)
-Ensure the USB Webcam, Mic, Speaker, and motor driver pins are connected.
-```bash
-cd ~/Education_project/robot_agent_ws
-colcon build
-source install/setup.bash
+2.  **Connect from your laptop** (two separate SSH sessions, one per board):
+    ```bash
+    ssh kant@<jetson-host>   # e.g. jetson.local or its static IP
+    ssh kant@<pi-host>       # e.g. raspberrypi.local or its static IP
+    ```
 
-ros2 launch robot_bringup pi_slave.launch.py \
-  alsa_device:=plughw:2,0 \
-  model_path:=/home/kant/piper_models/en_US-lessac-medium.onnx \
-  piper_path:=/home/kant/piper/piper/piper
-```
+3.  **Check the network link** between the boards (from either session):
+    ```bash
+    ping <the-other-board-ip>
+    ```
+
+4.  **Confirm `ROS_DOMAIN_ID`** is set on both (should already be in `~/.bashrc`):
+    ```bash
+    echo $ROS_DOMAIN_ID   # expect: 42
+    ```
+
+5.  **Pull and rebuild** if the code changed since the last run (see [Package Structure](#package-structure)):
+    ```bash
+    cd ~/Education_project && git pull
+    cd robot_agent_ws && colcon build --packages-select <changed_package>   # or no flag to rebuild everything
+    source install/setup.bash
+    ```
+
+6.  **Launch the Raspberry Pi 5 (Slave/IO) first.** Ensure the USB Webcam, Mic, Speaker, and motor driver pins are connected. Launching the Pi first means `piper_tts_node` is already listening when the Jetson later announces that the VLM is warmed up.
+    ```bash
+    cd ~/Education_project/robot_agent_ws
+    source install/setup.bash
+    ros2 launch robot_bringup pi_slave.launch.py \
+      alsa_device:=plughw:2,0 \
+      model_path:=/home/kant/piper_models/en_US-lessac-medium.onnx \
+      piper_path:=/home/kant/piper/piper/piper
+    ```
+
+7.  **Launch the Jetson Orin Nano (Master/Brain).** This starts loading and warming up the Gemma model in the background.
+    ```bash
+    cd ~/Education_project/robot_agent_ws
+    source install/setup.bash
+    ros2 launch robot_bringup jetson_master.launch.py
+    ```
+    Wait for the robot to say **"The model is preloaded and ready"** (spoken through the Pi's speaker) before giving any voice instruction — commands received during warmup are ignored since no image/model response is ready yet.
+
+8.  **Sanity check** (from either board):
+    ```bash
+    ros2 node list
+    ```
+    Expect exactly 5 nodes: `camera_node`, `stt_node`, `piper_tts_node`, `motor_node` (Pi) and `vlm_node` (Jetson). If one side's nodes are missing from the other board's view, it's a network/`ROS_DOMAIN_ID` issue — resolve that before testing further.
+
+9.  **Shutdown**: `Ctrl+C` each `ros2 launch` process. `motor_node` stops the motors and releases the GPIO pins on shutdown automatically.
