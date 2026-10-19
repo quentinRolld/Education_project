@@ -124,7 +124,8 @@ class VLMNode(Node):
             'prompt': system_prompt,
             'images': [self.last_image_b64],
             'stream': False,
-            'format': 'json',  # constrained JSON output: no markdown fences to generate or strip
+            # No 'format': 'json': Ollama's constrained decoding added ~1s per request on
+            # the Orin; the regex fallback below already strips the ```json fences.
             'options': {**OLLAMA_OPTIONS, 'num_predict': 100},
             'keep_alive': -1
         }
