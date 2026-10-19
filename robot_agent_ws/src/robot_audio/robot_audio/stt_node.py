@@ -4,7 +4,7 @@
 # -------------------------------
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String
+from std_msgs.msg import Empty, String
 import threading
 import time
 
@@ -15,6 +15,39 @@ try:
     SR_AVAILABLE = True
 except ImportError:
     SR_AVAILABLE = False
+
+
+class OnsetDetectingStream:
+    """Wraps the microphone stream to signal the start of speech as soon as it is
+    heard, i.e. before the phrase ends and gets transcribed. The VLM uses this
+    signal to encode the camera frame while the user is still talking."""
+
+    def __init__(self, stream, get_threshold, on_onset, min_loud_chunks=3):
+        self._stream = stream
+        self._get_threshold = get_threshold
+        self._on_onset = on_onset
+        # 3 chunks of 1024 samples at 16 kHz is ~0.2s: ignores short clicks
+        self._min_loud_chunks = min_loud_chunks
+        self._loud_chunks = 0
+        self._armed = True
+
+    def read(self, size):
+        buffer = self._stream.read(size)
+        if self._armed:
+            samples = np.frombuffer(buffer, dtype=np.int16).astype(np.float32)
+            rms = float(np.sqrt(np.mean(samples ** 2))) if samples.size else 0.0
+            self._loud_chunks = self._loud_chunks + 1 if rms > self._get_threshold() else 0
+            if self._loud_chunks >= self._min_loud_chunks:
+                self._armed = False
+                self._on_onset()
+        return buffer
+
+    def rearm(self):
+        self._armed = True
+        self._loud_chunks = 0
+
+    def __getattr__(self, name):
+        return getattr(self._stream, name)
 
 
 class SpeechToTextNode(Node):
@@ -45,6 +78,7 @@ class SpeechToTextNode(Node):
             self.device_index = self.auto_discover_microphone()
 
         self.pub = self.create_publisher(String, '/user/instruction', 10)
+        self.speech_started_pub = self.create_publisher(Empty, '/user/speech_started', 10)
         self.running = True
 
         # Start the microphone listener thread
@@ -103,6 +137,11 @@ class SpeechToTextNode(Node):
                 recognizer.adjust_for_ambient_noise(source, duration=3.0)
                 self.get_logger().info(f'Calibration done. New threshold: {recognizer.energy_threshold:.1f}')
 
+                onset_stream = OnsetDetectingStream(
+                    source.stream, lambda: recognizer.energy_threshold, self.publish_speech_started
+                )
+                source.stream = onset_stream
+
                 self.get_logger().info("STT is listening. You can speak now...")
                 last_heartbeat = time.monotonic()
 
@@ -111,6 +150,7 @@ class SpeechToTextNode(Node):
                         # Listen for a phrase (timeout = no speech, phrase_time_limit = max duration of speech)
                         audio = recognizer.listen(source, timeout=1.0, phrase_time_limit=10.0)
                     except sr.WaitTimeoutError:
+                        onset_stream.rearm()
                         # Periodic proof-of-life so idle silence isn't mistaken for a hang
                         if time.monotonic() - last_heartbeat > 30.0:
                             self.get_logger().info('Still listening, no speech detected recently...')
@@ -118,6 +158,7 @@ class SpeechToTextNode(Node):
                         continue  # Keep listening
 
                     last_heartbeat = time.monotonic()
+                    onset_stream.rearm()
 
                     if not self.running:
                         break
@@ -147,6 +188,10 @@ class SpeechToTextNode(Node):
 
         except Exception as e:
             self.get_logger().error(f"Failed to initialize microphone: {e}. Is your USB microphone connected?")
+
+    def publish_speech_started(self):
+        self.get_logger().info('Speech onset heard, asking the VLM to pre-encode the camera frame')
+        self.speech_started_pub.publish(Empty())
 
     def destroy_node(self):
         self.running = False
