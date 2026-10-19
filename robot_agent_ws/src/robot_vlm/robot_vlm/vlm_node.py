@@ -9,6 +9,7 @@ from sensor_msgs.msg import Image
 import base64
 import requests
 import json
+import re
 import time
 from cv_bridge import CvBridge
 
@@ -20,6 +21,10 @@ MODEL_NAME = 'gemma3:4b-it-qat'
 # Orin for every layer and the vision encoder to stay on the GPU; with the
 # defaults (4096/512) part of the model fell back to CPU and image requests
 # took ~100s instead of ~10s.
+# Matches a completed "text_response" string value (escaped quotes allowed) in a
+# partially streamed JSON answer.
+TEXT_RESPONSE_RE = re.compile(r'"text_response"\s*:\s*"((?:[^"\\]|\\.)*)"')
+
 OLLAMA_OPTIONS = {
     'num_ctx': 2048,
     'num_batch': 256,
@@ -123,7 +128,9 @@ class VLMNode(Node):
             'model': MODEL_NAME,
             'prompt': system_prompt,
             'images': [self.last_image_b64],
-            'stream': False,
+            # Streamed so the spoken answer can go to TTS as soon as "text_response"
+            # is complete, without waiting for the motion fields that follow it.
+            'stream': True,
             # No 'format': 'json': Ollama's constrained decoding added ~1s per request on
             # the Orin; the regex fallback below already strips the ```json fences.
             'options': {**OLLAMA_OPTIONS, 'num_predict': 100},
@@ -132,16 +139,29 @@ class VLMNode(Node):
         self.get_logger().info('Sending request to Gemma...')
         start = time.monotonic()
         try:
-            resp = requests.post(f'{OLLAMA_URL}/api/generate', json=payload, timeout=600)
-            resp.raise_for_status()
-            data = resp.json()
-            # Ollama returns 'response' key
-            response_text = data.get('response', '')
+            response_text = ''
+            spoken_text = None
+            with requests.post(f'{OLLAMA_URL}/api/generate', json=payload, timeout=600, stream=True) as resp:
+                resp.raise_for_status()
+                for line in resp.iter_lines():
+                    if not line:
+                        continue
+                    chunk = json.loads(line)
+                    response_text += chunk.get('response', '')
+                    if spoken_text is None:
+                        match = TEXT_RESPONSE_RE.search(response_text)
+                        if match:
+                            spoken_text = json.loads(f'"{match.group(1)}"')
+                            self.get_logger().info(f'Speech ready ({time.monotonic() - start:.1f}s): "{spoken_text}"')
+                            if spoken_text:
+                                self.speech_pub.publish(String(data=spoken_text))
+                    if chunk.get('done'):
+                        break
+
             # Publish raw response
             self.output_pub.publish(String(data=response_text))
-            
+
             # Robust parsing of JSON response
-            import re
             parsed_json = None
             try:
                 parsed_json = json.loads(response_text.strip())
@@ -153,28 +173,29 @@ class VLMNode(Node):
                         parsed_json = json.loads(match.group(0))
                     except Exception:
                         pass
-            
+
             if parsed_json is not None:
                 text_response = parsed_json.get('text_response', '')
                 distance = parsed_json.get('distance_cm', 0.0)
                 angle = parsed_json.get('angle_deg', 0.0)
-                
+
                 self.get_logger().info(f'Parsed VLM Response ({time.monotonic() - start:.1f}s) -> Speech: "{text_response}", Distance: {distance} cm, Angle: {angle} deg')
-                
-                # Publish speech text to TTS node
-                if text_response:
+
+                # Publish speech text to TTS node, unless it was already spoken while streaming
+                if text_response and spoken_text is None:
                     self.speech_pub.publish(String(data=text_response))
-                
+
                 # Publish motion commands
                 motion_data = json.dumps({"distance_cm": distance, "angle_deg": angle})
                 self.motion_pub.publish(String(data=motion_data))
             else:
                 self.get_logger().warning('Could not parse VLM response as JSON, falling back to reading raw output')
                 # Fallback: treat whole response as text response
-                self.speech_pub.publish(String(data=response_text))
+                if spoken_text is None:
+                    self.speech_pub.publish(String(data=response_text))
                 motion_data = json.dumps({"distance_cm": 0.0, "angle_deg": 0.0})
                 self.motion_pub.publish(String(data=motion_data))
-                
+
         except Exception as e:
             self.get_logger().error(f'VLM request failed: {e}')
 
