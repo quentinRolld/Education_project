@@ -57,6 +57,8 @@ Overall, from the moment the transcription arrives:
 
 With step 5, the longer the user's sentence, the more of the image encoding is already done when it ends. The frame used is the one captured when the user *started* speaking. Only one pre-encode runs at a time, and a pre-encoded frame older than 20 s is ignored.
 
+**Load-time safeguard:** even with these options, the ~1 GB GPU allocation made when Ollama loads the model can fail on the 8GB Orin (`NvMapMemAllocInternalTagged ... error 12` in `journalctl -u ollama`). Ollama then silently keeps part of the model on the CPU, and image requests take minutes or fail with HTTP 500. At startup, `vlm_node` therefore times one request with a camera-sized image (~5–9 s when healthy); if it takes more than 20 s or fails, it unloads and reloads the model, up to 3 attempts, before announcing it is ready.
+
 **Tried without effect:** sending a smaller or larger image (Ollama always resizes to 896×896); reducing `num_ctx` to 1024.
 
 ### Making `jetson_clocks` permanent

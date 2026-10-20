@@ -12,6 +12,8 @@ import json
 import re
 import threading
 import time
+import cv2
+import numpy as np
 from cv_bridge import CvBridge
 
 
@@ -21,6 +23,11 @@ MODEL_NAME = 'gemma3:4b-it-qat'
 # Matches a completed "text_response" string value (escaped quotes allowed) in a
 # partially streamed JSON answer.
 TEXT_RESPONSE_RE = re.compile(r'"text_response"\s*:\s*"((?:[^"\\]|\\.)*)"')
+
+# Warm-up health check: on a healthy load a camera-sized image request takes
+# ~7-9s; when part of the model fell back to CPU it takes minutes or fails.
+HEALTHY_IMAGE_REQUEST_S = 20.0
+WARMUP_MAX_ATTEMPTS = 3
 
 # A pre-encoded frame older than this is considered stale and not used.
 PREENCODED_FRAME_MAX_AGE_S = 20.0
@@ -87,37 +94,82 @@ class VLMNode(Node):
         self.get_logger().info('VLM Node ready (Warmup thread started in background)')
 
     def warmup_ollama(self):
-        import time
         # Sleep to allow ROS2 network discovery to find the TTS node subscriber
         time.sleep(2.0)
         self.speech_pub.publish(String(data="Initializing and warming up the model."))
 
-        self.get_logger().info(f'Pre-loading and warming up model {MODEL_NAME} in Ollama...')
-        # 1x1 black PNG in base64
-        dummy_image = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='
+        for attempt in range(1, WARMUP_MAX_ATTEMPTS + 1):
+            self.get_logger().info(f'Loading {MODEL_NAME} in Ollama (attempt {attempt}/{WARMUP_MAX_ATTEMPTS})...')
+            if not self.load_model():
+                continue
+            elapsed = self.time_image_request()
+            if elapsed is not None and elapsed <= HEALTHY_IMAGE_REQUEST_S:
+                self.get_logger().info(f'Model ready: image request took {elapsed:.1f}s')
+                self.speech_pub.publish(String(data="The model is preloaded and ready."))
+                return
+            # On the 8GB Orin a large GPU allocation can fail at load time; Ollama then
+            # silently keeps part of the model on the CPU and image requests take
+            # minutes or fail. Reloading from a clean state usually fixes it.
+            self.get_logger().warning(
+                f'Image request took {"too long" if elapsed is None else f"{elapsed:.1f}s"}: '
+                'model probably partly on CPU, reloading it'
+            )
+            self.unload_model()
+
+        self.get_logger().error('Model still slow after reloads; check `journalctl -u ollama` for NvMap errors')
+        self.speech_pub.publish(String(data="Warning, the model is running slowly."))
+
+    def load_model(self) -> bool:
         payload = {
             'model': MODEL_NAME,
             'prompt': 'initialization',
-            'images': [dummy_image],
             'stream': False,
             'options': {**OLLAMA_OPTIONS, 'num_predict': 1},
             'keep_alive': -1
         }
         try:
-            resp = requests.post(f'{OLLAMA_URL}/api/generate', json=payload, timeout=300)
-            if resp.status_code == 200:
-                self.get_logger().info('Ollama model pre-loaded and warmed up successfully!')
-                self.speech_pub.publish(String(data="The model is preloaded and ready."))
-            else:
-                self.get_logger().warning(f'Warmup failed with status code {resp.status_code}')
+            requests.post(f'{OLLAMA_URL}/api/generate', json=payload, timeout=300).raise_for_status()
+            return True
         except Exception as e:
-            self.get_logger().warning(f'Failed to warm up Ollama at startup: {e}')
+            self.get_logger().warning(f'Failed to load the model in Ollama: {e}')
+            return False
+
+    def time_image_request(self):
+        """Time one request with a camera-sized image (fresh, so not cached).
+        Returns the duration in seconds, or None if it failed or timed out."""
+        noise = np.random.default_rng().integers(0, 255, (480, 640, 3), dtype=np.uint8)
+        image_b64 = base64.b64encode(cv2.imencode('.jpg', noise)[1].tobytes()).decode('utf-8')
+        payload = {
+            'model': MODEL_NAME,
+            'prompt': 'Describe the image in one word.',
+            'images': [image_b64],
+            'stream': False,
+            'options': {**OLLAMA_OPTIONS, 'num_predict': 1},
+            'keep_alive': -1
+        }
+        start = time.monotonic()
+        try:
+            requests.post(f'{OLLAMA_URL}/api/generate', json=payload, timeout=90).raise_for_status()
+            return time.monotonic() - start
+        except Exception as e:
+            self.get_logger().warning(f'Warm-up image request failed: {e}')
+            return None
+
+    def unload_model(self):
+        try:
+            requests.post(f'{OLLAMA_URL}/api/generate', json={'model': MODEL_NAME, 'keep_alive': 0}, timeout=150)
+            for _ in range(60):
+                loaded = requests.get(f'{OLLAMA_URL}/api/ps', timeout=10).json().get('models', [])
+                if not any(m.get('name') == MODEL_NAME for m in loaded):
+                    return
+                time.sleep(2.0)
+        except Exception as e:
+            self.get_logger().warning(f'Failed to unload the model: {e}')
 
     def image_cb(self, msg: Image):
         # convert to jpg base64
         try:
             cv_img = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
-            import cv2
             
             # Resize image to speed up VLM inference by reducing visual tokens
             height, width = cv_img.shape[:2]
