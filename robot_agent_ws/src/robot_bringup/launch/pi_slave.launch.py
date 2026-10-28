@@ -1,6 +1,7 @@
 import os
 from launch import LaunchDescription
 from launch_ros.actions import Node
+from launch_ros.parameter_descriptions import ParameterValue
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
 
@@ -43,6 +44,24 @@ def generate_launch_description():
         description='Software gain applied to TTS audio (1.0 = unchanged)'
     )
 
+    wheel_diameter_arg = DeclareLaunchArgument(
+        'wheel_diameter_cm',
+        default_value='6.5',
+        description='Wheel diameter used to convert encoder ticks to distance'
+    )
+
+    track_width_arg = DeclareLaunchArgument(
+        'track_width_cm',
+        default_value='20.0',
+        description='Distance between the two wheel contact points, used for encoder-based turns and odometry'
+    )
+
+    encoder_slots_arg = DeclareLaunchArgument(
+        'encoder_slots',
+        default_value='20',
+        description='Number of slots on the encoder disk'
+    )
+
     # 1. Camera Node
     camera_node = Node(
         package='robot_camera',
@@ -80,6 +99,11 @@ def generate_launch_description():
         package='robot_control',
         executable='motor_node',
         name='motor_node',
+        parameters=[{
+            'wheel_diameter_cm': ParameterValue(LaunchConfiguration('wheel_diameter_cm'), value_type=float),
+            'track_width_cm': ParameterValue(LaunchConfiguration('track_width_cm'), value_type=float),
+            'encoder_slots': ParameterValue(LaunchConfiguration('encoder_slots'), value_type=int)
+        }],
         output='screen'
     )
 
@@ -90,6 +114,9 @@ def generate_launch_description():
         mic_device_index_arg,
         piper_path_arg,
         volume_gain_arg,
+        wheel_diameter_arg,
+        track_width_arg,
+        encoder_slots_arg,
         camera_node,
         piper_tts_node,
         stt_node,

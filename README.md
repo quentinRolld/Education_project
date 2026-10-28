@@ -122,7 +122,7 @@ Connected via Ethernet (sharing `ROS_DOMAIN_ID=42`), this board handles all low-
 *   **`camera_node`** (`robot_camera`): Captures USB Webcam frames.
 *   **`stt_node`** (`robot_audio`): Continuously captures microphone input and transcribes it with Speech Recognition (English, Google Web Speech API). Publishes `/user/speech_started` as soon as the user starts talking.
 *   **`piper_tts_node`** (`robot_audio`): Generates natural English speech using the precompiled Piper binary and outputs sound to the USB speaker.
-*   **`motor_node`** (`robot_control`): Translates turning angles and distances into wheel ticks/durations, controlling the H-bridge motors via GPIO pins (`rpi-lgpio`).
+*   **`motor_node`** (`robot_control`): Translates turning angles and distances into wheel moves, controlling the H-bridge motors via GPIO pins (`rpi-lgpio`). Moves stop when the wheel encoders have counted the target distance (falling back to timed moves if no tick arrives), and the encoder ticks are integrated into odometry published on `/odom` (`nav_msgs/Odometry`, 20 Hz).
 
 ---
 
@@ -142,6 +142,21 @@ Connected via Ethernet (sharing `ROS_DOMAIN_ID=42`), this board handles all low-
 *   Battery pack (5–30V, matching motor rating) goes to the MDD20A power terminals (`VMS`/`GND`), separate from the Pi's own power supply.
 *   Do **not** wire the MDD20A's `5V` signal-header pin back into the Pi — it's a regulator output for external logic, not an input.
 *   Pi and driver **GND must be tied together** so the PWM/DIR signals have a common reference, even though power rails are separate.
+
+### Wheel Encoders (IR slot sensors)
+
+Each wheel axle carries a slotted disk passing through an IR fork sensor (single channel, digital output `DO`). `motor_node` counts both edges of every slot and signs the ticks with the commanded direction, since a single-channel sensor can't tell forward from backward.
+
+| Sensor pin | Left encoder | Right encoder |
+|---|---|---|
+| `VCC` | 17 (3.3V) | 17 (3.3V) |
+| `GND` | 14 (GND) | 20 (GND) |
+| `DO` (ROS2 param) | 11 / GPIO17 (`enc_left_pin`) | 13 / GPIO27 (`enc_right_pin`) |
+| `AO` | not connected | not connected |
+
+*   Power the sensors from **3.3V**, never 5V: the `DO` output swings to the sensor's supply voltage and the Pi's GPIOs are not 5V-tolerant. If a sensor only works at 5V, add a voltage divider (10 kΩ in series, 20 kΩ to GND) on its `DO` line.
+*   Set the measured geometry as launch arguments: `wheel_diameter_cm` (default 6.5), `track_width_cm` (distance between the two wheels' contact points, default 20.0) and `encoder_slots` (default 20).
+*   Pins 3 and 5 stay free for the I2C IMU.
 
 ---
 
